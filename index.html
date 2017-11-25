@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8"/>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<!-- Normalize -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Adicionado para o auxilio com as imagens. -->
+
+	<style type="text/css">
+
+		/*Navegação*/
+		nav{
+			background-color: rgba(0, 0, 0, 0);
+			height: 60px;
+		}
+
+		nav a{
+			text-transform: uppercase;
+			text-decoration: none;
+			font-family: 'Montserrat', sans-serif;
+			color: white;
+			-webkit-transition: color .3s ease-out;
+    		-moz-transition: color .3s ease-out;
+    		-o-transition: color .3s ease-out;
+			transition: color .3s ease-out;
+		}
+
+		nav a:hover{
+			color: orange;
+			-webkit-transition: color .3s ease-in;
+    		-moz-transition: color .3s ease-in;
+    		-o-transition: color .3s ease-in;
+			transition: color .3s ease-in;
+		}
+
+		nav ul{
+			display: inline-block;
+		}
+
+		nav li{
+			display: inline-block;
+			padding: 10px 10px;
+		}
+
+		.direita{
+			float: right;
+			margin-right: 50px;
+		}
+
+		/*Título*/
+
+		#main{
+			background-image: url(http://i.imgur.com/X8cARW9.jpg);
+			background-size: 2200px auto;
+			background-repeat: no-repeat;
+			height: 780px;
+		}
+
+		#titulo{
+			font-family: 'Montserrat', sans-serif;
+			color: white;
+			text-align: center;
+			margin-top: 160px;
+			text-transform: uppercase;
+		}
+
+		#titulo h1{
+			font-size: 90px;
+			text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+			-webkit-transition: color .6s ease-out;
+    		-moz-transition: color .6s ease-out;
+    		-o-transition: color .6s ease-out;
+			transition: color .6s ease-out;
+		}
+
+		#titulo h1:hover{
+			color: orange;
+			-webkit-transition: color .6s ease-in;
+    		-moz-transition: color .6s ease-in;
+    		-o-transition: color .6s ease-in;
+			transition: color .6s ease-in;
+		}
+
+		#titulo p{
+			letter-spacing: 6px;
+			text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+		}
+
+		#gradient1{
+			margin-top: 354px;
+			height: 80px;
+			background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%);
+			background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%);
+			background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%);
+		}
+		
+		/*Lugares Para Conhecer*/
+
+		#lugares-para-conhecer{
+			font-family: 'Montserrat', sans-serif;
+			background-color: black;
+		}
+
+		#lugares-para-conhecer h1{
+			margin-top: 0px;
+			text-align: center;
+			padding: 60px 0px;
+			color: white;
+			text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+		}
+
+		/*Os Lugares*/
+
+		.conteudo {
+  			max-width: 1150px;
+  			margin: 0 auto;
+  			padding: 0 10px;
+		}
+
+		.cima{
+			padding: 0px 0px 50px 0px;
+			background-color: black;
+			-webkit-transition: background-color .3s ease-out;
+    		-moz-transition: background-color .3s ease-out;
+    		-o-transition: background-color .3s ease-out;
+			transition: background-color .3s ease-out;
+		}
+
+		.cima:hover{
+			background-color: orange;
+			-webkit-transition: background-color .3s ease-in;
+    		-moz-transition: background-color .3s ease-in;
+    		-o-transition: background-color .3s ease-in;
+			transition: background-color .3s ease-in;
+		}
+
+		.baixo{
+			padding: 0px 0px 50px 0px;
+			background-color: black;
+			-webkit-transition: background-color .3s ease-out;
+    		-moz-transition: background-color .3s ease-out;
+    		-o-transition: background-color .3s ease-out;
+			transition: background-color .3s ease-out;
+		}
+
+		.baixo:hover{
+			background-color: rgba(0,191,255,1);
+			-webkit-transition: background-color .3s ease-in;
+    		-moz-transition: background-color .3s ease-in;
+    		-o-transition: background-color .3s ease-in;
+			transition: background-color .3s ease-in;
+		}
+
+		.rochosos-gasosos{
+			text-align: center;
+			font-size: 50px;
+			margin-top: 60px;
+			padding-bottom: 30px;
+			color: rgba(0,0,0, 0.6);
+		}
+
+		.conteudo a{
+			text-decoration: none;
+			color: white;
+			}
+
+		.conteudo h3{
+			text-align: left;
+			text-shadow: 2px 2px rgba(0, 0, 0, .6);
+		}
+
+		.lua-img{
+			background-image: url(http://i.imgur.com/uxmbeUY.png);
+			background-repeat: none;
+			height: 300px;
+			max-width: 300px;
+		}
+
+		.mercurio-img{
+			background-image: url(http://i.imgur.com/v8pfzD3.png);
+			background-repeat: none;
+			height: 300px;
+			max-width: 300px;
+		}
+
+		.marte-img{
+			background-image: url(http://i.imgur.com/5hwn5GL.png);
+			background-repeat: none;
+			height: 300px;
+			max-width: 300px;
+		}
+
+		.ou{
+			height: 50px;
+			text-align: center;
+			padding: auto 0px;
+			color: white;
+			text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+		}
+
+		.jupiter-img{
+			background-image: url(http://i.imgur.com/ghzir3m.png);
+			background-repeat: none;
+			height: 300px;
+			max-width: 300px;
+		}
+
+		.netuno-img{
+			background-image: url(http://i.imgur.com/lc7FhsG.png);
+			background-repeat: none;
+			height: 300px;
+			max-width: 300px;
+		}
+
+		.urano-img{
+			background-image: url(http://i.imgur.com/NtT3o33.png);
+			background-repeat: none;
+			height: 300px;
+			max-width: 300px;
+		}
+
+		/*Recomendações*/
+
+		#recomendacoes{
+			/* use this for footer background-color: rgba(216,216,216,1);*/
+			background-color: rgba(216,216,216,1);
+		}
+
+		#recomendacoes h1{
+			margin-top: 0px;
+			text-align: center;
+			padding: 30px 0px;
+			color: gray;
+			background-color: rgba(216,216,216,1);
+			font-size: 60px;
+		}
+
+		#recomendacoes h4{
+			color: gray;
+			padding-top: 80px;
+			font-size: 30px;
+			text-align: center;
+		}
+
+		#recomendacoes p{
+			color: black;
+			font-size: 16px;
+			text-align: left;
+			height: 150px;
+		}
+
+		.personalidades1{
+			margin: 80px auto;
+			background-image: url(https://i.gyazo.com/8bc0b39d53b0204a22e03b46256395d4.png);
+			background-repeat: none;
+			height: 250px;
+			max-width: 250px;
+			border: 2px solid gray;
+			border-radius: 100%
+		}
+
+		.personalidades2{
+			margin: 80px auto;
+			background-image: url(https://i.gyazo.com/a42ba9227f4eb8f6a48d1d9734792f6f.png);
+			background-repeat: none;
+			height: 250px;
+			max-width: 250px;
+			border: 2px solid gray;
+			border-radius: 100%
+		}
+
+		.personalidades3{
+			margin: 80px auto;
+			background-image: url(https://i.gyazo.com/d41e12d6f7ca9f6898771adb01228b0e.png);
+			background-repeat: none;
+			height: 250px;
+			max-width: 250px;
+			border: 2px solid gray;
+			border-radius: 100%
+		}
+
+		/*Footer*/
+
+		footer{
+			height: 100px;
+			background-color: gray;
+		}
+
+		.footer{
+			text-align: right;
+			font-size: 16px;
+			padding-top: 45px;
+			padding-right: 20px;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+	</style>
+</head>
+
+<body>
+	
+	<section id="main">
+
+		<nav>
+			<ul class="esquerda">
+				<a href="#"><li>Home</li></a>
+				<a href="#"><li>Contato</li></a>
+				<a href="#"><li>Sobre</li></a>
+				<a href="#"><li>Seja um guia</li></a>
+				<a href="#"><li>Patrocinadores</li></a>
+			</ul>
+
+			<ul class="direita">
+				<a href="#"><li>Participe</li></a>
+				<a href="#"><li>Entrar</li></a>
+			</ul>
+		</nav>
+
+		<div id="titulo">
+			<h1>Quasar</h1>
+			<p>Explorando os cantos do sistema solar desde 2018</p>
+		</div>
+
+		<div id="gradient1"></div>
+	
+	</section>
+
+	<section id="lugares-para-conhecer">
+	
+		<h1>Lugares para conhecer</h1>
+
+		<div class="cima">
+			<div class="row">
+
+				<h2 class="rochosos-gasosos">Rochosos</h2>
+
+				<div class="conteudo">
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<a href="#">
+							<h3>Lua</h3>
+							<div class="lua-img"></div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<a href="#">
+							<h3>Mercurio</h3>
+							<div class="mercurio-img"></div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<a href="#">
+							<h3>Marte</h3>
+							<div class="marte-img"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ou"><h2>Ou...</h2></div>
+
+		<div class="baixo">
+			<div class="row">
+
+				<h2 class="rochosos-gasosos">Gasosos</h2>
+				
+				<div class="conteudo">
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<a href="#">
+							<h3>Jupiter</h3>
+							<div class="jupiter-img"></div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<a href="#">
+							<h3>Netuno</h3>
+							<div class="netuno-img"></div>
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-12 col-xs-12">
+						<a href="#">
+							<h3>Urano</h3>
+							<div class="urano-img"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section id="recomendacoes"> 
+
+		<h1>Recomendações</h1>
+
+		<div class="row">
+			<div class="conteudo">
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<h4>Senor Abravanel</h4>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae</p>
+					<div class="personalidades1"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<h4>Neil deGrasse Tyson</h4>
+					<p>vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore</p>
+					<div class="personalidades2"></div>
+				</div>
+
+				<div class="col-md-4 col-sm-12 col-xs-12">
+					<h4>Chris Hadfield</h4>
+					<p>unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore</p>
+					<div class="personalidades3"></div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<footer>
+		<p class="footer">Criado Por: Bruno A. Mattos.</p>
+	</footer>
+
+</body>
+
+</html>
