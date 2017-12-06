@@ -12,13 +12,14 @@
 	<!-- Adicionado para o auxilio com as imagens. -->
 
 	<style type="text/css">
-
+		body{
+			overflow-x: hidden;
+		}
 		/*Navegação*/
 		nav{
 			background-color: rgba(0, 0, 0, 0);
 			height: 60px;
 		}
-
 		nav a{
 			text-transform: uppercase;
 			text-decoration: none;
@@ -29,7 +30,6 @@
     			-o-transition: color .3s ease-out;
 			transition: color .3s ease-out;
 		}
-
 		nav a:hover{
 			color: orange;
 			-webkit-transition: color .3s ease-in;
@@ -37,30 +37,24 @@
     			-o-transition: color .3s ease-in;
 			transition: color .3s ease-in;
 		}
-
 		nav ul{
 			display: inline-block;
 		}
-
 		nav li{
 			display: inline-block;
 			padding: 10px 10px;
 		}
-
 		.direita{
 			float: right;
 			margin-right: 50px;
 		}
-
 		/*Título*/
-
 		#main{
 			background-image: url(http://i.imgur.com/X8cARW9.jpg);
 			background-size: 2200px auto;
 			background-repeat: no-repeat;
 			height: 780px;
 		}
-
 		#titulo{
 			font-family: 'Roboto Condensed', sans-serif;
 			letter-spacing: 6px;
@@ -69,7 +63,6 @@
 			margin-top: 160px;
 			text-transform: uppercase;
 		}
-
 		#titulo h1{
 			font-size: 90px;
 			text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
@@ -78,7 +71,6 @@
     			-o-transition: color .6s ease-out;
 			transition: color .6s ease-out;
 		}
-
 		#titulo h1:hover{
 			color: orange;
 			-webkit-transition: color .6s ease-in;
@@ -86,14 +78,13 @@
 			-o-transition: color .6s ease-in;
 			transition: color .6s ease-in;
 		}
-
 		#titulo p{
 			letter-spacing: 6px;
 			text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+			padding-top: 20px;
 			padding-bottom: 0px;
 			margin-bottom: 0px;
 		}
-
 		#gradient1{
 			margin-top: 354px;
 			height: 80px;
@@ -103,28 +94,24 @@
 		}
 		
 		/*Lugares Para Conhecer*/
-
 		#lugares-para-conhecer{
 			font-family: 'Roboto Condensed', sans-serif;
 			background-color: black;
 		}
-
 		#lugares-para-conhecer h1{
 			margin-top: 0px;
 			text-align: center;
 			padding: 60px 0px;
 			color: white;
 			text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+			font-size: 50px;
 		}
-
 		/*Os Lugares*/
-
 		.conteudo {
   			max-width: 1150px;
   			margin: 0 auto;
   			padding: 0 10px;
 		}
-
 		.cima{
 			padding: 0px 0px 50px 0px;
 			background-color: black;
@@ -133,7 +120,6 @@
 			-o-transition: background-color .3s ease-out;
 			transition: background-color .3s ease-out;
 		}
-
 		.cima:hover{
 			background-color: orange;
 			-webkit-transition: background-color .3s ease-in;
@@ -141,7 +127,6 @@
 			-o-transition: background-color .3s ease-in;
 			transition: background-color .3s ease-in;
 		}
-
 		.baixo{
 			padding: 0px 0px 50px 0px;
 			background-color: black;
@@ -150,7 +135,6 @@
 			-o-transition: background-color .3s ease-out;
 			transition: background-color .3s ease-out;
 		}
-
 		.baixo:hover{
 			background-color: rgba(0,191,255,1);
 			-webkit-transition: background-color .3s ease-in;
@@ -158,7 +142,6 @@
 			-o-transition: background-color .3s ease-in;
 			transition: background-color .3s ease-in;
 		}
-
 		.rochosos-gasosos{
 			text-align: center;
 			font-size: 50px;
@@ -166,38 +149,32 @@
 			padding-bottom: 30px;
 			color: rgba(0,0,0, 0.6);
 		}
-
 		.conteudo a{
 			text-decoration: none;
 			color: white;
 			}
-
 		.conteudo h3{
 			text-align: left;
 			text-shadow: 2px 2px rgba(0, 0, 0, .6);
 		}
-
 		.lua-img{
 			background-image: url(http://i.imgur.com/uxmbeUY.png);
 			background-repeat: none;
 			height: 300px;
 			max-width: 300px;
 		}
-
 		.mercurio-img{
 			background-image: url(http://i.imgur.com/v8pfzD3.png);
 			background-repeat: none;
 			height: 300px;
 			max-width: 300px;
 		}
-
 		.marte-img{
 			background-image: url(http://i.imgur.com/5hwn5GL.png);
 			background-repeat: none;
 			height: 300px;
 			max-width: 300px;
 		}
-
 		.ou{
 			height: 50px;
 			text-align: center;
@@ -205,103 +182,89 @@
 			color: white;
 			text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
 		}
-
 		.jupiter-img{
-			background-image: url(http://i.imgur.com/ghzir3m.png);
+			background-image: url(https://i.imgur.com/zh8u7Tg.png);
 			background-repeat: none;
 			height: 300px;
 			max-width: 300px;
 		}
-
 		.netuno-img{
 			background-image: url(http://i.imgur.com/lc7FhsG.png);
 			background-repeat: none;
 			height: 300px;
 			max-width: 300px;
 		}
-
 		.urano-img{
 			background-image: url(http://i.imgur.com/NtT3o33.png);
 			background-repeat: none;
 			height: 300px;
 			max-width: 300px;
 		}
-
 		/*Recomendações*/
-
 		#recomendacoes{
 			/* use this for footer background-color: rgba(216,216,216,1);*/
 			background-color: black;
 		}
-
 		#recomendacoes h1{
 			margin-top: 0px;
 			text-align: center;
-			padding: 30px 0px;
-			color: orange;
-			background-color: rgba(216,216,216,1);
-			font-size: 60px;
+			padding: 60px 0px 0px 0px;
+			color: white;
+			background-color: black;
+			text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+			font-size: 50px;
 		}
-
 		#recomendacoes h4{
 			color: rgba(0,191,255,1);
 			padding-top: 80px;
-			font-size: 30px;
+			font-size: 25px;
 			text-align: center;
 		}
-
 		#recomendacoes p{
-			color: black;
+			color: gray;
 			font-size: 16px;
 			text-align: left;
 			height: 150px;
 		}
-
 		.personalidades1{
 			margin: 80px auto;
-			background-image: url(https://i.imgur.com/g6Y4jrL.png);
+			background-image: url(https://i.imgur.com/9OJflb4.png);
 			background-repeat: none;
 			height: 250px;
 			max-width: 250px;
 			border: 2px solid rgba(0,191,255,1);
 			border-radius: 100%
 		}
-
 		.personalidades2{
 			margin: 80px auto;
-			background-image: url(https://i.imgur.com/CGP8b26.jpg);
+			background-image: url(https://i.imgur.com/YEklq1a.jpg);
 			background-repeat: none;
 			height: 250px;
 			max-width: 250px;
 			border: 2px solid rgba(0,191,255,1);
 			border-radius: 100%
 		}
-
 		.personalidades3{
 			margin: 80px auto;
-			background-image: url(https://i.imgur.com/hixWEY1.jpg);
+			background-image: url(https://i.imgur.com/FObGnGe.jpg);
 			background-repeat: none;
 			height: 250px;
 			max-width: 250px;
 			border: 2px solid rgba(0,191,255,1);
 			border-radius: 100%
 		}
-
 		/*Footer*/
-
 		footer{
-			height: 100px;
-			background-color: orange;
+			height: 62px;
+			background-color: rgba(0,191,255,1);
 		}
-
 		.footer{
 			text-align: right;
-			font-size: 16px;
-			padding-top: 45px;
+			font-size: 14px;
+			padding-top: 10px;
 			padding-right: 20px;
 			font-family: 'Roboto Condensed', sans-serif;
 		}
-
 	</style>
 </head>
 
@@ -326,7 +289,7 @@
 
 		<div id="titulo">
 			<h1>Quasar</h1>
-			<p>Explorando os cantos do sistema solar desde 2018</p>
+			<p>Explorando os cantos do sistema solar desde 2022</p>
 		</div>
 
 		<div id="gradient1"></div>
@@ -431,7 +394,7 @@
 	</section>
 
 	<footer>
-		<p class="footer">Criado Por: Bruno A. Mattos</p>
+		<p class="footer">Criado por: Bruno A. Mattos <br>Setembro de 2015</p>
 	</footer>
 
 </body>
