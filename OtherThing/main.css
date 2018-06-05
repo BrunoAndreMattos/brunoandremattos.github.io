@@ -1,0 +1,18 @@
+body {
+    background-color: bisque;
+}
+
+.teste {
+    /* float: right; */
+    /* display: block;
+    text-align: center;
+    text-decoration: none; */
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    /* width: 10%; */
+}
+
+.aaa {
+    list-style-type: none;
+}
