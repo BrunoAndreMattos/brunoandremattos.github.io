@@ -1,0 +1,547 @@
+const technologies = [{
+    "name": "Front-end",
+    "status": "LG",
+    "data": [{
+        "name": "HTML",
+        "status": "LD",
+        "data": [{
+            "name": "Basic Concepts",
+            "status": "LD"
+          },
+          {
+            "name": "Concepts",
+            "status": "LD",
+            "data": [{
+                "name": "Anatomy & Semantics",
+                "status": "LD"
+              },
+              {
+                "name": "Syntax",
+                "status": "LD"
+              },
+              {
+                "name": "Form handling setup",
+                "status": "LD"
+              },
+              {
+                "name": "SVG",
+                "status": "LD"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CSS",
+        "status": "LD",
+        "data": [{
+            "name": "Basic Concepts",
+            "status": "LD"
+          },
+          {
+            "name": "Concepts",
+            "status": "RS",
+            "data": [{
+                "name": "Grid",
+                "status": "LG"
+              }, {
+                "name": "Flexbox",
+                "status": "LG"
+              },
+              {
+                "name": "Animations",
+                "status": "TL"
+              },
+              {
+                "name": "SVG Animations",
+                "status": "TL"
+              },
+              {
+                "name": "BEM",
+                "status": "TL"
+              }
+            ]
+          },
+          {
+            "name": "Scripting",
+            "status": "TL",
+            "data": [{
+                "name": "Sass",
+                "status": "TL"
+              },
+              {
+                "name": "Less",
+                "status": "TL"
+              },
+              {
+                "name": "Stylus",
+                "status": "TL"
+              },
+              {
+                "name": "PostCSS",
+                "status": "TL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Javascript",
+        "status": "LD",
+        "data": [{
+            "name": "Basic Concepts",
+            "status": "LD"
+          },
+          {
+            "name": "Concepts",
+            "status": "RS",
+            "data": [{
+                "name": "JSON",
+                "status": "LD"
+              },
+              {
+                "name": "Callbacks",
+                "status": "LD"
+              },
+              {
+                "name": "Promises",
+                "status": "RS"
+              },
+              {
+                "name": "EcmaScript Next",
+                "status": "LD"
+              },
+              {
+                "name": "Ajax",
+                "status": "RS"
+              },
+              {
+                "name": "DOM",
+                "status": "LD"
+              },
+              {
+                "name": "BOM",
+                "status": "TL"
+              },
+              {
+                "name": "Animations",
+                "status": "TL"
+              },
+              {
+                "name": "SVG Animations",
+                "status": "TL"
+              }
+            ]
+          },
+          {
+            "name": "Libraries",
+            "status": "RS",
+            "data": [{
+                "name": "jQuery",
+                "status": "LD"
+              },
+              {
+                "name": "jQuery UI",
+                "status": "TL"
+              },
+              {
+                "name": "Lodash",
+                "status": "RS"
+              },
+              {
+                "name": "React",
+                "status": "TL"
+              },
+              {
+                "name": "Backbone.js",
+                "status": "TL"
+              },
+              {
+                "name": "Knockout.js",
+                "status": "TL"
+              },
+              {
+                "name": "Polymer.js",
+                "status": "TL"
+              },
+              {
+                "name": "ReactiveX",
+                "status": "TL"
+              }
+            ]
+          },
+          {
+            "name": "Specific Libraries (Better to search google according to needs)",
+            "status": "TL",
+            "data": [{
+                "name": "p5.js",
+                "status": "TL"
+              },
+              {
+                "name": "D3.js",
+                "status": "TL"
+              },
+              {
+                "name": "Vivid.js",
+                "status": "TL"
+              },
+              {
+                "name": "TensorFlow.js",
+                "status": "TL"
+              },
+              {
+                "name": "ml5js",
+                "status": "TL"
+              }
+            ]
+          },
+          {
+            "name": "Frameworks",
+            "status": "TL",
+            "data": [{
+                "name": "Vue.js",
+                "status": "TL"
+              },
+              {
+                "name": "Angular",
+                "status": "TL"
+              },
+              {
+                "name": "Redux",
+                "status": "TL"
+              },
+              {
+                "name": "Ember.js",
+                "status": "TL"
+              },
+              {
+                "name": "Aurelia.js",
+                "status": "TL"
+              },
+              {
+                "name": "Jasmine",
+                "status": "TL"
+              }
+            ]
+          },
+          {
+            "name": "Tools",
+            "status": "TL",
+            "data": [{
+                "name": "Yarn",
+                "status": "TL"
+              },
+              {
+                "name": "Gulp.js",
+                "status": "TL"
+              },
+              {
+                "name": "Karma",
+                "status": "TL"
+              }
+
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "status": "TL",
+        "data": [{
+            "name": "Bootstrap",
+            "status": "RS"
+          },
+          {
+            "name": "Skeleton",
+            "status": "TL"
+          },
+          {
+            "name": "Materialize CSS",
+            "status": "TL"
+          }
+        ]
+      },
+      {
+        "name": "Content Management Systems (CMS)",
+        "status": "TL",
+        "data": [{
+            "name": "Wordpress",
+            "status": "TL"
+          },
+          {
+            "name": "Webflow",
+            "status": "TL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Back-end",
+    "status": "TL",
+    "data": [{
+        "name": "Node.js",
+        "status": "RS",
+        "data": [{
+            "name": "Concepts",
+            "status": "RS",
+            "data": [{
+                "name": "npm",
+                "status": "RS"
+              },
+              {
+                "name": "package.json",
+                "status": "RS"
+              },
+              {
+                "name": "Middleware pattern",
+                "status": "RS"
+              }
+            ]
+          },
+          {
+            "name": "Frameworks",
+            "status": "TL",
+            "data": [{
+                "name": "Express.js",
+                "status": "TL"
+              },
+              {
+                "name": "Sails.js",
+                "status": "TL"
+              },
+              {
+                "name": "Koa.js",
+                "status": "TL"
+              },
+              {
+                "name": "AdonisJs",
+                "status": "TL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Typescript",
+        "status": "TL"
+      },
+      {
+        "name": "deno (not out yet)",
+        "status": "TL"
+      },
+      {
+        "name": "Ruby",
+        "status": "TL",
+        "data": [{
+          "name": "Frameworks",
+          "status": "TL",
+          "data": [{
+            "name": "Rails",
+            "status": "TL"
+          }]
+        }]
+      },
+      {
+        "name": "PHP",
+        "status": "RS",
+        "data": [{
+          "name": "Frameworks",
+          "status": "TL",
+          "data": [{
+            "name": "Laravel",
+            "status": "TL"
+          }]
+        }]
+      },
+      {
+        "name": "Python",
+        "status": "TL",
+        "data": [{
+          "name": "Frameworks",
+          "status": "TL",
+          "data": [{
+              "name": "Django",
+              "status": "TL"
+            },
+            {
+              "name": "Flask",
+              "status": "TL"
+            }
+          ]
+        }]
+      },
+      {
+        "name": "C#",
+        "status": "TL",
+        "data": [{
+          "name": "Frameworks",
+          "status": "TL",
+          "data": [{
+              "name": "ASP.NET MVC",
+              "status": "TL"
+            },
+            {
+              "name": "ASP.NET Web API",
+              "status": "TL"
+            }
+          ]
+        }]
+      },
+      {
+        "name": "databases",
+        "status": "TL",
+        "data": [{
+            "name": "SQL",
+            "status": "TL",
+            "data": [{
+                "name": "MySQL",
+                "status": "TL"
+              },
+              {
+                "name": "PostgreSQL",
+                "status": "TL"
+              }
+            ]
+          },
+          {
+            "name": "NoSQL",
+            "status": "TL",
+            "data": [{
+                "name": "mongoDB",
+                "status": "TL"
+              },
+              {
+                "name": "Redis",
+                "status": "TL"
+              },
+              {
+                "name": "Cassandra",
+                "status": "TL"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Stacks and Hybrid Frameworks",
+    "status": "TL",
+    "data": [{
+        "name": "Electron",
+        "status": "TL",
+        "data": [{
+            "name": "Main process",
+            "status": "TL"
+          },
+          {
+            "name": "Renderer process",
+            "status": "TL"
+          }
+        ]
+      },
+      {
+        "name": "MEAN",
+        "status": "TL",
+        "data": [{
+            "name": "mongoDB",
+            "status": "TL"
+          },
+          {
+            "name": "Express.js",
+            "status": "TL"
+          },
+          {
+            "name": "Angular",
+            "status": "TL"
+          },
+          {
+            "name": "Node.js",
+            "status": "RS"
+          }
+        ]
+      },
+      {
+        "name": "LAMP",
+        "status": "TL",
+        "data": [{
+            "name": "Linux",
+            "status": "TL"
+          },
+          {
+            "name": "Apache",
+            "status": "TL"
+          },
+          {
+            "name": "MySQL",
+            "status": "TL"
+          },
+          {
+            "name": "PHP",
+            "status": "TL"
+          }
+        ]
+      },
+      {
+        "name": "MERN",
+        "status": "TL",
+        "data": [{
+            "name": "mongoDB",
+            "status": "TL"
+          },
+          {
+            "name": "Express.js",
+            "status": "TL"
+          },
+          {
+            "name": "React",
+            "status": "TL"
+          },
+          {
+            "name": "Node.js",
+            "status": "RS"
+          },
+          {
+            "name": "Redux",
+            "status": "TL"
+          },
+          {
+            "name": "Webpack",
+            "status": "TL"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "WebAssembly (Not out yet)",
+    "status": "TL",
+  },
+  {
+    "name": "Other Technologies",
+    "status": "TL",
+    "data": [{
+        "name": "Webpack",
+        "status": "TL"
+      },
+      {
+        "name": "RegEx",
+        "status": "TL"
+      },
+      {
+        "name": "Search Engine Optimization (SEO)",
+        "status": "TL"
+      },
+      {
+        "name": "GIT",
+        "status": "RS",
+        "data": [{
+            "name": "Git Karma Commit Msg",
+            "status": "LD"
+          },
+        ]
+      }
+    ]
+  }
+]
