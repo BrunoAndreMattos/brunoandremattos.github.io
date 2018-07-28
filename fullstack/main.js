@@ -6,7 +6,6 @@ const labels = {
 	'LD': 'learned'
 }
 
-
 // $.getJSON('technologies.json', (technologies) Not working with github
 
 // Calls the function to insert the tree, in .tree
