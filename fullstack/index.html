@@ -8,25 +8,25 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="technologies.json" type="text/javascript"></script>
 </head>
 <body>
     <header>
         <h1>Bruno Learns Full Stack Web Development 2018</h1>
+        <nav>
+            <p><span class="learn">To learn</span> - <span class="learning">Learning/Revisiting</span> - <span class="revisit">Revisit</span> - <span class="learned">Learned</span></p>
+            <p>
+                <button id="expand-all">Expand All</button>
+                <button id="close-all">Close All</button>
+            </p>
+        </nav>
     </header>
-    <nav>
-        <p><span class="learn">To learn</span> - <span class="learning">Learning/Revisiting</span> - <span class="revisit">Revisit</span> - <span class="learned">Learned</span></p>
-        <p>
-            <button id="expand-all">Expand All</button>
-            <button id="close-all">Close All</button>
-        </p>
-    </nav>
+
     <main>
-        <ul class="tree" id="treeId">
-        </ul>
+        <ul class="tree"></ul>
     </main>
+
     <footer>
-        <p>List not completed, will be updated as I learn more about web. (Last update 26/07/2018)</p>
+        <p>List not completed, will be updated as I learn more about web. (Last update 28/07/2018)</p>
         <p>For suggestions, misclassifications and recommendations of other technologies talk to me on Twitter <a href="https://twitter.com/Batttas" target="_blank">@Batttas</a>.</p>
     </footer>
     <script src="main.js"></script>

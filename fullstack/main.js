@@ -6,83 +6,68 @@ const labels = {
 	'LD': 'learned'
 }
 
-// Calls the function to insert the tree, in #treeId
-insertTreeLevel($('#treeId'), technologies);
+// Calls .json data asynchronously
+$.getJSON('technologies.json', (technologies) => {
+	// Calls the function to insert the tree, in .tree
+	insertTreeLevel($('.tree'), technologies);
 
-// Recursive function which inserts the data in the root
-function insertTreeLevel(root, list) {
+	// Recursive function which inserts the data in the root
+	function insertTreeLevel(root, list) {
 
-	//For each object in the list
-	for (obj of list) {
+		//For each object in the list
+		for (obj of list) {
 
-		// Inserts the li
-		const li = $('<li>');
-		root.append(li);
+			// Inserts the li
+			const li = $('<li>');
+			root.append(li);
 
-		// Inserts the li text, with it's class
-		li.append($('<span>')
-			.append(obj.name)
-			.addClass(labels[obj.status]));
+			// Inserts the li text, with it's class
+			li.append($('<span>').append(obj.name).addClass(labels[obj.status]));
 
-		// If the object has children
-		if (obj.data) {
+			// If the object has children
+			if (obj.data) {
 
-			// Adds '+' after the text, and the folder class
-			li.children()
-				.append(' +')
-				.addClass('folder');
+				// Adds '+' after the text, and the folder class
+				li.children().append(' +').addClass('folder');
 
-			// Creates the ul, appending it to the actual li
-			const ul = $('<ul>');
-			li.append(ul);
+				// Creates the ul, appending it to the actual li
+				const ul = $('<ul>');
+				li.append(ul);
 
-			// Inserts the children in the tree
-			insertTreeLevel(ul, obj.data);
+				// Inserts the children in the tree
+				insertTreeLevel(ul, obj.data);
+			}
 		}
 	}
 
-	// Hiding all the folder children asap, so that they do not appear on reloading
-	document.querySelectorAll('.folder')
-		.forEach(folder => folder.nextElementSibling.style.display = 'none');
+	// Closing all folders
+	$('.folder').each(function(index) {
+		$(this).next().hide();
+	});
+});
+
+// Showing and hiding folders toggle
+$(document).ready(() => {
+	toggleFolder(); // Don't know yet why it needs to be called in here but it works
+})
+
+// Showing and hiding folders toggle
+function toggleFolder() {
+	$('.folder').click(function() {
+		$(this).next().toggle();
+	});
 }
 
-// Initializing stuff
-$(document)
-	.ready(() => {
-		// Select all the folder class elements
-		document.querySelectorAll('.folder')
-			.forEach(folder => {
-				// Adding toggle option when clicking in a folder
-				folder.onclick = (e) => {
-					const ul = folder.nextElementSibling
-					const display = ul.style.display
-
-					if (display === 'none') {
-						ul.style.display = 'block'
-					} else {
-						ul.style.display = 'none'
-					}
-				}
-			})
-
-	})
-
 // Setting expand-all button function
-document.getElementById('expand-all')
-	.addEventListener('click', () => {
-		document.querySelectorAll('.folder')
-			.forEach(folder => {
-				const ul = folder.nextElementSibling
-				ul.style.display = 'block'
-			})
-	})
+$('#expand-all').click(() => {
+	$('.folder').each(function() {
+		$(this).next().show();
+	});
+});
 
 // Setting close-all button function
-document.getElementById('close-all')
-	.addEventListener('click', () => {
-		document.querySelectorAll('.folder')
-			.forEach(folder => {
-				const ul = folder.nextElementSibling
-				ul.style.display = 'none'
-			})
-	})
+$('#close-all').click(() => {
+	$('.folder').each(function() {
+		$(this).next().hide();
+	});
+});
