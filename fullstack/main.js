@@ -6,6 +6,8 @@ const labels = {
 	'LD': 'learned'
 }
 
+let technologies;
+
 // Calls .json data asynchronously
 $.getJSON('technologies.json', (technologies) => {
 	// Calls the function to insert the tree, in .tree
