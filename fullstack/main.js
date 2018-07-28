@@ -6,47 +6,45 @@ const labels = {
 	'LD': 'learned'
 }
 
-let technologies;
 
-// Calls .json data asynchronously
-$.getJSON('technologies.json', (technologies) => {
-	// Calls the function to insert the tree, in .tree
-	insertTreeLevel($('.tree'), technologies);
+// $.getJSON('technologies.json', (technologies) Not working with github
 
-	// Recursive function which inserts the data in the root
-	function insertTreeLevel(root, list) {
+// Calls the function to insert the tree, in .tree
+insertTreeLevel($('.tree'), technologies);
 
-		//For each object in the list
-		for (obj of list) {
+// Recursive function which inserts the data in the root
+function insertTreeLevel(root, list) {
 
-			// Inserts the li
-			const li = $('<li>');
-			root.append(li);
+	//For each object in the list
+	for (obj of list) {
 
-			// Inserts the li text, with it's class
-			li.append($('<span>').append(obj.name).addClass(labels[obj.status]));
+		// Inserts the li
+		const li = $('<li>');
+		root.append(li);
 
-			// If the object has children
-			if (obj.data) {
+		// Inserts the li text, with it's class
+		li.append($('<span>').append(obj.name).addClass(labels[obj.status]));
 
-				// Adds '+' after the text, and the folder class
-				li.children().append(' +').addClass('folder');
+		// If the object has children
+		if (obj.data) {
 
-				// Creates the ul, appending it to the actual li
-				const ul = $('<ul>');
-				li.append(ul);
+			// Adds '+' after the text, and the folder class
+			li.children().append(' +').addClass('folder');
 
-				// Inserts the children in the tree
-				insertTreeLevel(ul, obj.data);
-			}
+			// Creates the ul, appending it to the actual li
+			const ul = $('<ul>');
+			li.append(ul);
+
+			// Inserts the children in the tree
+			insertTreeLevel(ul, obj.data);
 		}
 	}
-
 	// Closing all folders
 	$('.folder').each(function(index) {
 		$(this).next().hide();
 	});
-});
+}
+
 
 // Showing and hiding folders toggle
 $(document).ready(() => {

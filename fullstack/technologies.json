@@ -1,4 +1,4 @@
-[
+const technologies = [
   {
     "name": "Front-end",
     "status": "LG",
