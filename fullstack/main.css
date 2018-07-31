@@ -1,13 +1,18 @@
-/* colors: #323741, #06858c, #45c48b, #ffa84c, #f46674, #f4f4f4 */
-
 * {
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0;
+    --bg-color: #16191f;
+    --text-color: #f4f4f4;
+    --button-color: #f4f4f4;
+    --interested: #ffc400;
+    --not-interested: #a0a0a0;
+    --learned: #00ff8c;
+    --media-btn: #09cbfc;
 }
 
 body {
-    background-color:#f4f4f4;
+    background-color: var(--bg-color);
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
@@ -20,7 +25,6 @@ body {
 
 main {
     padding-left: 30%;
-    color: #323741;
     grid-area: content;
 }
 
@@ -38,101 +42,106 @@ header {
 }
 
 h1 {
-    color: #323741;
+    color: var(--text-color);
     text-align: center;
     padding-bottom: 2rem;
 }
 
 nav {
-    color: #323741;
+    color: var(--text-color);
 }
 
 nav p {
     text-align: center;
 }
 
-#expand-all, #close-all {
-	background-color: #323741;
+.caption {
+    display: flex;
+    justify-content: center;
+}
+
+.caption span {
+    padding: 0 1rem;
+}
+
+#expand-all, #close-all, #toggle-tree {
+	background-color: var(--text-color);
 	display: inline-block;
 	cursor: pointer;
-	color: #f4f4f4;
-    padding: 0.5rem 0.8rem;
-    margin: 0.8rem 0.3rem;
+	color: var(--bg-color);
+    padding: 0.7rem 1rem;
+    margin: 1.6rem 1rem;
     text-decoration: none;
-    border: none;
+    border: solid 0.1rem var(--text-color);
+    border-radius: 3rem;;
 }
 
-#expand-all:hover, #close-all:hover {
-	background-color: #4a4e57;
-}
-
-#expand-all:active, #close-all:active {
-	position: relative;
-	top: 2px;
+button:focus {
+    outline: 0;
 }
 
 .folder {
     cursor: pointer;
 }
 
-.learn {
-    color: #f46674;
+.interested {
+    color: var(--interested);
 }
 
-.learn.folder:hover {
-    color: rgb(252, 134, 146);
-}
-
-.learning {
-    color: #06858c;
-}
-
-.learning.folder:hover {
-    color: rgb(10, 181, 190);
-}
-
-.revisit {
-    color: #ffa84c;
-}
-
-.revisit.folder:hover {
-    color: rgb(255, 203, 148);
+.not-interested {
+    color: var(--not-interested);
 }
 
 .learned {
-    color: #45c48b;
-}
-
-.learned.folder:hover {
-    color: rgb(93, 250, 179);
+    color: var(--learned);
 }
 
 footer p {
-    color: #323741;
+    color: var(--text-color);
 }
 
 footer p a {
-    color: #f46674;
+    color: var(--media-btn);
     text-decoration: none;
 }
 
-footer p a:hover {
-    color: rgb(252, 134, 146);
+.no-tree * {
+    list-style-type: none;
+}
+
+.no-tree ul {
+    padding-left: 25px;
+}
+
+ul.no-tree, .no-tree li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.no-tree, ul.no-tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.no-tree ul {
+    margin-left: 30px;
 }
 
 /* TREE CODE CORTESIA DA COD3R ACADEMY */
+
 .tree * {
     list-style-type: none;
 }
 
-.tree li a {
-    color: #323741;
-    text-decoration: none;
-    font-size: 18px;
-}
-
 .tree ul {
     padding-left: 25px;
+}
+
+.tree li a {
+    color: var(--not-interested);
+    text-decoration: none;
+    font-size: 18px;
 }
 
 ul.tree, .tree li {
@@ -147,15 +156,14 @@ ul.tree, ul.tree ul {
 }
 
 ul.tree ul {
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 ul.tree li {
     margin: 0;
     margin: 0 9px;
     padding: 0 7px;
-    border-left: 1px solid rgb(100,100,100);
-
+    border-left: 1px solid var(--not-interested);
 }
 
 ul.tree li:last-child {
@@ -167,13 +175,13 @@ ul.tree li:before {
     top: -0.3em;
     height: 1em;
     width: 12px;
-    color: white;
-    border-bottom: 1px solid rgb(100,100,100);
+    color: var(--not-interested);
+    border-bottom: 1px solid var(--not-interested);
     content: "";
     display: inline-block;
     left: -7px;
 }
 
 ul.tree li:last-child:before {
-    border-left: 1px solid rgb(100,100,100);
+    border-left: 1px solid var(--not-interested);
 }

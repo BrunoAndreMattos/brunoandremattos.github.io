@@ -1,15 +1,12 @@
 // Labels for the status classes
 const labels = {
-	'TL': 'learn',
-	'RS': 'revisit',
-	'LG': 'learning',
-	'LD': 'learned'
+	'IN': 'interested',
+	'LD': 'learned',
+	'NI': 'not-interested',
 }
 
-// $.getJSON('technologies.json', (technologies) Not working with github
-
 // Calls the function to insert the tree, in .tree
-insertTreeLevel($('.tree'), technologies);
+insertTreeLevel($('.no-tree'), technologies);
 
 // Recursive function which inserts the data in the root
 function insertTreeLevel(root, list) {
@@ -44,18 +41,10 @@ function insertTreeLevel(root, list) {
 	});
 }
 
-
 // Showing and hiding folders toggle
-$(document).ready(() => {
-	toggleFolder(); // Don't know yet why it needs to be called in here but it works
-})
-
-// Showing and hiding folders toggle
-function toggleFolder() {
-	$('.folder').click(function() {
-		$(this).next().toggle();
-	});
-}
+$('.folder').on('click', function() {
+	$(this).next().toggle();
+});
 
 // Setting expand-all button function
 $('#expand-all').click(() => {
@@ -70,3 +59,18 @@ $('#close-all').click(() => {
 		$(this).next().hide();
 	});
 });
+
+// Toggle tree style
+$('#toggle-tree').click(function() {
+	if ($('ul').hasClass('no-tree')) {
+
+		$('ul').removeClass('no-tree').addClass('tree');
+		$(this).css('background-color', '#16191f');
+		$(this).css('color', '#f4f4f4');
+	} else {
+
+		$('ul').removeClass('tree').addClass('no-tree');
+		$(this).css('background-color', '#f4f4f4');
+		$(this).css('color', '#16191f');
+	}
+})

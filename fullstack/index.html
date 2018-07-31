@@ -3,32 +3,37 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Full Stack Web Development Check List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Full Stack Web Development Check List</title>
+    
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./libraries/animate.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="./technologies.json" type="text/javascript"></script>
+    
+    <script src="technologies.json" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Bruno Learns Full Stack Web Development 2018</h1>
+        <h1 class="animated fadeInDown">Full Stack Web Development</h1>
         <nav>
-            <p><span class="learn">To learn</span> - <span class="learning">Learning/Revisiting</span> - <span class="revisit">Revisit</span> - <span class="learned">Learned</span></p>
+            <p class="caption animated fadeInDown"><span class="interested">Interested in learning</span> <span class="learned">Learned</span> <span class="not-interested">Not interested at the moment</span></p>
             <p>
-                <button id="expand-all">Expand All</button>
-                <button id="close-all">Close All</button>
+                <button id="expand-all" class="animated flipInX">Expand All</button>
+                <button id="close-all" class="animated flipInX">Close All</button>
+                <button id="toggle-tree" class="animated flipInX">Toggle Tree View</button>
             </p>
         </nav>
     </header>
 
     <main>
-        <ul class="tree"></ul>
+        <ul class="no-tree animated fadeInLeftBig"></ul>
     </main>
 
     <footer>
-        <p>List not completed, will be updated as I learn more about web. (Last update 28/07/2018)</p>
-        <p>For suggestions, misclassifications and recommendations of other technologies talk to me on Twitter <a href="https://twitter.com/Batttas" target="_blank">@Batttas</a>.</p>
+        <p class="animated fadeInUp">List not completed, will be updated as I learn more about web. (Last update 31/07/2018)</p>
+        <p class="animated fadeInUp">For suggestions, misclassifications and recommendations of other technologies talk to me on Twitter <a href="https://twitter.com/Batttas" target="_blank">@Batttas</a>.</p>
     </footer>
     <script src="main.js"></script>
 </body>

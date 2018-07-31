@@ -1,20 +1,17 @@
 const technologies = [
   {
     "name": "Front-end",
-    "status": "LG",
+    "status": "IN",
     "data": [
       {
         "name": "HTML",
         "status": "LD",
         "data": [
           {
-            "name": "Basic Concepts",
-            "status": "LD"
-          },
-          {
             "name": "Concepts",
             "status": "LD",
-            "data": [{
+            "data": [
+              {
                 "name": "Anatomy & Semantics",
                 "status": "LD"
               },
@@ -31,6 +28,16 @@ const technologies = [
                 "status": "LD"
               }
             ]
+          },
+          {
+            "name": "Templating Tools",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Jade Language",
+                "status": "IN"
+              }
+            ]
           }
         ]
       },
@@ -39,58 +46,86 @@ const technologies = [
         "status": "LD",
         "data": [
           {
-            "name": "Basic Concepts",
-            "status": "LD"
-          },
-          {
             "name": "Concepts",
-            "status": "RS",
+            "status": "LD",
             "data": [
-              {
-                "name": "Media query",
-                "status": "LD"
-              }, 
-              {
-                "name": "Flexbox",
-                "status": "LD"
-              }, 
               {
                 "name": "Grid",
                 "status": "LD"
               },
               {
-                "name": "Animations",
-                "status": "TL"
+                "name": "Flexbox",
+                "status": "LD"
+              }, 
+              {
+                "name": "Variables",
+                "status": "LD"
+              }, 
+              {
+                "name": "Media query (@media)",
+                "status": "LD"
+              }, 
+              {
+                "name": "Supports (@supports)",
+                "status": "LD"
+              },  
+              {
+                "name": "Animations (@keyframes)",
+                "status": "LD"
               },
               {
                 "name": "SVG Animations",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "BEM",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "Scripting",
-            "status": "TL",
+            "status": "IN",
             "data": [
               {
                 "name": "Sass",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Less",
-                "status": "TL"
+                "status": "NI"
               },
               {
                 "name": "Stylus",
-                "status": "TL"
+                "status": "NI"
               },
               {
                 "name": "PostCSS",
-                "status": "TL"
+                "status": "NI"
+              }
+            ]
+          },
+          {
+            "name": "Libraries",
+            "status": "LD",
+            "data": [
+              {
+                "name": "Animate.css",
+                "status": "LD"
+              }
+            ]
+          },
+          {
+            "name": "Tools",
+            "status": "IN",
+            "data": [
+              {
+                "name": "keyframes.app",
+                "status": "LD"
+              },
+              {
+                "name": "shapeshifter.design",
+                "status": "IN"
               }
             ]
           }
@@ -101,12 +136,8 @@ const technologies = [
         "status": "LD",
         "data": [
           {
-            "name": "Basic Concepts",
-            "status": "LD"
-          },
-          {
             "name": "Concepts",
-            "status": "RS",
+            "status": "IN",
             "data": [
               {
                 "name": "JSON",
@@ -118,15 +149,15 @@ const technologies = [
               },
               {
                 "name": "Promises",
-                "status": "RS"
+                "status": "LD"
               },
               {
                 "name": "EcmaScript Next",
                 "status": "LD"
               },
               {
-                "name": "Ajax",
-                "status": "RS"
+                "name": "AJAX",
+                "status": "LD"
               },
               {
                 "name": "DOM",
@@ -134,21 +165,21 @@ const technologies = [
               },
               {
                 "name": "BOM",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Animations",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "SVG Animations",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "Libraries",
-            "status": "RS",
+            "status": "IN",
             "data": [
               {
                 "name": "jQuery",
@@ -156,140 +187,161 @@ const technologies = [
               },
               {
                 "name": "jQuery UI",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Lodash",
-                "status": "RS"
+                "status": "IN"
               },
               {
                 "name": "React",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Backbone.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Knockout.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Polymer.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "ReactiveX",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "Specific Libraries (Better to search google according to needs)",
-            "status": "TL",
+            "status": "IN",
             "data": [
               {
                 "name": "p5.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "D3.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Vivid.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "TensorFlow.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "ml5js",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "Frameworks",
-            "status": "TL",
+            "status": "IN",
             "data": [
               {
                 "name": "Vue.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Angular",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Redux",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Ember.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Aurelia.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Jasmine",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "Tools",
-            "status": "TL",
+            "status": "IN",
             "data": [
               {
                 "name": "Yarn",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Gulp.js",
-                "status": "TL"
+                "status": "IN"
+              },
+              {
+                "name": "Grunt",
+                "status": "IN"
+              },
+              {
+                "name": "Flow",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "Testing",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Jest",
+                "status": "IN"
+              },
+              {
+                "name": "Mocha",
+                "status": "IN"
               },
               {
                 "name": "Karma",
-                "status": "TL"
+                "status": "IN"
               }
-
             ]
           }
         ]
       },
       {
         "name": "Frameworks",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
             "name": "Bootstrap",
-            "status": "RS"
+            "status": "LD"
           },
           {
             "name": "Skeleton",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Materialize CSS",
-            "status": "TL"
+            "status": "IN"
           }
         ]
       },
       {
         "name": "Content Management Systems (CMS)",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
-            "name": "Wordpress",
-            "status": "TL"
+            "name": "WordPress",
+            "status": "IN"
           },
           {
             "name": "Webflow",
-            "status": "TL"
+            "status": "IN"
           }
         ]
       }
@@ -297,49 +349,49 @@ const technologies = [
   },
   {
     "name": "Back-end",
-    "status": "TL",
+    "status": "IN",
     "data": [
       {
         "name": "Node.js",
-        "status": "RS",
+        "status": "IN",
         "data": [
           {
             "name": "Concepts",
-            "status": "RS",
+            "status": "IN",
             "data": [
               {
                 "name": "npm",
-                "status": "RS"
+                "status": "IN"
               },
               {
                 "name": "package.json",
-                "status": "RS"
+                "status": "IN"
               },
               {
                 "name": "Middleware pattern",
-                "status": "RS"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "Frameworks",
-            "status": "TL",
+            "status": "IN",
             "data": [
               {
                 "name": "Express.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Sails.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Koa.js",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "AdonisJs",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           }
@@ -347,113 +399,217 @@ const technologies = [
       },
       {
         "name": "Typescript",
-        "status": "TL"
+        "status": "IN"
       },
       {
         "name": "deno (not out yet)",
-        "status": "TL"
+        "status": "IN"
       },
       {
         "name": "Ruby",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
-          "name": "Frameworks",
-          "status": "TL",
-          "data": [
-            {
-            "name": "Rails",
-            "status": "TL"
-          }]
-        }]
+            "name": "Package Manager",
+            "status": "IN",
+            "data": [
+              {
+                "name": "RubyGems",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "Frameworks",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Rails",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "Testing",
+            "status": "IN",
+            "data": [
+              {
+                "name": "RSpec",
+                "status": "IN"
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "PHP",
-        "status": "RS",
+        "status": "LD",
         "data": [
           {
-          "name": "Frameworks",
-          "status": "TL",
-          "data": [
-            {
-            "name": "Laravel",
-            "status": "TL"
-          }]
-        }]
+            "name": "Frameworks",
+            "status": "IN",
+            "data": [
+              {
+              "name": "Laravel",
+              "status": "IN"
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "Python",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
-          "name": "Frameworks",
-          "status": "TL",
+          "name": "Package Manager",
+          "status": "IN",
           "data": [
-            {
-              "name": "Django",
-              "status": "TL"
-            },
-            {
-              "name": "Flask",
-              "status": "TL"
-            }
-          ]
-        }]
+              {
+                "name": "pip",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+          "name": "Frameworks",
+          "status": "IN",
+          "data": [
+              {
+                "name": "Django",
+                "status": "IN"
+              },
+              {
+                "name": "Flask",
+                "status": "IN"
+              }
+            ]
+          }
+        ]
       },
       {
         "name": "C#",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
-          "name": "Frameworks",
-          "status": "TL",
-          "data": [
-            {
-              "name": "ASP.NET MVC",
-              "status": "TL"
-            },
-            {
-              "name": "ASP.NET Web API",
-              "status": "TL"
-            }
-          ]
-        }]
+            "name": "Frameworks",
+            "status": "IN",
+            "data": [
+              {
+                "name": "ASP.NET MVC",
+                "status": "IN"
+              },
+              {
+                "name": "ASP.NET Web API",
+                "status": "IN"
+              }
+            ]
+          }
+        ]
       },
       {
-        "name": "databases",
-        "status": "TL",
+        "name": "Go",
+        "status": "IN",
+        "data": [
+          {
+            "name": "Frameworks",
+            "status": "IN",
+            "data": [
+              {
+                "name": "HuGo",
+                "status": "IN"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Storage",
+        "status": "IN",
         "data": 
         [{
             "name": "SQL",
-            "status": "RS",
+            "status": "IN",
             "data": [
               {
                 "name": "MySQL",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "PostgreSQL",
-                "status": "TL"
+                "status": "IN"
               }
             ]
           },
           {
             "name": "NoSQL",
-            "status": "TL",
+            "status": "IN",
             "data": [
               {
                 "name": "mongoDB",
-                "status": "TL"
-              },
-              {
-                "name": "Redis",
-                "status": "TL"
+                "status": "IN"
               },
               {
                 "name": "Cassandra",
-                "status": "TL"
+                "status": "IN"
               }
             ]
+          },
+          {
+            "name": "Cache",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Redis",
+                "status": "IN"
+              },
+              {
+                "name": "memcached",
+                "status": "IN"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Server Stuff",
+        "status": "IN",
+        "data": [
+          {
+            "name": "Web Server",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Nginx",
+                "status": "IN"
+              },
+              {
+                "name": "Apache",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "RESTful APIs",
+            "status": "IN"
+          },
+          {
+            "name": "Authentication",
+            "status": "IN",
+            "data": [
+              {
+                "name": "OAuth 2.0",
+                "status": "IN"
+              },
+              {
+                "name": "JWT",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "Docker",
+            "status": "IN"
           }
         ]
       }
@@ -461,93 +617,93 @@ const technologies = [
   },
   {
     "name": "Stacks and Hybrid Frameworks",
-    "status": "TL",
+    "status": "IN",
     "data": [
       {
         "name": "Electron",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
             "name": "Main process",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Renderer process",
-            "status": "TL"
+            "status": "IN"
           }
         ]
       },
       {
         "name": "MEAN",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
             "name": "mongoDB",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Express.js",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Angular",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Node.js",
-            "status": "RS"
+            "status": "IN"
           }
         ]
       },
       {
         "name": "LAMP",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
             "name": "Linux",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Apache",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "MySQL",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "PHP",
-            "status": "TL"
+            "status": "IN"
           }
         ]
       },
       {
         "name": "MERN",
-        "status": "TL",
+        "status": "IN",
         "data": [
           {
             "name": "mongoDB",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Express.js",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "React",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Node.js",
-            "status": "RS"
+            "status": "IN"
           },
           {
             "name": "Redux",
-            "status": "TL"
+            "status": "IN"
           },
           {
             "name": "Webpack",
-            "status": "TL"
+            "status": "IN"
           }
         ]
       }
@@ -555,23 +711,27 @@ const technologies = [
   },
   {
     "name": "WebAssembly (Not out yet)",
-    "status": "TL"
+    "status": "IN"
   },
   {
     "name": "Other Technologies",
-    "status": "TL",
+    "status": "IN",
     "data": [
       {
         "name": "Webpack",
-        "status": "TL"
+        "status": "IN"
       },
       {
         "name": "RegEx",
-        "status": "TL"
+        "status": "IN"
       },
       {
         "name": "Search Engine Optimization (SEO)",
-        "status": "TL"
+        "status": "IN"
+      },
+      {
+        "name": "SSH",
+        "status": "IN"
       },
       {
         "name": "GIT",
@@ -599,7 +759,7 @@ const technologies = [
               },
               {
                 "name": "Tags",
-                "status": "RS"
+                "status": "IN"
               },
               {
                 "name": "Git Karma Commit Msg",
