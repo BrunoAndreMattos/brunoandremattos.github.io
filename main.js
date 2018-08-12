@@ -41,28 +41,11 @@ const ip1BV = 106.65;
 const ip2BV = 138.52; 
 const ip3BV = 159.83; 
 
-// const m2BomFimPreco = 23.16;
-// const m2CentroPreco = 21.12;
-// const m2PetropolisPreco = 23.45;
-// const m2BoaVistaPreco = 27.72;
+$('#positivo').hide();
+$('#negativo').hide();
+$('#extrato').hide();
 
-// const m2Quarto1 = 50;
-// const m2Quarto2 = 65;
-// const m2Quarto3 = 75;
-
-// const mediaM2BomFim = 6489;
-// const mediaM2Centro = 5220;
-// const mediaM2Petropolis = 7710;
-// const mediaM2BoaVista = 9705;
-
-// let calculaIPTU = (qntQuartos, mediaDom2) => {
-//     return (((mediaDom2 * qntQuartos) * 0.31) * 0.0085) / 12;
-// }
-
-$('#nfoi').hide();
-$('#foi').hide();
-
-$('#ir').click(function(e) {
+$('#consultar').click(function(e) {
     e.preventDefault();
     bairro = $('#bairro').val();
     receita = $('#receita').val();
@@ -70,9 +53,11 @@ $('#ir').click(function(e) {
     dormitorios = $('#quartos').val();
 
     let custoAluguel;
+    let nomeBairro;
 
     switch (bairro) {
         case 'bom-fim':
+            nomeBairro = 'Bom Fim';
             if(dormitorios == 1) {
                 custoAluguel = qt1BF;
                 IPTU = ip1BF
@@ -85,6 +70,7 @@ $('#ir').click(function(e) {
             }
         break;
         case 'centro':
+            nomeBairro = 'Centro';
             if(dormitorios == 1) {
                 custoAluguel = qt1C;
                 IPTU = ip1C;
@@ -97,6 +83,7 @@ $('#ir').click(function(e) {
             }
         break;
         case 'petropolis':
+            nomeBairro = 'Petropolis';
             if(dormitorios == 1) {
                 custoAluguel = qt1P;
                 IPTU = ip1P;
@@ -108,7 +95,8 @@ $('#ir').click(function(e) {
                 IPTU = ip3P;
             }
         break;
-        case 'boa-vista':
+        case 'bela-vista':
+            nomeBairro = 'Bela Vista';
             if(dormitorios == 1) {
                 custoAluguel = qt1BV;
                 IPTU = ip1BV;
@@ -123,18 +111,49 @@ $('#ir').click(function(e) {
     }
 
     custoTotal = fixos + IPTU + custoAluguel;
+    resultado = Math.ceil(receita - (custoTotal / habitantes));
+
+    if(resultado > 0) {
+        $('#result').html('<h2> Você pode morar no ' + nomeBairro + '! </h2> <br /> <p> e ainda sobram <strong>R$' + resultado + '</strong> por mês.</p>');
+        $('#result').css('background-color', '#0557028C');
+    } else {
+        $('#result').html('<h2> Infelizmente você ainda não pode morar no ' + nomeBairro + ' </h2> <br /> <p> Faltam <strong>R$' + Math.abs(resultado) + '</strong> por mês.</p>');
+        $('#result').css("background-color", "#5300008C");
+    }
+
+    $('#extrato #fixos .fixos-preco').html(`
+    <li>Luz R$${luz}</li>
+    <li>Gás R$${gas}</li>
+    <li>Telefone/Internet R$${telefone}</li>
+    <li>Netflix R$${netflix}</li>
+    <li>Condomínio R$${condominio}</li>
+    <li>Alimentação R$${alimentacao}</li>
+    <li>Limpeza R$${limpeza}</li>
+    <li>Transporte R$${transporte}</li>`);
     
-    $('form').append('<h1> Sobrou: ' + Math.ceil(receita - (custoTotal / habitantes))  + '</h1>');
+    $('#extrato #fixos').append(`<h3>Total de custos fixos por mês: R$${fixos} </h3>`);
+
+    if(dormitorios == 1){
+        $('.IPTU-preco').html(`Para ${dormitorios} dormitório: R$${IPTU}`);
+    } else {
+        $('.IPTU-preco').html(`Para ${dormitorios} dormitórios: R$${IPTU}`);
+    }
+    
+    if(dormitorios == 1){
+        $('.aluguel-preco').html(`Para ${dormitorios} dormitório: R$${custoAluguel}`);
+    } else {
+        $('.aluguel-preco').html(`Para ${dormitorios} dormitórios: R$${custoAluguel}`);
+    }
+
+    $('#extrato').show();
 
     $('html, body').animate({
-        scrollTop: $("main").offset().top
-    }, 5000);
+        scrollTop: $("#result").offset().top
+    }, 300);
 
     if((receita - (custoTotal / habitantes)) > 0) {
-        $('#foi').show();
-        // $('header').append('<iframe style="width: 100%; height: 1900px" src="https://docs.google.com/forms/d/e/1FAIpQLSdWv8UV2qgxRmCOlNhqmYYLBTjc7tO1_APPxNquHYzi8yw02g/viewform"></iframe>');
+        $('#positivo').show();
     } else {
-        $('#nfoi').show();
-        // $('header').append('<iframe style="width: 100%; height: 1900px" src="https://docs.google.com/forms/d/e/1FAIpQLSfeVORgsPbrBwOhqdb2J_VFKeBBEknKozF2MqepSJ97-bEU2Q/viewform');
+        $('#negativo').show();
     }
 });

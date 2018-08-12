@@ -73,7 +73,7 @@ nav p {
     margin: 1.6rem 1rem;
     text-decoration: none;
     border: solid 0.1rem var(--text-color);
-    border-radius: 3rem;;
+    border-radius: 3rem;
 }
 
 button:focus {
