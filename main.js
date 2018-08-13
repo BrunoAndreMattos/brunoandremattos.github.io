@@ -45,6 +45,28 @@ $('#positivo').hide();
 $('#negativo').hide();
 $('#extrato').hide();
 
+// API de comunicação de dados
+pubnub = new PubNub({
+    publishKey: 'pub-c-d21e697a-c335-48b7-acc4-3d2ecd564f4a',
+    subscribeKey: 'sub-c-4ede1878-97f3-11e7-9589-26a34ceecec8'
+})
+
+// Função para comunicação de dados
+function publishSampleMessage() {
+    var publishConfig = {
+        channel : "hello_world",
+        message: { 
+            rendimento: receita,
+            bairro: bairro,
+            habitantes: habitantes,
+            dormitorios: dormitorios
+        }
+    }
+    pubnub.publish(publishConfig, function(status, response) {
+        console.log(status, response);
+    })
+}	
+
 $('#consultar').click(function(e) {
     e.preventDefault();
     bairro = $('#bairro').val();
@@ -129,9 +151,8 @@ $('#consultar').click(function(e) {
     <li>Condomínio R$${condominio}</li>
     <li>Alimentação R$${alimentacao}</li>
     <li>Limpeza R$${limpeza}</li>
-    <li>Transporte R$${transporte}</li>`);
-    
-    $('#extrato #fixos').append(`<h3>Total de custos fixos por mês: R$${fixos} </h3>`);
+    <li>Transporte R$${transporte}</li>
+    <h3>Total de custos fixos por mês: R$${fixos} </h3>`);
 
     if(dormitorios == 1){
         $('.IPTU-preco').html(`Para ${dormitorios} dormitório: R$${IPTU}`);
@@ -156,4 +177,6 @@ $('#consultar').click(function(e) {
     } else {
         $('#negativo').show();
     }
+
+    publishSampleMessage();
 });
