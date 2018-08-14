@@ -7,33 +7,32 @@
     --neutral-color: #f4f4f4;
 }
 
-body {
+html {
     background-color: var(--secondary-color);
 }
 
-header {
-    opacity: 1;
-    text-align: center;
-    grid-area: header;
-}
-
-#bg-imagem {
-    background: url('img/chave.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-
+body {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 650px 1fr 50px;
+    grid-template-rows: auto auto 0;
     grid-template-areas: 
     'header'
     'main'
     'footer';
 }
 
+header {
+    opacity: 1;
+    text-align: center;
+    grid-area: header;
+    background: url('img/chave.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 main {
-    background-color: var(--main-color);
+    background-color: var(--neutral-color);
     text-align: center;
     grid-area: main;
 }
@@ -76,13 +75,16 @@ header p strong {
     margin: 1rem 0;
 }
 
-input, select {
+input, 
+select {
     padding: 1rem;
     border-style: none;
     border-radius: 3rem;
 }
 
-input:focus, select:focus, button:focus {
+input:focus, 
+select:focus, 
+button:focus {
     outline: 0;
 }
 
@@ -107,6 +109,7 @@ button:hover {
     display: inline-block;
     color: var(--neutral-color);
     padding: 1rem;
+    margin: 1.5rem;
 }
 
 #result h2 {
@@ -117,41 +120,11 @@ button:hover {
     padding: 0;
 }
 
-#extrato {
-    background-color: var(--neutral-color);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 80px 80px;
-    grid-template-areas: 
-    'fixos'
-    'IPTU'
-    'aluguel';
+table {
+    width: 100%;
+    margin: 1rem 0;
 }
 
-#fixos {
-    grid-area: fixos;
-}
-
-#fixos h3 {
-    padding: 1rem;
-}
-
-.fixos-preco {
-    padding-top: 1rem;
-}
-
-#IPTU {
-    grid-area: IPTU;
-}
-
-#aluguel {
-    grid-area: aluguel;
-}
-
-#IPTU p {
-    padding-top: 1rem;
-}
-
-#aluguel-preco {
-    padding-top: 1rem;
+tr:nth-child(even) {
+    background-color: #dddddd;
 }

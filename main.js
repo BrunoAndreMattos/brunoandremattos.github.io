@@ -1,45 +1,45 @@
-let receita;
-let bairro;
-let habitantes;
-let dormitorios;
-let custoTotal;
+var receita;
+var bairro;
+var habitantes;
+var dormitorios;
+var custoTotal;
 
-const luz = 60;
-const gas = 50;
-const telefone = 150;
-const netflix = 32;
-const condominio = 517;
-const alimentacao = 600;
-const limpeza = 400;
-const transporte = 720;
+var luz = 60;
+var gas = 50;
+var telefone = 150;
+var netflix = 32;
+var condominio = 517;
+var alimentacao = 600;
+var limpeza = 400;
+var transporte = 720;
 
-const fixos = luz + gas + telefone + netflix + condominio + alimentacao + limpeza + transporte;
+var fixos = luz + gas + telefone + netflix + condominio + alimentacao + limpeza + transporte;
 
-const qt1BF = 1158; 
-const qt2BF = 1505.4; 
-const qt3BF = 1737; 
-const qt1C = 1056; 
-const qt2C = 1372.8; 
-const qt3C = 1584; 
-const qt1P = 1172.5; 
-const qt2P = 1524.25; 
-const qt3P = 1758.75; 
-const qt1BV = 1386; 
-const qt2BV = 1001.8; 
-const qt3BV = 2079; 
+var qt1BF = 1158; 
+var qt2BF = 1505.4; 
+var qt3BF = 1737; 
+var qt1C = 1056; 
+var qt2C = 1372.8; 
+var qt3C = 1584; 
+var qt1P = 1172.5; 
+var qt2P = 1524.25; 
+var qt3P = 1758.75; 
+var qt1BV = 1386; 
+var qt2BV = 1001.8; 
+var qt3BV = 2079; 
 
-const ip1BF = 71.24; 
-const ip2BF = 92.62; 
-const ip3BF = 106.87; 
-const ip1C = 57.31; 
-const ip2C = 74.5; 
-const ip3C = 85.97; 
-const ip1P = 84.65; 
-const ip2P = 110.04; 
-const ip3P = 126.97; 
-const ip1BV = 106.65; 
-const ip2BV = 138.52; 
-const ip3BV = 159.83; 
+var ip1BF = 71.24; 
+var ip2BF = 92.62; 
+var ip3BF = 106.87; 
+var ip1C = 57.31; 
+var ip2C = 74.5; 
+var ip3C = 85.97; 
+var ip1P = 84.65; 
+var ip2P = 110.04; 
+var ip3P = 126.97; 
+var ip1BV = 106.65; 
+var ip2BV = 138.52; 
+var ip3BV = 159.83; 
 
 $('#positivo').hide();
 $('#negativo').hide();
@@ -74,8 +74,8 @@ $('#consultar').click(function(e) {
     habitantes = $('#habitantes').val();
     dormitorios = $('#quartos').val();
 
-    let custoAluguel;
-    let nomeBairro;
+    var custoAluguel;
+    var nomeBairro;
 
     switch (bairro) {
         case 'bom-fim':
@@ -143,34 +143,8 @@ $('#consultar').click(function(e) {
         $('#result').css("background-color", "#5300008C");
     }
 
-    $('#extrato #fixos .fixos-preco').html(`
-    <li>Luz R$${luz}</li>
-    <li>Gás R$${gas}</li>
-    <li>Telefone/Internet R$${telefone}</li>
-    <li>Netflix R$${netflix}</li>
-    <li>Condomínio R$${condominio}</li>
-    <li>Alimentação R$${alimentacao}</li>
-    <li>Limpeza R$${limpeza}</li>
-    <li>Transporte R$${transporte}</li>
-    <h3>Total de custos fixos por mês: R$${fixos} </h3>`);
-
-    if(dormitorios == 1){
-        $('.IPTU-preco').html(`Para ${dormitorios} dormitório: R$${IPTU}`);
-    } else {
-        $('.IPTU-preco').html(`Para ${dormitorios} dormitórios: R$${IPTU}`);
-    }
-    
-    if(dormitorios == 1){
-        $('.aluguel-preco').html(`Para ${dormitorios} dormitório: R$${custoAluguel}`);
-    } else {
-        $('.aluguel-preco').html(`Para ${dormitorios} dormitórios: R$${custoAluguel}`);
-    }
-
+    $('#extrato').html('<table> <tr> <th>Custo</th> <th>Média em R$</th> </tr> <tr> <td>Luz</td> <td>' + luz + '</td> </tr><tr> <td>Gás</td> <td>' + gas + '</td> </tr><tr> <td>Telefone/Internet</td> <td>' + telefone + '</td> </tr><tr> <td>Netflix</td> <td>' + netflix + '</td> </tr><tr> <td>Condomínio</td> <td>' + condominio + '</td> </tr> <tr> <td>Alimentação</td> <td>' + alimentacao + '</td> </tr><tr> <td>Limpeza</td><td>' + limpeza + '</td> </tr><tr> <td>Transporte</td> <td>' + transporte +'</td> </tr><tr> <td>IPTU para ' + dormitorios + ' dormitório(s)</td> <td>' + IPTU + '</td></tr><tr><td>Aluguel para ' + dormitorios + ' dormitório(s)</td><td>' + custoAluguel + '</td></tr><tr><td>Total de custos</td><td>' + custoTotal + '</td> </tr><tr><td>Total por habitante</td><td>' + Math.ceil(Math.abs(custoTotal / habitantes)) + '</td> </tr> </table>');
     $('#extrato').show();
-
-    $('html, body').animate({
-        scrollTop: $("#result").offset().top
-    }, 300);
 
     if((receita - (custoTotal / habitantes)) > 0) {
         $('#positivo').show();
@@ -178,5 +152,11 @@ $('#consultar').click(function(e) {
         $('#negativo').show();
     }
 
+    $('html, body').animate({
+        scrollTop: $("#result").offset().top
+    }, 300);
+
     publishSampleMessage();
+
+
 });
