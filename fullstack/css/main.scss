@@ -1,0 +1,209 @@
+$colors: (
+    background-color: #16191f,
+    neutral: #f4f4f4,
+    interested: #ffc400,
+    not-interested: #a0a0a0,
+    learned: #00ff8c,
+    twitter-button: #09cbfc
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    
+    background-color: color(background-color);
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr 160px;
+    grid-template-areas: 
+    'header'
+    'content'
+    'footer';
+    
+    header {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        grid-area: header;
+        
+        h1 {
+            color: color(neutral);
+            text-align: center;
+            padding-bottom: 2rem;
+        }
+        
+        nav {
+            color: color(neutral); 
+            
+            p {
+                text-align: center;
+            }
+            
+            button {
+                background-color: color(neutral);
+                display: inline-block;
+                cursor: pointer;
+                color: color(background-color);
+                padding: 0.7rem 1rem;
+                margin: 1.6rem 1rem;
+                text-decoration: none;
+                border: solid 0.1rem color(neutral);
+                border-radius: 3rem;
+            
+                transition-duration: 0.6s;
+                transition-property: padding;
+            }
+
+            button:focus {
+                outline: 0;
+            }
+
+            button:active,
+            button:hover {
+                padding: 0.7rem 1.6rem;
+            }
+            
+            .caption {
+                display: flex;
+                justify-content: center;
+                
+                span {
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+    
+    main {
+        padding-left: 30%;
+        grid-area: content;
+        
+        .folder {
+            cursor: pointer;
+        }
+
+        li {
+            transition-duration: 0.6s;
+            transition-property: all;
+        }
+
+        li:hover {
+            padding-left: 1rem;
+        }
+    }
+    
+    footer {
+        align-self: center;
+        text-align: center;
+        padding: 0 2rem;
+        grid-area: footer;
+
+        p {
+            color: color(neutral);
+            margin: 0.2rem;
+
+            a {
+                color: color(twitter-button);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .interested {
+        color: color(interested);
+    }
+    
+    .not-interested {
+        color: color(not-interested);
+    }
+    
+    .learned {
+        color: color(learned);
+    }
+}
+
+.no-tree * {
+    list-style-type: none;
+}
+
+.no-tree ul {
+    padding-left: 25px;
+}
+
+ul.no-tree, .no-tree li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.no-tree, ul.no-tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.no-tree ul {
+    margin-left: 30px;
+}
+
+/* TREE CODE CORTESIA DA COD3R ACADEMY */
+
+.tree * {
+    list-style-type: none;
+}
+
+.tree ul {
+    padding-left: 25px;
+}
+
+.tree li a {
+    color: color(not-interested);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+ul.tree, .tree li {
+    padding-left: 0px;
+    padding-top: 5px;
+}
+
+ul.tree, ul.tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.tree ul {
+    margin-left: 30px;
+}
+
+ul.tree li {
+    margin: 0;
+    margin: 0 9px;
+    padding: 0 7px;
+    border-left: 1px solid color(not-interested);
+}
+
+ul.tree li:last-child {
+    border-left: none;
+}
+
+ul.tree li:before {
+    position:relative;
+    top: -0.3em;
+    height: 1em;
+    width: 12px;
+    color: color(not-interested);
+    border-bottom: 1px solid color(not-interested);
+    content: "";
+    display: inline-block;
+    left: -7px;
+}
+
+ul.tree li:last-child:before {
+    border-left: 1px solid color(not-interested);
+}

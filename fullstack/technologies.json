@@ -70,26 +70,26 @@ const technologies = [
                 "status": "LD"
               },  
               {
-                "name": "Animations (@keyframes)",
+                "name": "Transitions and Animations (@keyframes)",
                 "status": "LD"
               },
               {
                 "name": "SVG Animations",
-                "status": "IN"
-              },
-              {
-                "name": "BEM",
                 "status": "IN"
               }
             ]
           },
           {
             "name": "Scripting",
-            "status": "IN",
+            "status": "LD",
             "data": [
               {
+                "name": "SCSS",
+                "status": "LD"
+              },
+              {
                 "name": "Sass",
-                "status": "IN"
+                "status": "LD"
               },
               {
                 "name": "Less",
@@ -102,6 +102,24 @@ const technologies = [
               {
                 "name": "PostCSS",
                 "status": "NI"
+              }
+            ]
+          },
+          {
+            "name": "Guides and Methodologies",
+            "status": "IN",
+            "data": [
+              {
+                "name": "OOCSS",
+                "status": "IN"
+              },
+              {
+                "name": "BEM",
+                "status": "IN"
+              },
+              {
+                "name": "SMACSS",
+                "status": "IN"
               }
             ]
           },
