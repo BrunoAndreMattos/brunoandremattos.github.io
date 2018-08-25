@@ -1,0 +1,72 @@
+$neutral: #f4f4f4;
+$neutral2: #eee;
+$neutral3: #ddd;
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $neutral;
+    height: 100vh;
+    margin: 0;
+    
+    h1 {
+        margin: 0;
+        padding: 2rem 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        
+        div {
+            margin: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        div:hover {
+            cursor: pointer;
+            .checkmark {
+                background-color: $neutral3;
+            }
+        }
+
+        input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        input:checked {
+            .checkmark {
+                background-color: #2196F3;
+            }
+            
+            .checkmark:after {
+                display: block;
+            }
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+          }
+        
+        .checkmark {
+            height: 25px;
+            width: 25px;
+            background-color: $neutral2;
+            border-radius: 50%;
+            margin: 0.6rem;
+        }
+    }
+}
