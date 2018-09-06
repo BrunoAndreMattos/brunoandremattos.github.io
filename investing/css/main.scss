@@ -1,6 +1,7 @@
+// Last edit 06/09/2018
 $neutral: #f4f4f4;
-$neutral2: #eee;
-$neutral3: #ddd;
+$neutral-dark: darken($neutral, 10%);
+$blue: #2196F3;
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -19,32 +20,59 @@ body {
     form {
         display: flex;
         justify-content: center;
-        
+
         div {
             margin: 1rem;
             display: flex;
             align-items: center;
-
-            input {
-                position: absolute;
-                opacity: 0;
-            }
-            
-            .checkmark {
-                height: 25px;
-                width: 25px;
-                background-color: $neutral2;
-                border-radius: 50%;
-                margin: 0.6rem;
-            }
         }
 
         div:hover {
             cursor: pointer;
+
             .checkmark {
-                background-color: $neutral3;
+                background-color: $neutral-dark;
             }
         }
 
+        input[type=radio] {
+            opacity: 0;
+            position: absolute;
+        }
+
+        input:checked + .checkmark::after {
+            content: '';
+            display: block;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        input:checked + .checkmark {
+            background-color: $blue;
+        }
+
+        .checkmark {
+            height: 33px;
+            width: 33px;
+            background-color: $neutral-dark;
+            border-radius: 50%;
+            margin: 7px;
+        }
+    }
+
+    #link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        a {
+            text-decoration: none;
+            color: $blue;
+        }
     }
 }
