@@ -30,8 +30,8 @@ body header nav #hamburger input {
   width: 40px;
   height: 32px;
   position: fixed;
-  top: -7px;
-  left: -5px;
+  top: 8px;
+  left: 8px;
   cursor: pointer;
   opacity: 0;
   z-index: 2;
@@ -45,7 +45,7 @@ body header nav #hamburger span {
   margin: 5px;
   position: relative;
   background: #233D4D;
-  border-radius: 3px;
+  border-radius: 10px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
           transform-origin: 4px 0px;
@@ -90,9 +90,9 @@ body header nav #hamburger ul {
   width: 100%;
   height: auto;
   margin: -100px 0 0 -50px;
-  background-color: #233D4D;
-  padding-top: 90px;
+  padding-top: 100px;
   padding-bottom: 30px;
+  background-color: #233D4D;
   -webkit-font-smoothing: antialiased;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
@@ -108,10 +108,17 @@ body header nav #hamburger ul a {
   color: #f4f4f4;
   text-transform: uppercase;
   text-decoration: none;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
 }
 
 body header nav #hamburger ul a li {
+  background-color: #233D4D;
   padding: 1rem 0;
+}
+
+body header nav #hamburger ul a:hover {
+  color: #F8B30E;
 }
 
 body header nav #hamburger input:checked ~ ul {
@@ -121,5 +128,10 @@ body header nav #hamburger input:checked ~ ul {
 
 body header #my-pic {
   padding-top: 100px;
+}
+
+body header #my-pic img {
+  margin: auto;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */

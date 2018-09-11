@@ -1,5 +1,6 @@
 $neutral: #f4f4f4;
 $main: #233D4D;
+$secondary: #F8B30E;
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -28,8 +29,8 @@ body {
           width: 40px;
           height: 32px;
           position: fixed;
-          top: -7px;
-          left: -5px;
+          top: 8px;
+          left: 8px;
           
           cursor: pointer;
           
@@ -47,7 +48,7 @@ body {
           position: relative;
           
           background: $main;
-          border-radius: 3px;
+          border-radius: 10px;
           
           z-index: 1;
           
@@ -71,7 +72,7 @@ body {
           transform: rotate(45deg) translate(-2px, -1px);
           background: $neutral;
         }
-
+        
         input:checked ~ span:nth-last-child(3) {
           opacity: 0;
           transform: rotate(0deg) scale(0.2, 0.2);
@@ -88,26 +89,31 @@ body {
           width: 100%;
           height: auto;
           margin: -100px 0 0 -50px;
-          background-color: $main;
-
-          padding-top: 90px;
+          padding-top: 100px;
           padding-bottom: 30px;
+          background-color: $main;
           
           -webkit-font-smoothing: antialiased;
           
           transform-origin: 0% 0%;
           transform: translate(0, -100%);
-          
           transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
           a {
             color: $neutral;
             text-transform: uppercase;
             text-decoration: none;
+          
+            transition: color 0.4s;
             
             li {
+              background-color: $main;
               padding: 1rem 0;
             }
+          }
+          
+          a:hover {
+            color: $secondary;
           }
         }
 
@@ -120,6 +126,11 @@ body {
 
     #my-pic {
       padding-top: 100px;
+      
+      img {
+        margin: auto;
+        border-radius: 50%;
+      }
     }
   }
 
