@@ -13,94 +13,38 @@ body header nav {
 }
 
 body header nav #hamburger {
-  position: absolute;
+  display: block;
+  position: fixed;
   top: 10px;
   left: 10px;
-  height: 30px;
-  width: 30px;
-  background-color: white;
-}
-
-body header nav ul {
-  display: block;
-  list-style: none;
   width: 100%;
-  padding: 0;
-  margin: 0;
-  background-color: red;
-}
-
-body header nav ul a {
-  color: #f4f4f4;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-body header nav ul a li {
-  padding: 1rem;
-}
-
-body header #my-pic {
-  padding-top: 100px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  /* make it look decent enough */
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: #232323;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: tomato;
-}
-
-#hamburger {
-  display: block;
-  position: relative;
-  top: 50px;
-  left: 50px;
   z-index: 1;
   -webkit-user-select: none;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-#haburger input {
+body header nav #hamburger input {
   display: block;
   width: 40px;
   height: 32px;
-  position: absolute;
+  position: fixed;
   top: -7px;
   left: -5px;
   cursor: pointer;
   opacity: 0;
-  /* hide this */
   z-index: 2;
-  /* and place it over the hamburger */
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
-#haburger span {
+body header nav #hamburger span {
   display: block;
   width: 33px;
   height: 4px;
-  margin-bottom: 5px;
+  margin: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: #233D4D;
   border-radius: 3px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
@@ -111,78 +55,71 @@ a:hover {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#haburger span:first-child {
+body header nav #hamburger span:first-child {
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
 }
 
-#haburger span:nth-last-child(2) {
+body header nav #hamburger span:nth-last-child(2) {
   -webkit-transform-origin: 0% 100%;
           transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#haburger input:checked ~ span {
+body header nav #hamburger input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
           transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #f4f4f4;
 }
 
-/*
- * But let's hide the middle one.
- */
-#haburger input:checked ~ span:nth-last-child(3) {
+body header nav #hamburger input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   -webkit-transform: rotate(0deg) scale(0.2, 0.2);
           transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#haburger input:checked ~ span:nth-last-child(2) {
+body header nav #hamburger input:checked ~ span:nth-last-child(2) {
   -webkit-transform: rotate(-45deg) translate(0, -1px);
           transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu {
+body header nav #hamburger ul {
+  display: block;
   position: absolute;
-  width: 300px;
+  list-style: none;
+  width: 100%;
+  height: auto;
   margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  background: #ededed;
-  list-style-type: none;
+  background-color: #233D4D;
+  padding-top: 90px;
+  padding-bottom: 30px;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
-  -webkit-transform: translate(-100%, 0);
-          transform: translate(-100%, 0);
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li {
-  padding: 10px 0;
-  font-size: 22px;
+body header nav #hamburger ul a {
+  color: #f4f4f4;
+  text-transform: uppercase;
+  text-decoration: none;
 }
 
-/*
- * And let's slide it in from the left
- */
-#haburger input:checked ~ ul {
+body header nav #hamburger ul a li {
+  padding: 1rem 0;
+}
+
+body header nav #hamburger input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
+}
+
+body header #my-pic {
+  padding-top: 100px;
 }
 /*# sourceMappingURL=main.css.map */
