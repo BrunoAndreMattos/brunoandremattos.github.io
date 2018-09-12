@@ -1,10 +1,16 @@
 body {
+  background-color: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 }
 
 body header {
+  background-size: cover;
+  background-image: url("../img/bg1.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
   height: 100vh;
 }
 
@@ -131,7 +137,49 @@ body header #my-pic {
 }
 
 body header #my-pic img {
+  display: block;
   margin: auto;
-  border-radius: 50%;
+  width: 250px;
+  height: 240px;
+  border-radius: 30% 0;
+}
+
+body header h1 {
+  padding-top: 30px;
+  text-align: center;
+  color: #233D4D;
+}
+
+body header p {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #233D4D;
+  max-width: 80%;
+  margin: auto;
+}
+
+body header p a {
+  color: #BF2441;
+  text-decoration: none;
+}
+
+body main #projects {
+  background-color: #BF2441;
+  color: #F8B30E;
+}
+
+body main #projects .project {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+body main #projects .project img {
+  width: 80%;
+}
+
+body main #projects .project:hover {
+  background-color: #f4f4f4;
 }
 /*# sourceMappingURL=main.css.map */

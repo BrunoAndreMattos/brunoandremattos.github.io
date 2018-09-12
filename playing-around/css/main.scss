@@ -1,13 +1,20 @@
 $neutral: #f4f4f4;
 $main: #233D4D;
 $secondary: #F8B30E;
+$tertiary: #BF2441;
 
 body {
+  background-color: $neutral;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
 
   header {
+    background-size: cover;
+    background-image: url('../img/bg1.jpeg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
     height: 100vh;
 
     nav {
@@ -128,17 +135,70 @@ body {
       padding-top: 100px;
       
       img {
+        display: block;
         margin: auto;
-        border-radius: 50%;
+        width: 250px;
+        height: 240px;
+        border-radius: 30% 0;
+      }
+    }
+
+    h1 {
+      padding-top: 30px;
+      text-align: center;
+      color: $main;
+    }
+    
+    p {
+      padding-top: 30px; 
+      text-align: center;
+      font-size: 1.3rem;
+      color: $main;
+      max-width: 80%;
+      margin: auto;
+      
+      a {
+        color: $tertiary;
+        text-decoration: none;
       }
     }
   }
 
   main {
+    
+    #projects {
+      background-color: $tertiary;
+      color: $secondary;
 
+      .project {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .project:hover {
+        background-color: $neutral
+      }
+    }
+
+    
+    #what-i-know {
+
+    }
+
+    #about-me {
+
+    }
   }
+  
+  footer {    
 
-  footer {
+    #contact {
 
+    }
   }
 }
