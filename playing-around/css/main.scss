@@ -167,12 +167,19 @@ body {
   main {
     
     #projects {
-      background-color: $tertiary;
+      background-color: $main;
       color: $secondary;
+      
+      h2 {
+        margin: 0;
+        text-align: center;
+        padding: 30px;
+      }
 
       .project {
         width: 100%;
         padding: 10px 0;
+        margin: 0;
         text-align: center;
 
         img {
@@ -184,21 +191,37 @@ body {
         background-color: $neutral
       }
     }
-
     
     #what-i-know {
-
+      background-color: $main;
+      margin: 0;
+      padding: 0;
+      
+      ul {
+        margin: 0;
+        list-style-type: none;
+      }
     }
 
     #about-me {
-
+      height: 10px;
+      background-color: $secondary;
     }
   }
   
   footer {    
-
+    background-color: $secondary;
+    margin: 0;
+    padding: 0;
+    
     #contact {
+      ul {
+        margin: 0;
+      }
+    }
 
+    p {
+      margin: 0;
     }
   }
 }

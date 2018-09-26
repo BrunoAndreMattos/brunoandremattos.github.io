@@ -165,13 +165,20 @@ body header p a {
 }
 
 body main #projects {
-  background-color: #BF2441;
+  background-color: #233D4D;
   color: #F8B30E;
+}
+
+body main #projects h2 {
+  margin: 0;
+  text-align: center;
+  padding: 30px;
 }
 
 body main #projects .project {
   width: 100%;
   padding: 10px 0;
+  margin: 0;
   text-align: center;
 }
 
@@ -181,5 +188,35 @@ body main #projects .project img {
 
 body main #projects .project:hover {
   background-color: #f4f4f4;
+}
+
+body main #what-i-know {
+  background-color: #233D4D;
+  margin: 0;
+  padding: 0;
+}
+
+body main #what-i-know ul {
+  margin: 0;
+  list-style-type: none;
+}
+
+body main #about-me {
+  height: 10px;
+  background-color: #F8B30E;
+}
+
+body footer {
+  background-color: #F8B30E;
+  margin: 0;
+  padding: 0;
+}
+
+body footer #contact ul {
+  margin: 0;
+}
+
+body footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
