@@ -1,25 +1,27 @@
 $neutral: #f4f4f4;
-$main: #233D4D;
-$secondary: #F8B30E;
-$tertiary: #BF2441;
+$main: #233D4D;     
+$secondary: rgb(255, 192, 46);
+$tertiary: rgb(255, 17, 61);
 
 body {
   background-color: $neutral;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-
+  
   header {
     background-size: cover;
     background-image: url('../img/bg1.jpeg');
     background-repeat: no-repeat;
     background-position: center center;
+    // clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 63%);
+    // background-color: $tertiary;
     width: 100%;
     height: 100vh;
-
+    
     nav {
       text-align: center;
-
+      
       #hamburger {
         display: block;
         position: fixed;
@@ -137,15 +139,15 @@ body {
       img {
         display: block;
         margin: auto;
-        width: 250px;
+        width: 200px;
         height: auto;
         border-radius: 30% 0;
-        box-shadow: 3px 3px 6px 0px rgba(0,0,0,0.15);
+        box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.2);
       }
     }
 
     h1 {
-      padding-top: 20px;
+      // padding-top: 20px;
       text-align: center;
       color: $main;
       text-shadow: 3px 3px rgba(0, 0, 0, 0.15);      
@@ -153,7 +155,6 @@ body {
     
     p { 
       text-align: center;
-      color: $main;
       max-width: 90%;
       margin: auto;
       
@@ -162,7 +163,7 @@ body {
   }
 
   main {
-    
+
     #projects {
       background-color: $secondary;
       
@@ -196,7 +197,7 @@ body {
 
           img {
             width: 80%;
-            box-shadow: 3px 3px 8px 1px rgba(0,0,0,0.15);
+            box-shadow: 0px 3px 8px 3px rgba(0,0,0,0.2);
           }
         }
       }

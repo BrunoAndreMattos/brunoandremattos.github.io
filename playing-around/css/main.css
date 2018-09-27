@@ -124,7 +124,7 @@ body header nav #hamburger ul a li {
 }
 
 body header nav #hamburger ul a:hover {
-  color: #F8B30E;
+  color: #ffc02e;
 }
 
 body header nav #hamburger input:checked ~ ul {
@@ -139,15 +139,14 @@ body header #my-pic {
 body header #my-pic img {
   display: block;
   margin: auto;
-  width: 250px;
+  width: 200px;
   height: auto;
   border-radius: 30% 0;
-  -webkit-box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.2);
 }
 
 body header h1 {
-  padding-top: 20px;
   text-align: center;
   color: #233D4D;
   text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
@@ -155,14 +154,13 @@ body header h1 {
 
 body header p {
   text-align: center;
-  color: #233D4D;
   max-width: 90%;
   margin: auto;
   color: #437593;
 }
 
 body main #projects {
-  background-color: #F8B30E;
+  background-color: #ffc02e;
 }
 
 body main #projects h1 {
@@ -198,8 +196,8 @@ body main #projects .project a p {
 
 body main #projects .project a img {
   width: 80%;
-  -webkit-box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.15);
-          box-shadow: 3px 3px 8px 1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
 body main #what-i-know {
@@ -215,11 +213,11 @@ body main #what-i-know ul {
 
 body main #about-me {
   height: 10px;
-  background-color: #F8B30E;
+  background-color: #ffc02e;
 }
 
 body footer {
-  background-color: #F8B30E;
+  background-color: #ffc02e;
   margin: 0;
   padding: 0;
 }
