@@ -1,16 +1,19 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ffaa00;
   height: 100vh;
   margin: 0;
 }
 
 body h1 {
+  font-size: 50px;
   margin: 0;
   padding: 2rem 0;
+  padding-top: 10%;
   width: 100%;
   text-align: center;
   display: block;
+  color: #014656;
 }
 
 body form {
@@ -32,12 +35,16 @@ body form div {
           align-items: center;
 }
 
+body form div p {
+  color: #014656;
+}
+
 body form div:hover {
   cursor: pointer;
 }
 
 body form div:hover .checkmark {
-  background-color: #dbdbdb;
+  background-color: #ffeecc;
 }
 
 body form input[type=radio] {
@@ -58,15 +65,19 @@ body form input:checked + .checkmark::after {
 }
 
 body form input:checked + .checkmark {
-  background-color: #2196F3;
+  background-color: #014656;
 }
 
 body form .checkmark {
   height: 33px;
   width: 33px;
-  background-color: #dbdbdb;
+  background-color: #cc8800;
   border-radius: 50%;
   margin: 7px;
+}
+
+body #result {
+  color: white;
 }
 
 body #link {
@@ -83,6 +94,6 @@ body #link {
 
 body #link a {
   text-decoration: none;
-  color: #2196F3;
+  color: #014656;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,20 +1,23 @@
 // Last edit 06/09/2018
-$neutral: #f4f4f4;
-$neutral-dark: darken($neutral, 10%);
-$blue: #2196F3;
+$main: rgb(255, 170, 0);
+$main-dark: darken($main, 10%);
+$secondary: #014656;
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: $neutral;
+    background-color: $main;
     height: 100vh;
     margin: 0;
     
     h1 {
+        font-size: 50px;
         margin: 0;
         padding: 2rem 0;
+        padding-top: 10%;
         width: 100%;
         text-align: center;
         display: block;
+        color: $secondary;
     }
 
     form {
@@ -25,13 +28,17 @@ body {
             margin: 1rem;
             display: flex;
             align-items: center;
+
+            p {
+                color: $secondary;
+            }
         }
 
         div:hover {
             cursor: pointer;
 
             .checkmark {
-                background-color: $neutral-dark;
+                background-color: lighten($main, 40%);
             }
         }
 
@@ -53,16 +60,20 @@ body {
         }
 
         input:checked + .checkmark {
-            background-color: $blue;
+            background-color: $secondary;
         }
 
         .checkmark {
             height: 33px;
             width: 33px;
-            background-color: $neutral-dark;
+            background-color: $main-dark;
             border-radius: 50%;
             margin: 7px;
         }
+    }
+
+    #result {
+        color: white;
     }
 
     #link {
@@ -72,7 +83,7 @@ body {
         
         a {
             text-decoration: none;
-            color: $blue;
+            color: $secondary;
         }
     }
 }
