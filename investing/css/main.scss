@@ -1,6 +1,7 @@
-// Last edit 06/09/2018
-$main: rgb(255, 170, 0);
-$main-dark: darken($main, 10%);
+// Last edit 29/09/2018
+// $main: rgb(255, 170, 0);
+$main: rgb(255, 183, 38);
+$main-dark: darken($main, 15%);
 $secondary: #014656;
 
 body {
@@ -8,6 +9,13 @@ body {
     background-color: $main;
     height: 100vh;
     margin: 0;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffd491+1,bf7f00+100 */
+    background: #ffd491; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffd491 1%, #bf7f00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffd491 1%,#bf7f00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffd491 1%,#bf7f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd491', endColorstr='#bf7f00',GradientType=0 ); /* IE6-9 */
     
     h1 {
         font-size: 50px;
@@ -30,6 +38,7 @@ body {
             align-items: center;
 
             p {
+                font-size: 20px;
                 color: $secondary;
             }
         }
@@ -73,7 +82,8 @@ body {
     }
 
     #result {
-        color: white;
+        padding: 30px 0;
+        color: $secondary;
     }
 
     #link {
@@ -84,6 +94,10 @@ body {
         a {
             text-decoration: none;
             color: $secondary;
+        }
+
+        a:hover {
+            color: white;
         }
     }
 }
