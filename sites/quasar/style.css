@@ -1,0 +1,274 @@
+
+body{
+	overflow-x: hidden;
+}
+
+/*Navegação*/
+nav{
+	background-color: rgba(0, 0, 0, 0);
+	height: 60px;
+}
+nav a{
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	-webkit-transition: color .3s ease-out;
+	-moz-transition: color .3s ease-out;
+	-o-transition: color .3s ease-out;
+	transition: color .3s ease-out;
+}
+nav a:hover{
+	color: orange;
+	-webkit-transition: color .3s ease-in;
+	-moz-transition: color .3s ease-in;
+	-o-transition: color .3s ease-in;
+	transition: color .3s ease-in;
+}
+nav ul{
+	display: inline-block;
+}
+nav li{
+	display: inline-block;
+	padding: 10px 10px;
+}
+h3{
+	text-decoration: none;
+}
+.direita{
+	float: right;
+	margin-right: 50px;
+}
+
+
+/*Título*/
+#main{
+	background-image: url(http://i.imgur.com/X8cARW9.jpg);
+	background-size: 2200px auto;
+	background-repeat: no-repeat;
+	height: 780px;
+}
+#titulo{
+	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 6px;
+	color: white;
+	text-align: center;
+	margin-top: 160px;
+	text-transform: uppercase;
+}
+#titulo h1{
+	font-size: 90px;
+	text-shadow: 5px 5px rgba(0, 0, 0, 0.4);
+	-webkit-transition: color .6s ease-out;
+		-moz-transition: color .6s ease-out;
+		-o-transition: color .6s ease-out;
+	transition: color .6s ease-out;
+}
+#titulo h1:hover{
+	color: orange;
+	-webkit-transition: color .6s ease-in;
+	-moz-transition: color .6s ease-in;
+	-o-transition: color .6s ease-in;
+	transition: color .6s ease-in;
+}
+#titulo p{
+	letter-spacing: 6px;
+	text-shadow: 2px 2px rgba(0, 0, 0, 0.4);
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+#gradient1{
+	margin-top: 332px;
+	height: 80px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,1) 100%);
+}
+
+
+
+/*Lugares Para Conhecer*/
+#lugares-para-conhecer{
+	font-family: 'Roboto Condensed', sans-serif;
+	background-color: black;
+}
+#lugares-para-conhecer h1{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+	padding: 55px 0px;
+	color: white;
+	text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+	font-size: 50px;
+}
+
+
+
+/*Os Lugares*/
+.conteudo {
+	max-width: 1150px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.cima{
+	padding: 0px 0px 50px 0px;
+	background-color: black;
+	-webkit-transition: background-color .3s ease-out;
+	-moz-transition: background-color .3s ease-out;
+	-o-transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out;
+}
+.cima:hover{
+	background-color: orange;
+	-webkit-transition: background-color .3s ease-in;
+	-moz-transition: background-color .3s ease-in;
+	-o-transition: background-color .3s ease-in;
+	transition: background-color .3s ease-in;
+}
+.baixo{
+	padding: 0px 0px 50px 0px;
+	background-color: black;
+	-webkit-transition: background-color .3s ease-out;
+	-moz-transition: background-color .3s ease-out;
+	-o-transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out;
+}
+.baixo:hover{
+	background-color: rgba(0,191,255,1);
+	-webkit-transition: background-color .3s ease-in;
+	-moz-transition: background-color .3s ease-in;
+	-o-transition: background-color .3s ease-in;
+	transition: background-color .3s ease-in;
+}
+.rochosos-gasosos{
+	text-align: center;
+	font-size: 50px;
+	margin-top: 60px;
+	padding-bottom: 30px;
+	color: rgba(0,0,0, 0.6);
+}
+.conteudo a{
+	text-decoration: none;
+	color: white;
+	}
+.conteudo h3{
+	text-align: left;
+	text-shadow: 2px 2px rgba(0, 0, 0, .6);
+}
+.lua-img{
+	background-image: url(http://i.imgur.com/uxmbeUY.png);
+	background-repeat: none;
+	height: 300px;
+	max-width: 300px;
+}
+.mercurio-img{
+	background-image: url(http://i.imgur.com/v8pfzD3.png);
+	background-repeat: none;
+	height: 300px;
+	max-width: 300px;
+}
+.marte-img{
+	background-image: url(http://i.imgur.com/5hwn5GL.png);
+	background-repeat: none;
+	height: 300px;
+	max-width: 300px;
+}
+.ou{
+	height: 50px;
+	text-align: center;
+	padding: auto 0px;
+	color: white;
+	text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+}
+.jupiter-img{
+	background-image: url(https://i.imgur.com/zh8u7Tg.png);
+	background-repeat: none;
+	height: 300px;
+	max-width: 300px;
+}
+.netuno-img{
+	background-image: url(http://i.imgur.com/lc7FhsG.png);
+	background-repeat: none;
+	height: 300px;
+	max-width: 300px;
+}
+.urano-img{
+	background-image: url(http://i.imgur.com/NtT3o33.png);
+	background-repeat: none;
+	height: 300px;
+	max-width: 300px;
+}
+
+
+
+
+/*Recomendações*/
+#recomendacoes{
+	/* use this for footer background-color: rgba(216,216,216,1);*/
+	background-color: black;
+}
+#recomendacoes h1{
+	margin-top: 0px;
+	text-align: center;
+	padding: 60px 0px 0px 0px;
+	color: white;
+	background-color: black;
+	text-shadow: 2px 2px rgba(255, 255, 255, 0.3);
+	font-size: 50px;
+}
+#recomendacoes h4{
+	color: rgba(0,191,255,1);
+	padding-top: 80px;
+	font-size: 25px;
+	text-align: center;
+}
+#recomendacoes p{
+	color: gray;
+	font-size: 16px;
+	text-align: left;
+	height: 150px;
+}
+.personalidades1{
+	margin: 80px auto;
+	background-image: url(https://i.imgur.com/9OJflb4.png);
+	background-repeat: none;
+	height: 250px;
+	max-width: 250px;
+	border: 2px solid rgba(0,191,255,1);
+	border-radius: 100%
+}
+.personalidades2{
+	margin: 80px auto;
+	background-image: url(https://i.imgur.com/YEklq1a.jpg);
+	background-repeat: none;
+	height: 250px;
+	max-width: 250px;
+	border: 2px solid rgba(0,191,255,1);
+	border-radius: 100%
+}
+.personalidades3{
+	margin: 80px auto;
+	background-image: url(https://i.imgur.com/FObGnGe.jpg);
+	background-repeat: none;
+	height: 250px;
+	max-width: 250px;
+	border: 2px solid rgba(0,191,255,1);
+	border-radius: 100%
+}
+
+
+
+
+/*Footer*/
+footer{
+	height: 62px;
+	background-color: rgba(0,191,255,1);
+}
+.footer{
+	text-align: right;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-right: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+}

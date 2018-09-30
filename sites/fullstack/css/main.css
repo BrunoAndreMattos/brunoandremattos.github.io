@@ -1,0 +1,210 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #16191f;
+  display: -ms-grid;
+  display: grid;
+  min-height: 100vh;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 20% 1fr 160px;
+      grid-template-rows: 20% 1fr 160px;
+      grid-template-areas: 'header' 'content' 'footer';
+}
+
+body header {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+body header h1 {
+  color: #f4f4f4;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+body header nav {
+  color: #f4f4f4;
+}
+
+body header nav p {
+  text-align: center;
+}
+
+body header nav button {
+  background-color: #f4f4f4;
+  display: inline-block;
+  cursor: pointer;
+  color: #16191f;
+  padding: 0.7rem 1rem;
+  margin: 1.6rem 1rem;
+  text-decoration: none;
+  border: solid 0.1rem #f4f4f4;
+  border-radius: 3rem;
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: padding;
+  transition-property: padding;
+}
+
+body header nav button:focus {
+  outline: 0;
+}
+
+body header nav button:active,
+body header nav button:hover {
+  padding: 0.7rem 1.6rem;
+}
+
+body header nav .caption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header nav .caption span {
+  padding: 0 1rem;
+}
+
+body main {
+  padding-left: 30%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
+}
+
+body main .folder {
+  cursor: pointer;
+}
+
+body main li {
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-transition-property: all;
+  transition-property: all;
+}
+
+body main li:hover {
+  padding-left: 1rem;
+}
+
+body footer {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  padding: 0 2rem;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}
+
+body footer p {
+  color: #f4f4f4;
+  margin: 0.2rem;
+}
+
+body footer p a {
+  color: #09cbfc;
+  text-decoration: none;
+}
+
+body .interested {
+  color: #ffc400;
+}
+
+body .not-interested {
+  color: #a0a0a0;
+}
+
+body .learned {
+  color: #00ff8c;
+}
+
+.no-tree * {
+  list-style-type: none;
+}
+
+.no-tree ul {
+  padding-left: 25px;
+}
+
+ul.no-tree, .no-tree li {
+  padding-left: 0px;
+  padding-top: 5px;
+}
+
+ul.no-tree, ul.no-tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.no-tree ul {
+  margin-left: 30px;
+}
+
+/* TREE CODE CORTESIA DA COD3R ACADEMY */
+.tree * {
+  list-style-type: none;
+}
+
+.tree ul {
+  padding-left: 25px;
+}
+
+.tree li a {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+ul.tree, .tree li {
+  padding-left: 0px;
+  padding-top: 5px;
+}
+
+ul.tree, ul.tree ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.tree ul {
+  margin-left: 30px;
+}
+
+ul.tree li {
+  margin: 0;
+  margin: 0 9px;
+  padding: 0 7px;
+  border-left: 1px solid #a0a0a0;
+}
+
+ul.tree li:last-child {
+  border-left: none;
+}
+
+ul.tree li:before {
+  position: relative;
+  top: -0.3em;
+  height: 1em;
+  width: 12px;
+  color: #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+  content: "";
+  display: inline-block;
+  left: -7px;
+}
+
+ul.tree li:last-child:before {
+  border-left: 1px solid #a0a0a0;
+}
+/*# sourceMappingURL=main.css.map */

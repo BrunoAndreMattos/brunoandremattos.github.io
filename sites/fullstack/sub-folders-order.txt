@@ -1,0 +1,15 @@
+Concepts
+Package Manager
+Templating Tools
+Scripting Language
+Guides and Methodologies
+Important Libraries
+Specific Libraries
+Frameworks
+Testing
+Tools
+
+Iterations:
+    Add classification
+    Add content
+    Wonder if I want to learn
