@@ -1,0 +1,218 @@
+* {
+  font-family: 'Montserrat', 'sans-serif';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #16191f;
+}
+
+@media (min-width: 840px) {
+  body {
+    height: 100vh;
+  }
+}
+
+body header {
+  background: url("../img/ap.png") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  height: 1000px;
+}
+
+@media (min-width: 840px) {
+  body header {
+    height: 100%;
+  }
+}
+
+body header h1 {
+  margin: 0;
+  padding: 3rem 0;
+  color: #fdc44a;
+  letter-spacing: 0.1rem;
+  display: block;
+  text-align: center;
+}
+
+body header h2 {
+  color: #f4f4f4;
+  padding: 1rem;
+  display: inline-block;
+  letter-spacing: 0.1rem;
+}
+
+body header p {
+  display: block;
+  font-size: 1.2rem;
+  color: #f4f4f4;
+}
+
+@media (min-width: 840px) {
+  body header p {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+body header p strong {
+  letter-spacing: 0.1rem;
+}
+
+body header input,
+body header #bairro {
+  padding: 1rem 0;
+  border-style: none;
+  border-radius: 3rem;
+  margin: 0;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 840px) {
+  body header input,
+  body header #bairro {
+    display: inline-block;
+    padding: 1rem;
+    text-align: left;
+    width: 20%;
+  }
+}
+
+body header #bairro {
+  padding-left: 1rem;
+}
+
+body header .select {
+  padding-top: 1rem;
+}
+
+body header .select p {
+  padding-right: 0.5rem;
+  display: inline;
+}
+
+body header select {
+  padding: 1rem 0.5rem;
+  border-style: none;
+  border-radius: 3rem;
+  margin: 0;
+  text-align: center;
+}
+
+body header input:focus,
+body header select:focus,
+body header button:focus {
+  outline: 0;
+}
+
+body header button {
+  background-color: #fdc44a;
+  cursor: pointer;
+  color: #16191f;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
+  text-decoration: none;
+  border: solid 0.2rem #fdc44a;
+  border-radius: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 840px) {
+  body header button {
+    width: auto;
+    padding: 1rem;
+  }
+}
+
+body header button:hover {
+  cursor: pointer;
+}
+
+body main {
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+body main .modal {
+  padding-top: 10%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+body main .modal #modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body main .modal #modal-content #result {
+  margin: auto;
+  width: 100%;
+  color: #f4f4f4;
+  padding: 1.3rem 0;
+}
+
+body main .modal #modal-content #result .fechar {
+  background: none;
+  right: 0;
+}
+
+body main .modal #modal-content #result h2 {
+  margin: 0;
+}
+
+body main .modal #modal-content #result P {
+  margin: 0;
+  padding: 0;
+}
+
+body main .modal #modal-content #extrato {
+  background-color: #f4f4f4;
+}
+
+body main .modal #modal-content #extrato table {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+  color: #16191f;
+}
+
+body main .modal #modal-content #extrato table th {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  color: #16191f;
+}
+
+body main .modal #modal-content #extrato table tr:nth-child(even) {
+  background-color: #fed47c;
+}
+
+body footer {
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+  background-color: #fdc44a;
+}
+
+body footer p {
+  margin: 0;
+  color: #16191f;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Quanto Custa Morar Sozinho?</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.13.0.js"></script>
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <h1>Quanto custa <span id="tipo"></span>?</h1>
+      <h3></h3>
+      <form>
+
+        <p>Meus rendimentos por mês</p>
+        <input id="receita" type="text" name="rendimentos" placeholder="ex. 1200"> <br>
+
+        <p>Bairro</p>
+        <select name="bairro" id="bairro">
+          <option value="bom-fim">Bom Fim</option>
+          <option value="centro">Centro</option>
+          <option value="petropolis">Petropolis</option>
+          <option value="bela-vista">Bela Vista</option>
+        </select>
+
+        <div class="select">
+          <p>Habitantes</p>
+          <select name="quartos" id="habitantes">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <div class="select">
+          <p>Dormitorios</p>
+          <select name="quartos" id="quartos">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+
+        <button id="consultar" type="submit">Consultar!</button>
+      </form>
+    </header>
+    
+  <main>
+    <div id="modal" class="modal">
+      <div id="modal-content">
+        <div id="result"></div>
+        <div id="extrato"></div>
+      </div>
+    </div>
+    
+    <div id="g-form">
+      <iframe id="positivo" style="width: 100%; height: 1900px" src="https://docs.google.com/forms/d/e/1FAIpQLSdWv8UV2qgxRmCOlNhqmYYLBTjc7tO1_APPxNquHYzi8yw02g/viewform"></iframe>
+      <iframe id="negativo" style="width: 100%; height: 1900px" src="https://docs.google.com/forms/d/e/1FAIpQLSfeVORgsPbrBwOhqdb2J_VFKeBBEknKozF2MqepSJ97-bEU2Q/viewform"></iframe>
+    </div>
+  </main>
+      
+  <footer>
+    <p>
+      All rights reserved.
+    </p>
+  </footer>
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+  </script>
+  <script src="main.js"></script>
+  </body>
+</html>

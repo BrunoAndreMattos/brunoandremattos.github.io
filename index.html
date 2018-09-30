@@ -1,70 +1,126 @@
+<!-- Last Edit 29/09/2018 -->
+<!-- Make it have 2 languages -->
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Quanto Custa Morar Sozinho?</title>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=ed/ge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.13.0.js"></script>
-    <link href="main.css" rel="stylesheet">
-  </head>
-
-  <body>
+    <link rel="stylesheet" href="css/main.css">
+    <title>My Portfolio</title>
+</head>
+<body>
     <header>
-      <h1>Quanto custa morar sozinho?</h1>
-      <h3></h3>
-      <form>
-        <div class="input-section">
-          <p>Meus rendimentos por mês</p>
-          <input id="receita" type="text" name="rendimentos" placeholder="ex. 1200">
+        <nav>
+            <div id="hamburger">
+                <input id="check-burger" type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                    <a href="#projects"><li class="item-menu"> Projects </li></a>
+                    <a href="#what-i-know"><li class="item-menu"> What I Know</li></a>
+                    <a href="#about-me"><li class="item-menu"> About Me</li></a>
+                    <a href="#contact"><li class="item-menu"> Contact</li></a>
+                </ul>
+            </div>
+        </nav>
+        <div id="my-pic">
+            <img src="img/eu.png" alt="A picture of me">
         </div>
-        <div class="input-section">
-          <p>Bairro</p>
-          <select name="bairro" id="bairro">
-            <option value="bom-fim">Bom Fim</option>
-            <option value="centro">Centro</option>
-            <option value="petropolis">Petropolis</option>
-            <option value="bela-vista">Bela Vista</option>
-          </select>
-        </div>
-        <div class="input-section">
-          <p>Habitantes</p>
-          <select name="quartos" id="habitantes">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
-        <div class="input-section">
-          <p>Dormitorios</p>
-          <select name="quartos" id="quartos">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-          </select>
-        </div>
-        <button id="consultar" type="submit">Consultar!</button>
-      </form>
-      <div id="result"></div>
+        <h1>Bruno André Mattos</h1>
+        <p>Computer Science Student | Web Developer | Finance and Investing Enthusiast | Aspiring Entrpreneur</p>
     </header>
-    
-  <main>
-    <div id="extrato"></div>
-    <div id="g-form">
-      <iframe id="positivo" style="width: 100%; height: 1900px" src="https://docs.google.com/forms/d/e/1FAIpQLSdWv8UV2qgxRmCOlNhqmYYLBTjc7tO1_APPxNquHYzi8yw02g/viewform"></iframe>
-      <iframe id="negativo" style="width: 100%; height: 1900px" src="https://docs.google.com/forms/d/e/1FAIpQLSfeVORgsPbrBwOhqdb2J_VFKeBBEknKozF2MqepSJ97-bEU2Q/viewform"></iframe>
-    </div>
-  </main>
-      
-  <footer></footer>
-  <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous">
-  </script>
-  <script src="main.js"></script>
-  </body>
+    <main>
+        <div id="projects">
+            <h1> Projects </h1>
+            <div class="project">
+                <a href="http://brunoandremattos.github.io/quasar/" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/quasar.png" alt="aaa">
+                    <h3>Quasar (2015)</h3>
+                    <p>A website for a fictional space tourism company. Applied knowledge of HTML, CSS and Bootstrap.</p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="http://brunoandremattos.github.io/fullstack/" target="_blank" rel="noopener noreferrer">
+                    <img src="img/fullstack.png" alt="aaa">
+                    <h3>Full Stack Web Development (2018)</h3>
+                    <p>A website to keep track of my web development learnings. Constantly updated as I learn. Applied knowledge of HTML, SCSS, CSS animations, DOM and JSON manipulation with jQuery JavaScript.</p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="http://brunoandremattos.github.io/investing/" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/quasar.png" alt="aaa">
+                    <h3>Investing Guide (2018)</h3>
+                    <p>A little joke website for my friends that like to lose money. Applied knowledge of HTML, CSS and vanilla JavaScript</p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="http://brunoandremattos.github.io/quantocusta/" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/quasar.png" alt="aaa">
+                    <h3>Quanto Custa (2018)</h3>
+                    <p>A website made as a minimum viable product after we validated our market on the Startup Weekend Porto Alegre 2018 FinTech. Applied knowledge of HTML, SCCS, CSS animations, and some hardcoded jQuery JavaScript for data.</p>
+                </a>
+            </div>
+            <div class="project">
+                <a href="http://brunoandremattos.github.io/universalmeat/" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/quasar.png" alt="aaa">
+                    <h3>Universal Meat (Work in progress)</h3>
+                    <p>A website for a fictional company that sells lab grown meat. Still in the wireframing process.</p>
+                </a>
+            </div>
+        </div>
+        <div id="what-i-know">
+            <ul>
+                <li>HTML</li>
+                <li>CSS
+                    <ul>
+                        <li>
+                            Sass/SCSS
+                        </li>
+                    </ul>
+                </li>
+                <li>JavaScript
+                    <ul>
+                        <li>
+                            Node.js
+                        </li>
+                        <li>
+                            jQuery
+                        </li>
+                    </ul>
+                </li>
+                <li>Bootstrap</li>
+                <li>PHP</li>
+                <li>SQL </li>
+                <li>Python
+                    <ul>
+                        <li>
+                            Django
+                        </li>
+                    </ul>
+                </li>
+                <li>C</li>
+                <li>Git</li>
+            </ul>
+        </div>
+        <div id="about-me">
+            <p>AAAA</p>
+        </div>
+    </main>
+    <footer>
+        <div id="contact">
+            <ul>
+                <li> <a href="http://" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li> <a href="http://" target="_blank" rel="noopener noreferrer">Github</a></li>
+                <li> <a href="http://" target="_blank" rel="noopener noreferrer">Inf</a></li>
+                <li> <a href="http://" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li> <a href="http://" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+        </div>
+        <p>Last Edit 10/09/2018</p>
+    </footer>
+</body>
+<script src="main.js"></script>
 </html>
