@@ -6,10 +6,15 @@ body {
 }
 
 body header {
-  background-size: cover;
-  background-image: url("../img/bg1.jpeg");
-  background-repeat: no-repeat;
-  background-position: center center;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff113d+0,ff6682+100 */
+  background: #ff113d;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ff113d 0%, #ff6682 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff113d', endColorstr='#ff6682',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   width: 100%;
   height: 100vh;
 }
@@ -139,24 +144,28 @@ body header #my-pic {
 body header #my-pic img {
   display: block;
   margin: auto;
-  width: 200px;
+  width: 180px;
   height: auto;
   border-radius: 30% 0;
-  -webkit-box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 body header h1 {
   text-align: center;
   color: #233D4D;
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
 }
 
 body header p {
   text-align: center;
   max-width: 90%;
   margin: auto;
-  color: #437593;
+  color: white;
+}
+
+body main {
+  margin: 0;
+  padding: 0;
 }
 
 body main #projects {
@@ -168,7 +177,7 @@ body main #projects h1 {
   text-align: center;
   padding: 50px;
   color: #233D4D;
-  text-shadow: 3px 3px rgba(0, 0, 0, 0.15);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
 }
 
 body main #projects .project {
@@ -212,12 +221,26 @@ body main #what-i-know ul {
 }
 
 body main #about-me {
-  height: 10px;
+  margin: 0;
+  height: 50px;
   background-color: #ffc02e;
+}
+
+body main #about-me p {
+  margin: 0;
 }
 
 body footer {
   background-color: #ffc02e;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff113d+0,ff6682+100 */
+  background: #ff6682;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ff6682 0%, #ff113d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6682', endColorstr='#ff113d',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   margin: 0;
   padding: 0;
 }
