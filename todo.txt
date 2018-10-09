@@ -1,0 +1,3 @@
+* Finish style of mobile first development
+* Begin style of desktop development
+* Update pictures of projects

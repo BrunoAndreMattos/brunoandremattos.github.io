@@ -1,0 +1,5 @@
+* Animate hide of folder items
+* Add hybrid frameworks
+* Add this https://github.com/adam-golab/react-developer-roadmap?utm_source=mybridge&utm_medium=blog&utm_campaign=read_more
+* Add this https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d
+* Update my skills
