@@ -253,7 +253,7 @@ body main #what-i-know ul li h2 {
 }
 
 body main #what-i-know ul li .prog-shape {
-  background-color: rgba(244, 244, 244, 0.2);
+  background-color: #ff1540;
   height: auto;
   width: 80%;
   margin: 20px auto;
