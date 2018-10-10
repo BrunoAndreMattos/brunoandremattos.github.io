@@ -247,11 +247,118 @@ body main #what-i-know ul {
   padding-bottom: 50px;
 }
 
-body main #what-i-know ul .prog-shape {
-  background-color: #f4f4f4;
-  height: 10px;
+body main #what-i-know ul li h2 {
+  padding-top: 20px;
+  color: #f4f4f4;
+}
+
+body main #what-i-know ul li .prog-shape {
+  background-color: rgba(244, 244, 244, 0.2);
+  height: auto;
   width: 80%;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+body main #what-i-know ul li .prog-shape p {
+  color: white;
+  padding: 3px;
+  margin: 0;
+}
+
+body main #what-i-know ul li .prog-shape #html {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 85%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #css {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 85%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #javascript {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 85%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #node {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #bootstrap {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 75%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #php {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 55%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #sql {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #python {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 75%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #django {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #c {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 65%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #git {
+  background-color: #f4f4f4;
+  height: 25px;
+  width: 75%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li h4 {
+  display: inline-block;
+  padding-right: 5px;
   margin: auto;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+body main #what-i-know ul li .plus {
+  display: inline-block;
+  padding: 5px;
+  border: 2px solid #f4f4f4;
+  border-radius: 10px;
+  margin: 3px;
+  letter-spacing: 1px;
+  font-size: 12px;
 }
 
 body main #about-me {

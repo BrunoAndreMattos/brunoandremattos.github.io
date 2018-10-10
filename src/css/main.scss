@@ -228,11 +228,121 @@ body {
         color: $neutral;
         padding-bottom: 50px;
 
-        .prog-shape {
-          background-color: $neutral;
-          height: 10px;
-          width: 80%;
-          margin: auto;
+        li {
+          h2 {
+            padding-top: 20px;
+            color: $neutral;
+          }
+
+          .prog-shape {
+            // background-color: lighten($tertiary, 0.8);
+            background-color: rgba($neutral, 0.2);
+            height: auto;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 10px;
+
+            p {
+              color: lighten($tertiary, 60%);
+              padding: 3px;
+              margin: 0;
+            }
+
+            #html {
+              background-color: $neutral;
+              height: 25px;
+              width: 85%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #css {
+              background-color: $neutral;
+              height: 25px;
+              width: 85%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #javascript {
+              background-color: $neutral;
+              height: 25px;
+              width: 85%;
+              border-radius: 0 10px 0 10px;
+            }
+            
+            #node {
+              background-color: $neutral;
+              height: 25px;
+              width: 15%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #bootstrap {
+              background-color: $neutral;
+              height: 25px;
+              width: 75%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #php {
+              background-color: $neutral;
+              height: 25px;
+              width: 55%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #sql {
+              background-color: $neutral;
+              height: 25px;
+              width: 15%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #python {
+              background-color: $neutral;
+              height: 25px;
+              width: 75%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #django {
+              background-color: $neutral;
+              height: 25px;
+              width: 15%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #c {
+              background-color: $neutral;
+              height: 25px;
+              width: 65%;
+              border-radius: 0 10px 0 10px;
+            }
+
+            #git {
+              background-color: $neutral;
+              height: 25px;
+              width: 75%;
+              border-radius: 0 10px 0 10px;
+            }
+          }
+
+          h4 {
+            display: inline-block;
+            padding-right: 5px;
+            margin: auto;
+            letter-spacing: 2px;
+            font-size: 12px;
+          }
+
+          .plus {
+            display: inline-block;
+            padding: 5px;
+            border: 2px solid $neutral;
+            border-radius: 10px;
+            margin: 3px;
+            letter-spacing: 1px;
+            font-size: 12px;
+          }
         }
       }
     }
