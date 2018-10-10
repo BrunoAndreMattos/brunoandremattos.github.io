@@ -1,9 +1,10 @@
 $neutral: #f4f4f4;
 $main: #233D4D;     
-$secondary: rgb(255, 192, 46);
-$tertiary: rgb(255, 17, 61);
+$secondary: #FFC02E;
+$tertiary: #FF113D;
 
 body {
+  scroll-behavior: smooth;
   background-color: $neutral;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -29,7 +30,6 @@ body {
         top: 10px;
         left: 10px;
         width: 100%;
-
         z-index: 1;
         user-select: none;
 
@@ -42,7 +42,6 @@ body {
           left: 8px;
           
           cursor: pointer;
-          
           opacity: 0;
           z-index: 2;
           -webkit-touch-callout: none;
@@ -59,11 +58,9 @@ body {
           border-radius: 10px;
           
           z-index: 1;
-          
           transform-origin: 4px 0px;
-          
           transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                      background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                      background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
                       opacity 0.55s ease;
         }
 
@@ -99,11 +96,9 @@ body {
           margin: -100px 0 0 -50px;
           padding-top: 100px;
           padding-bottom: 20px;
-
           background-color: $neutral;
 
           -webkit-font-smoothing: antialiased;
-          
           transform-origin: 0% 0%;
           transform: translate(0, -100%);
           transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
@@ -121,8 +116,7 @@ body {
           }
         }
 
-        input:checked ~ ul
-        {
+        input:checked ~ ul {
           transform: none;
         }
       }
@@ -137,7 +131,7 @@ body {
         width: 180px;
         height: auto;
         border-radius: 30% 0;
-        box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.4);
+        box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.4);
       }
     }
 

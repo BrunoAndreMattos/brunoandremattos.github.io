@@ -1,4 +1,5 @@
 body {
+  scroll-behavior: smooth;
   background-color: #f4f4f4;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -60,10 +61,10 @@ body header nav #hamburger span {
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
           transform-origin: 4px 0px;
-  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  -webkit-transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 body header nav #hamburger span:first-child {
@@ -142,8 +143,8 @@ body header #my-pic img {
   width: 180px;
   height: auto;
   border-radius: 30% 0;
-  -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 body header h1 {
@@ -164,7 +165,7 @@ body main {
 }
 
 body main #projects {
-  background-color: #ffc02e;
+  background-color: #FFC02E;
 }
 
 body main #projects h1 {
@@ -279,7 +280,7 @@ body main #about-me p {
 }
 
 body footer {
-  background-color: #ffc02e;
+  background-color: #FFC02E;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7cdb29+0,9bdd00+100 */
   background: #7cdb29;
   /* Old browsers */
