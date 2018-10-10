@@ -256,7 +256,7 @@ body main #what-i-know ul li .prog-shape {
   background-color: #ff1540;
   height: auto;
   width: 80%;
-  margin: 20px auto;
+  margin: 18px auto;
   border-radius: 10px;
 }
 
@@ -269,14 +269,14 @@ body main #what-i-know ul li .prog-shape p {
 body main #what-i-know ul li .prog-shape #html {
   background-color: #f4f4f4;
   height: 25px;
-  width: 85%;
+  width: 97%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #css {
   background-color: #f4f4f4;
   height: 25px;
-  width: 85%;
+  width: 90%;
   border-radius: 0 10px 0 10px;
 }
 
@@ -387,15 +387,14 @@ body main #about-me p {
 }
 
 body footer {
-  background-color: #FFC02E;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7cdb29+0,9bdd00+100 */
-  background: #7cdb29;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#233d4d+0,193b51+41,1e6991+100 */
+  background: #233d4d;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #7cdb29 0%, #9bdd00 100%);
+  background: linear-gradient(45deg, #233d4d 0%, #193b51 41%, #1e6991 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cdb29', endColorstr='#9bdd00',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#233d4d', endColorstr='#1e6991',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   margin: 0;
   padding: 0;
@@ -407,7 +406,7 @@ body footer #contact {
 
 body footer #contact h1 {
   text-align: center;
-  color: black;
+  color: #f4f4f4;
   margin: auto;
   margin-bottom: 50px;
   width: -webkit-fit-content;
@@ -415,15 +414,31 @@ body footer #contact h1 {
   width: fit-content;
   padding-top: 50px;
   padding-bottom: 8px;
-  border-bottom: solid black 4px;
+  border-bottom: solid #f4f4f4 4px;
 }
 
 body footer #contact ul {
   margin: 0;
+  padding: 0;
+}
+
+body footer #contact ul li {
+  list-style: none;
+  padding: 10px 0;
+  text-align: center;
+}
+
+body footer #contact ul li a {
+  color: #f4f4f4;
+  text-decoration: none;
+  text-align: center;
 }
 
 body footer p {
   text-align: center;
   margin: 0;
+  padding: 10px;
+  color: #f4f4f4;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=main.css.map */
