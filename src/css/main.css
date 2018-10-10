@@ -6,14 +6,14 @@ body {
 }
 
 body header {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff113d+0,ff6682+100 */
-  background: #ff113d;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#233d4d+0,193b51+41,1e6991+100 */
+  background: #233d4d;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #ff113d 0%, #ff6682 100%);
+  background: linear-gradient(45deg, #233d4d 0%, #193b51 41%, #1e6991 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff113d', endColorstr='#ff6682',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#233d4d', endColorstr='#1e6991',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   width: 100%;
   height: 100vh;
@@ -55,7 +55,7 @@ body header nav #hamburger span {
   height: 4px;
   margin: 5px;
   position: relative;
-  background: #233D4D;
+  background: #f4f4f4;
   border-radius: 10px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
@@ -80,7 +80,7 @@ body header nav #hamburger input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
           transform: rotate(45deg) translate(-2px, -1px);
-  background: #f4f4f4;
+  background: #233D4D;
 }
 
 body header nav #hamburger input:checked ~ span:nth-last-child(3) {
@@ -102,8 +102,8 @@ body header nav #hamburger ul {
   height: auto;
   margin: -100px 0 0 -50px;
   padding-top: 100px;
-  padding-bottom: 30px;
-  background-color: #233D4D;
+  padding-bottom: 20px;
+  background-color: #f4f4f4;
   -webkit-font-smoothing: antialiased;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
@@ -116,20 +116,15 @@ body header nav #hamburger ul {
 }
 
 body header nav #hamburger ul a {
-  color: #f4f4f4;
-  text-transform: uppercase;
+  color: #233D4D;
+  font-size: 20px;
   text-decoration: none;
   -webkit-transition: color 0.4s;
   transition: color 0.4s;
 }
 
 body header nav #hamburger ul a li {
-  background-color: #233D4D;
-  padding: 1rem 0;
-}
-
-body header nav #hamburger ul a:hover {
-  color: #ffc02e;
+  padding: 15px 0;
 }
 
 body header nav #hamburger input:checked ~ ul {
@@ -147,20 +142,20 @@ body header #my-pic img {
   width: 180px;
   height: auto;
   border-radius: 30% 0;
-  -webkit-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
 body header h1 {
   text-align: center;
-  color: #233D4D;
+  color: #f4f4f4;
 }
 
 body header p {
   text-align: center;
   max-width: 90%;
   margin: auto;
-  color: white;
+  color: #f4f4f4;
 }
 
 body main {
@@ -173,16 +168,22 @@ body main #projects {
 }
 
 body main #projects h1 {
-  margin: 0;
   text-align: center;
-  padding: 50px;
   color: #233D4D;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+  margin: auto;
+  margin-bottom: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 50px;
+  padding-bottom: 8px;
+  border-bottom: solid #233D4D 4px;
 }
 
 body main #projects .project {
   width: 100%;
   padding: 10px 0;
+  padding-bottom: 30px;
   margin: 0;
   text-align: center;
 }
@@ -210,43 +211,103 @@ body main #projects .project p {
 }
 
 body main #what-i-know {
-  background-color: #233D4D;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff113d+0,ff6682+100 */
+  background: #ff113d;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ff113d 0%, #ff6682 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff113d', endColorstr='#ff6682',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   margin: 0;
   padding: 0;
 }
 
 body main #what-i-know h1 {
-  margin: 0;
+  text-align: center;
+  color: #f4f4f4;
+  margin: auto;
+  margin-bottom: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 50px;
+  padding-bottom: 8px;
+  border-bottom: solid #f4f4f4 4px;
 }
 
 body main #what-i-know ul {
+  text-align: center;
+  padding: 0;
   margin: 0;
   list-style-type: none;
+  color: #f4f4f4;
+  padding-bottom: 50px;
+}
+
+body main #what-i-know ul .prog-shape {
+  background-color: #f4f4f4;
+  height: 10px;
+  width: 80%;
+  margin: auto;
 }
 
 body main #about-me {
   margin: 0;
   height: auto;
-  background-color: #ffc02e;
+  background-color: #f4f4f4;
+}
+
+body main #about-me h1 {
+  text-align: center;
+  color: #233D4D;
+  margin: auto;
+  margin-bottom: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 50px;
+  padding-bottom: 8px;
+  border-bottom: solid #233D4D 4px;
 }
 
 body main #about-me p {
   margin: 0;
+  padding: 30px;
+  color: #233D4D;
 }
 
 body footer {
   background-color: #ffc02e;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff113d+0,ff6682+100 */
-  background: #ff6682;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7cdb29+0,9bdd00+100 */
+  background: #7cdb29;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #ff6682 0%, #ff113d 100%);
+  background: linear-gradient(135deg, #7cdb29 0%, #9bdd00 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff6682', endColorstr='#ff113d',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7cdb29', endColorstr='#9bdd00',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   margin: 0;
   padding: 0;
+}
+
+body footer #contact {
+  padding-bottom: 30px;
+}
+
+body footer #contact h1 {
+  text-align: center;
+  color: black;
+  margin: auto;
+  margin-bottom: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 50px;
+  padding-bottom: 8px;
+  border-bottom: solid black 4px;
 }
 
 body footer #contact ul {
@@ -254,6 +315,7 @@ body footer #contact ul {
 }
 
 body footer p {
+  text-align: center;
   margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
