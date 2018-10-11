@@ -1,8 +1,7 @@
-// Last edit 29/09/2018
-// $main: rgb(255, 170, 0);
-$main: rgb(255, 183, 38);
-$main-dark: darken($main, 15%);
-$secondary: #014656;
+// Last edit 11/10/2018
+$main: #f4f4f4;
+$secondary: #00232b;
+$tertiary: #06FF32;
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -10,13 +9,6 @@ body {
     height: 100vh;
     margin: 0;
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffd491+1,bf7f00+100 */
-    background: #ffd491; /* Old browsers */
-    background: -moz-linear-gradient(top, #ffd491 1%, #bf7f00 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #ffd491 1%,#bf7f00 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #ffd491 1%,#bf7f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd491', endColorstr='#bf7f00',GradientType=0 ); /* IE6-9 */
-    
     h1 {
         font-size: 50px;
         margin: 0;
@@ -28,17 +20,17 @@ body {
         color: $secondary;
     }
 
-    form {
-        display: flex;
-        justify-content: center;
-
+    main {
+        width: fit-content;
+        margin: auto;
+        
         div {
             margin: 1rem;
-            display: flex;
-            align-items: center;
-
+            display: inline-block;
+            
             p {
                 font-size: 20px;
+                margin: 30px;
                 color: $secondary;
             }
         }
@@ -65,7 +57,7 @@ body {
             width: 13px;
             height: 13px;
             border-radius: 50%;
-            background-color: white;
+            background-color: $tertiary;
         }
 
         input:checked + .checkmark {
@@ -73,31 +65,30 @@ body {
         }
 
         .checkmark {
+            position: absolute;
+
             height: 33px;
             width: 33px;
-            background-color: $main-dark;
+            background-color: darken($main, 10%);
             border-radius: 50%;
-            margin: 7px;
         }
     }
 
     #result {
         padding: 30px 0;
-        color: $secondary;
+        color: $tertiary;
     }
 
     #link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+        text-align: center;
+
         a {
             text-decoration: none;
             color: $secondary;
         }
 
         a:hover {
-            color: white;
+            color: $tertiary;
         }
     }
 }
