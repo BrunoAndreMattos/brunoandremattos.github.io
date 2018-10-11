@@ -116,15 +116,10 @@ body header nav #hamburger ul {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-body header nav #hamburger ul a {
+body header nav #hamburger ul li {
   color: #233D4D;
   font-size: 20px;
   text-decoration: none;
-  -webkit-transition: color 0.4s;
-  transition: color 0.4s;
-}
-
-body header nav #hamburger ul a li {
   padding: 15px 0;
 }
 
@@ -199,27 +194,29 @@ body main #projects .project a img {
           box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
-body main #projects .project h3 {
+body main #projects .project a h3 {
   color: #233D4D;
+  margin: auto;
+  padding: 20px 0;
+  width: 80%;
 }
 
 body main #projects .project p {
   color: #233D4D;
-  text-align: center;
   margin: auto;
   width: 80%;
   padding-bottom: 20px;
 }
 
 body main #what-i-know {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff113d+0,ff6682+100 */
-  background: #ff113d;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d33d58+0,d62445+100 */
+  background: #d33d58;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(135deg, #ff113d 0%, #ff6682 100%);
+  background: linear-gradient(45deg, #d33d58 0%, #d62445 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff113d', endColorstr='#ff6682',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33d58', endColorstr='#d62445',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   margin: 0;
   padding: 0;
@@ -258,6 +255,8 @@ body main #what-i-know ul li .prog-shape {
   width: 80%;
   margin: 18px auto;
   border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 body main #what-i-know ul li .prog-shape p {
@@ -359,6 +358,8 @@ body main #what-i-know ul li .plus {
   margin: 3px;
   letter-spacing: 1px;
   font-size: 12px;
+  -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
 body main #about-me {
@@ -401,6 +402,7 @@ body footer {
 }
 
 body footer #contact {
+  margin: auto;
   padding-bottom: 30px;
 }
 
@@ -417,22 +419,21 @@ body footer #contact h1 {
   border-bottom: solid #f4f4f4 4px;
 }
 
-body footer #contact ul {
-  margin: 0;
-  padding: 0;
+body footer #contact #icons {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 
-body footer #contact ul li {
-  list-style: none;
-  padding: 10px 0;
-  text-align: center;
-  color: #f4f4f4;
-}
-
-body footer #contact ul li a {
-  color: #f4f4f4;
+body footer #contact #icons a {
+  margin: auto;
+  padding: 10px;
   text-decoration: none;
-  text-align: center;
+}
+
+body footer #contact #icons a .svg {
+  fill: #f4f4f4;
 }
 
 body footer p {
@@ -441,5 +442,6 @@ body footer p {
   padding: 10px;
   color: #f4f4f4;
   letter-spacing: 1px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=main.css.map */
