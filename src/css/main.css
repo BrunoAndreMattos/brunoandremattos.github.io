@@ -128,11 +128,15 @@ body header nav #hamburger input:checked ~ ul {
           transform: none;
 }
 
-body header #my-pic {
+body header #click-aux {
+  height: 100vh;
+}
+
+body header #click-aux #my-pic {
   padding-top: 100px;
 }
 
-body header #my-pic img {
+body header #click-aux #my-pic img {
   display: block;
   margin: auto;
   width: 180px;
@@ -142,12 +146,12 @@ body header #my-pic img {
           box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
-body header h1 {
+body header #click-aux h1 {
   text-align: center;
   color: #f4f4f4;
 }
 
-body header p {
+body header #click-aux p {
   text-align: center;
   max-width: 90%;
   margin: auto;

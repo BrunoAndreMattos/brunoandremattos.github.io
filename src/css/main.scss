@@ -117,29 +117,33 @@ body {
       }
     }
 
-    #my-pic {
-      padding-top: 100px;
+    #click-aux {
+      height: 100vh;
       
-      img {
-        display: block;
-        margin: auto;
-        width: 180px;
-        height: auto;
-        border-radius: 30% 0;
-        box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.4);
+      #my-pic {
+        padding-top: 100px;
+        
+        img {
+          display: block;
+          margin: auto;
+          width: 180px;
+          height: auto;
+          border-radius: 30% 0;
+          box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.4);
+        }
       }
-    }
-
-    h1 {
-      text-align: center;  
-      color: $neutral;  
-    }
-    
-    p { 
-      text-align: center;
-      max-width: 90%;
-      margin: auto;
-      color: $neutral;
+  
+      h1 {
+        text-align: center;  
+        color: $neutral;  
+      }
+      
+      p { 
+        text-align: center;
+        max-width: 90%;
+        margin: auto;
+        color: $neutral;
+      }
     }
   }
 
