@@ -77,3 +77,28 @@ document.querySelector('#m-contact').addEventListener('click', () => {
 
     myScroll(elem);
 });
+
+// Close the menu by clicking out
+document.getElementById('click-aux').addEventListener('click', () => {
+    const menu = document.getElementById('check-burger');
+
+    if(menu.checked == true) {
+        menu.click();
+    }
+});
+
+document.querySelector('main').addEventListener('click', () => {
+    const menu = document.getElementById('check-burger');
+
+    if(menu.checked == true) {
+        menu.click();
+    }
+});
+
+document.querySelector('footer').addEventListener('click', () => {
+    const menu = document.getElementById('check-burger');
+
+    if(menu.checked == true) {
+        menu.click();
+    }
+});
