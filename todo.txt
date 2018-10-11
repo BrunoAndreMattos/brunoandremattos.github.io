@@ -3,3 +3,11 @@
 * Update pictures of projects
 * Make it multi language
 * Make images size smaller
+* Add good animations as user scrolls
+
+feedback suggestions and corrections:
+* Exit hamburger menu by clicking out
+* document.getElementById(“container”),addEventListener(“click”, () => {
+    If (“open” in document.getElementById(“menu”).classList)
+    hamburguer.click();
+})
