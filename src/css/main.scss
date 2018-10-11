@@ -1,7 +1,7 @@
 $neutral: #f4f4f4;
 $main: #233D4D;     
 $secondary: #FFC02E;
-$tertiary: #FF113D;
+$tertiary: #d33d58;
 
 body {
   scroll-behavior: smooth;
@@ -232,7 +232,7 @@ body {
           }
 
           .prog-shape {
-            background-color: lighten($tertiary, 0.8);
+            background-color: darken($tertiary, 5%);
             // background-color: rgba($neutral, 0.2);
             height: auto;
             width: 80%;
