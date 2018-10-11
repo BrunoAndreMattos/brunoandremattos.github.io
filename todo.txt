@@ -1,15 +1,6 @@
-* Finish style of mobile first development
 * Begin style of desktop development
 * Update pictures of projects
 * Make it multi language
 * Make images size smaller
 * Add good animations as user scrolls
 * Create and add fav icon
-
-feedback suggestions and corrections:
-* Exit hamburger menu by clicking out
-* document.getElementById(“container”),addEventListener(“click”, () => {
-    If (“open” in document.getElementById(“menu”).classList)
-    hamburguer.click();
-})
-* Remove progress bars backshadow
