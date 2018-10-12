@@ -362,31 +362,6 @@ body main #what-i-know ul li .plus {
   font-size: 12px;
 }
 
-body main #about-me {
-  margin: 0;
-  height: auto;
-  background-color: #f4f4f4;
-}
-
-body main #about-me h1 {
-  text-align: center;
-  color: #233D4D;
-  margin: auto;
-  margin-bottom: 50px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-top: 50px;
-  padding-bottom: 8px;
-  border-bottom: solid #233D4D 4px;
-}
-
-body main #about-me p {
-  margin: 0;
-  padding: 30px;
-  color: #233D4D;
-}
-
 body footer {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#233d4d+0,193b51+41,1e6991+100 */
   background: #233d4d;

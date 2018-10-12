@@ -3,6 +3,33 @@ $main: #233D4D;
 $secondary: #FFC02E;
 $tertiary: #d33d58;
 
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// @include desktop() {
+  
+// }
+
+// footer {
+//   grid-area: rodape;
+// }
+
+// body {
+//   display: grid;
+//   min-height: 100vh;
+//   grid-template-columns: 300px 1fr;
+//   grid-template-rows: 100px 1fr 100px;
+//   grid-template-areas: 
+//       'cabecalho cabecalho'
+//       'navegacao conteudo'
+//       'rodape rodape'
+// }
+
 body {
   scroll-behavior: smooth;
   background-color: $neutral;
@@ -237,12 +264,10 @@ body {
 
           .prog-shape {
             background-color: darken($tertiary, 5%);
-            // background-color: rgba($neutral, 0.2);
             height: auto;
             width: 80%;
             margin: 18px auto;
             border-radius: 10px;
-            // box-shadow: 1px 1px 18px 0px rgba(0,0,0,0.4);
 
             p {
               color: lighten($tertiary, 60%);
@@ -346,30 +371,6 @@ body {
             font-size: 12px;
           }
         }
-      }
-    }
-
-    #about-me {
-      margin: 0;
-      height: auto;
-      background-color: $neutral;
-
-      h1 {
-        text-align: center;
-        color: $main;
-
-        margin: auto;
-        margin-bottom: 50px;
-        width: fit-content;
-        padding-top: 50px;
-        padding-bottom: 8px;
-        border-bottom: solid $main 4px; 
-      }
-      
-      p {
-        margin: 0;
-        padding: 30px;
-        color: $main;
       }
     }
   }
