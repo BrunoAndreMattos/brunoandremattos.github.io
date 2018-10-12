@@ -8,7 +8,8 @@ document.getElementById('people-hyped').addEventListener('click', function() {
 
 document.getElementById('people-fearful').addEventListener('click', function() {
     document.getElementById('result').innerHTML = "Buy";
-    this.previousElementSibling.children[0].checked = false;
+    
     this.children[0].checked = true;
+    this.previousElementSibling.children[0].checked = false;
 });
 

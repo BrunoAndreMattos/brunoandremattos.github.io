@@ -34,20 +34,12 @@ body main div p {
   color: #00232b;
 }
 
-body main div:hover {
-  cursor: pointer;
-}
-
-body main div:hover .checkmark {
-  background-color: white;
-}
-
-body main input[type=radio] {
+body main div input[type=radio] {
   opacity: 0;
   position: absolute;
 }
 
-body main input:checked + .checkmark::after {
+body main div input:checked + .checkmark::after {
   content: '';
   display: block;
   position: relative;
@@ -59,16 +51,27 @@ body main input:checked + .checkmark::after {
   background-color: #06FF32;
 }
 
-body main input:checked + .checkmark {
+body main div input:checked + .checkmark {
   background-color: #00232b;
 }
 
-body main .checkmark {
-  position: absolute;
+body main div .checkmark {
+  display: block;
+  position: relative;
+  top: 57px;
+  right: 10px;
   height: 33px;
   width: 33px;
-  background-color: #dbdbdb;
+  background-color: #cecece;
   border-radius: 50%;
+}
+
+body main div:hover {
+  cursor: pointer;
+}
+
+body main div:hover .checkmark {
+  background-color: white;
 }
 
 body #result {
