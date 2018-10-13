@@ -61,7 +61,7 @@ document.querySelector('#m-header').addEventListener('click', () => {
 });
 
 document.querySelector('#m-projects').addEventListener('click', () => {
-    const elem = document.querySelector('#projects');
+    const elem = document.querySelector('main');
 
     myScroll(elem);
 });
