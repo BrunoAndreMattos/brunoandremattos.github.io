@@ -1,6 +1,2 @@
-* Begin style of desktop development
-* Update pictures of projects
+* Update pictures of projects as they evolve
 * Make it multi language
-* Make images size smaller
-* Add good animations as user scrolls
-* Create and add fav icon
