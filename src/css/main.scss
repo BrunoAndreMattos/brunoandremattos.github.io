@@ -286,7 +286,7 @@ body {
           a:hover {
             img {
               transform: scale(1.05);
-              filter: blur(0);
+              filter: opacity(100%);
             }
           }
         }
@@ -296,9 +296,9 @@ body {
           
           img {
             @include desktop() {
-              transition: transform 0.25s ease-in-out;
+              transition: all 0.25s ease-in-out;
               transform: scale(1);
-              filter: blur(1px);
+              filter: opacity(90%);
             }
             width: 80%;
             box-shadow: 0px 3px 8px 3px rgba(0,0,0,0.2);
@@ -564,6 +564,10 @@ body {
       color: $neutral;
       letter-spacing: 1px;
       font-size: 12px;
+
+      a {
+        color: $neutral;
+      }
     }
   }
 }

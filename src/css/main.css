@@ -320,8 +320,8 @@ body main #projects .project {
   body main #projects .project a:hover img {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
-    -webkit-filter: blur(0);
-            filter: blur(0);
+    -webkit-filter: opacity(100%);
+            filter: opacity(100%);
   }
 }
 
@@ -337,14 +337,12 @@ body main #projects .project a img {
 
 @media (min-width: 840px) {
   body main #projects .project a img {
-    -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    transition: -webkit-transform 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out;
-    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
     -webkit-transform: scale(1);
             transform: scale(1);
-    -webkit-filter: blur(1px);
-            filter: blur(1px);
+    -webkit-filter: opacity(90%);
+            filter: opacity(90%);
   }
 }
 
@@ -638,5 +636,9 @@ body footer p {
   color: #f4f4f4;
   letter-spacing: 1px;
   font-size: 12px;
+}
+
+body footer p a {
+  color: #f4f4f4;
 }
 /*# sourceMappingURL=main.css.map */
