@@ -11,25 +11,6 @@ $desktop: 840px;
     }
 }
 
-// @include desktop() {
-  
-// }
-
-// footer {
-//   grid-area: rodape;
-// }
-
-// body {
-//   display: grid;
-//   min-height: 100vh;
-//   grid-template-columns: 300px 1fr;
-//   grid-template-rows: 100px 1fr 100px;
-//   grid-template-areas: 
-//       'cabecalho cabecalho'
-//       'navegacao conteudo'
-//       'rodape rodape'
-// }
-
 body {
   scroll-behavior: smooth;
   background-color: $neutral;
@@ -47,6 +28,10 @@ body {
 
     width: 100%;
     height: 100vh;
+
+    @include desktop() {
+      height: auto;
+    }
     
     nav {
       text-align: center;
@@ -60,6 +45,12 @@ body {
         z-index: 1;
         user-select: none;
 
+        @include desktop() {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+
         input {
           display: block;
           width: 40px;
@@ -72,6 +63,10 @@ body {
           opacity: 0;
           z-index: 2;
           -webkit-touch-callout: none;
+
+          @include desktop() {
+            display: none;
+          }
         }
 
         span {
@@ -89,6 +84,10 @@ body {
           transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                       background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
                       opacity 0.55s ease;
+          
+          @include desktop() {
+            display: none;
+          } 
         }
 
         span:first-child {
@@ -135,17 +134,65 @@ body {
             font-size: 20px;
             text-decoration: none;
             padding: 15px 0;
+
+            a {
+              text-decoration: none;
+              color: $main;
+            }
+          }
+        }
+
+        @include desktop() {
+          ul {
+            display: flex;
+            margin: 0;
+            height: auto;
+            padding: 0;
+            padding-bottom: 30px;
+            background-color: rgba($neutral, 0%);
+            transform: none;
+            justify-content: flex-start;
+
+            li {
+              padding: 10px;
+              margin: 20px 0;
+              margin-left: 2rem;
+              font-size: 18px;
+              color: $neutral;
+              cursor: pointer;
+              transition: color 0.25s ease-in-out;
+
+              a {
+                text-decoration: none;
+                color: $neutral;
+
+                transition: color 0.25s ease-in-out;
+              }
+
+              a:hover {
+                color: $secondary;
+              }
+            }
+
+            li:hover {
+              color: $secondary;
+            }
           }
         }
 
         input:checked ~ ul {
           transform: none;
         }
+
       }
     }
 
     #click-aux {
       height: 100vh;
+
+      @include desktop() {
+        height: auto;
+      }
       
       #my-pic {
         padding-top: 100px;
@@ -157,12 +204,26 @@ body {
           height: auto;
           border-radius: 30% 0;
           box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.4);
+
+          @include desktop() {
+            width: 250px;
+          }
+        }
+
+        @include desktop() {
+          padding-top: 200px;
         }
       }
-  
+
       h1 {
         text-align: center;  
         color: $neutral;  
+
+        @include desktop() {
+          padding: 40px;
+          font-size: 40px;
+          letter-spacing: 1px;
+        }
       }
       
       p { 
@@ -170,6 +231,11 @@ body {
         max-width: 90%;
         margin: auto;
         color: $neutral;
+        
+        @include desktop() {
+          padding-bottom: 300px;
+          letter-spacing: 1px;
+        }
       }
     }
   }
@@ -177,33 +243,63 @@ body {
   main {
     margin: 0;
     padding: 0;
+    background-color: $secondary;
+
+    h1 {
+      text-align: center;
+      color: $main;
+
+      margin: auto;
+      margin-bottom: 50px;
+      width: fit-content;
+      padding-top: 50px;
+      padding-bottom: 8px;
+      border-bottom: solid $main 4px; 
+
+      @include desktop() {
+        font-size: 40px;
+      }
+    }
 
     #projects {
       background-color: $secondary;
 
-      h1 {
-        text-align: center;
-        color: $main;
-
-        margin: auto;
-        margin-bottom: 50px;
-        width: fit-content;
-        padding-top: 50px;
-        padding-bottom: 8px;
-        border-bottom: solid $main 4px; 
+      @include desktop() {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
+          
       .project {
         width: 100%;
         padding: 10px 0;
         padding-bottom: 30px;
         margin: 0;
         text-align: center;
+
+        
+        @include desktop() {
+          width: 500px;
+          padding: 50px 0;
+
+          a:hover {
+            img {
+              transform: scale(1.05);
+              filter: blur(0);
+            }
+          }
+        }
         
         a {
           text-decoration: none;
-
+          
           img {
+            @include desktop() {
+              transition: transform 0.25s ease-in-out;
+              transform: scale(1);
+              filter: blur(1px);
+            }
             width: 80%;
             box-shadow: 0px 3px 8px 3px rgba(0,0,0,0.2);
           }
@@ -213,6 +309,10 @@ body {
             margin: auto;
             padding: 20px 0;
             width: 80%;
+
+            @include desktop() {
+              font-size: 22px;
+            }
           }
         }
 
@@ -246,6 +346,10 @@ body {
         padding-top: 50px;
         padding-bottom: 8px;
         border-bottom: solid $neutral 4px; 
+
+        @include desktop() {
+          font-size: 40px;
+        }
       }
 
       ul {
@@ -256,14 +360,31 @@ body {
         color: $neutral;
         padding-bottom: 50px;
 
+        @include desktop() {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
         li {
+
+          @include desktop() {
+            width: 600px;
+            padding-top: 30px;
+          }
+
           h2 {
             padding-top: 20px;
             color: $neutral;
           }
 
           .prog-shape {
-            background-color: darken($tertiary, 5%);
+            background: #d33d58; /* Old browsers */
+            background: -moz-linear-gradient(45deg, #d62445 0%, #d14e66 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(45deg, #d62445 0%, #d14e66 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(45deg, #d62445 0%, #d14e66 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33d58', endColorstr='#d62445',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
             height: auto;
             width: 80%;
             margin: 18px auto;
@@ -400,6 +521,10 @@ body {
         padding-top: 50px;
         padding-bottom: 8px;
         border-bottom: solid $neutral 4px; 
+
+        @include desktop() {
+          margin-bottom: 80px;
+        }
       }
       
       #icons {
@@ -410,8 +535,23 @@ body {
           padding: 10px;
           text-decoration: none;
   
+          @include desktop() {
+            padding: 20px;
+          }
+
           .svg {
+            @include desktop() {
+              transition: transform 0.25s ease-in-out;
+              transform: scale(1);
+            }
             fill: $neutral;
+          }
+          
+          .svg:hover {
+            @include desktop() {
+              transform: scale(1.2);
+              fill: $secondary;
+            }
           }
         }
       }

@@ -20,6 +20,12 @@ body header {
   height: 100vh;
 }
 
+@media (min-width: 840px) {
+  body header {
+    height: auto;
+  }
+}
+
 body header nav {
   text-align: center;
 }
@@ -37,6 +43,14 @@ body header nav #hamburger {
           user-select: none;
 }
 
+@media (min-width: 840px) {
+  body header nav #hamburger {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
 body header nav #hamburger input {
   display: block;
   width: 40px;
@@ -48,6 +62,12 @@ body header nav #hamburger input {
   opacity: 0;
   z-index: 2;
   -webkit-touch-callout: none;
+}
+
+@media (min-width: 840px) {
+  body header nav #hamburger input {
+    display: none;
+  }
 }
 
 body header nav #hamburger span {
@@ -65,6 +85,12 @@ body header nav #hamburger span {
   transition: background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.2s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+@media (min-width: 840px) {
+  body header nav #hamburger span {
+    display: none;
+  }
 }
 
 body header nav #hamburger span:first-child {
@@ -123,6 +149,51 @@ body header nav #hamburger ul li {
   padding: 15px 0;
 }
 
+body header nav #hamburger ul li a {
+  text-decoration: none;
+  color: #233D4D;
+}
+
+@media (min-width: 840px) {
+  body header nav #hamburger ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    height: auto;
+    padding: 0;
+    padding-bottom: 30px;
+    background-color: rgba(244, 244, 244, 0);
+    -webkit-transform: none;
+            transform: none;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  body header nav #hamburger ul li {
+    padding: 10px;
+    margin: 20px 0;
+    margin-left: 2rem;
+    font-size: 18px;
+    color: #f4f4f4;
+    cursor: pointer;
+    -webkit-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+  }
+  body header nav #hamburger ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    -webkit-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out;
+  }
+  body header nav #hamburger ul li a:hover {
+    color: #FFC02E;
+  }
+  body header nav #hamburger ul li:hover {
+    color: #FFC02E;
+  }
+}
+
 body header nav #hamburger input:checked ~ ul {
   -webkit-transform: none;
           transform: none;
@@ -130,6 +201,12 @@ body header nav #hamburger input:checked ~ ul {
 
 body header #click-aux {
   height: 100vh;
+}
+
+@media (min-width: 840px) {
+  body header #click-aux {
+    height: auto;
+  }
 }
 
 body header #click-aux #my-pic {
@@ -146,9 +223,29 @@ body header #click-aux #my-pic img {
           box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
 }
 
+@media (min-width: 840px) {
+  body header #click-aux #my-pic img {
+    width: 250px;
+  }
+}
+
+@media (min-width: 840px) {
+  body header #click-aux #my-pic {
+    padding-top: 200px;
+  }
+}
+
 body header #click-aux h1 {
   text-align: center;
   color: #f4f4f4;
+}
+
+@media (min-width: 840px) {
+  body header #click-aux h1 {
+    padding: 40px;
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
 }
 
 body header #click-aux p {
@@ -158,16 +255,20 @@ body header #click-aux p {
   color: #f4f4f4;
 }
 
+@media (min-width: 840px) {
+  body header #click-aux p {
+    padding-bottom: 300px;
+    letter-spacing: 1px;
+  }
+}
+
 body main {
   margin: 0;
   padding: 0;
-}
-
-body main #projects {
   background-color: #FFC02E;
 }
 
-body main #projects h1 {
+body main h1 {
   text-align: center;
   color: #233D4D;
   margin: auto;
@@ -180,12 +281,48 @@ body main #projects h1 {
   border-bottom: solid #233D4D 4px;
 }
 
+@media (min-width: 840px) {
+  body main h1 {
+    font-size: 40px;
+  }
+}
+
+body main #projects {
+  background-color: #FFC02E;
+}
+
+@media (min-width: 840px) {
+  body main #projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 body main #projects .project {
   width: 100%;
   padding: 10px 0;
   padding-bottom: 30px;
   margin: 0;
   text-align: center;
+}
+
+@media (min-width: 840px) {
+  body main #projects .project {
+    width: 500px;
+    padding: 50px 0;
+  }
+  body main #projects .project a:hover img {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
 }
 
 body main #projects .project a {
@@ -198,11 +335,30 @@ body main #projects .project a img {
           box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
 }
 
+@media (min-width: 840px) {
+  body main #projects .project a img {
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-filter: blur(1px);
+            filter: blur(1px);
+  }
+}
+
 body main #projects .project a h3 {
   color: #233D4D;
   margin: auto;
   padding: 20px 0;
   width: 80%;
+}
+
+@media (min-width: 840px) {
+  body main #projects .project a h3 {
+    font-size: 22px;
+  }
 }
 
 body main #projects .project p {
@@ -239,6 +395,12 @@ body main #what-i-know h1 {
   border-bottom: solid #f4f4f4 4px;
 }
 
+@media (min-width: 840px) {
+  body main #what-i-know h1 {
+    font-size: 40px;
+  }
+}
+
 body main #what-i-know ul {
   text-align: center;
   padding: 0;
@@ -248,13 +410,40 @@ body main #what-i-know ul {
   padding-bottom: 50px;
 }
 
+@media (min-width: 840px) {
+  body main #what-i-know ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 840px) {
+  body main #what-i-know ul li {
+    width: 600px;
+    padding-top: 30px;
+  }
+}
+
 body main #what-i-know ul li h2 {
   padding-top: 20px;
   color: #f4f4f4;
 }
 
 body main #what-i-know ul li .prog-shape {
-  background-color: #c92e4a;
+  background: #d33d58;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #d62445 0%, #d14e66 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d33d58', endColorstr='#d62445',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   height: auto;
   width: 80%;
   margin: 18px auto;
@@ -394,6 +583,12 @@ body footer #contact h1 {
   border-bottom: solid #f4f4f4 4px;
 }
 
+@media (min-width: 840px) {
+  body footer #contact h1 {
+    margin-bottom: 80px;
+  }
+}
+
 body footer #contact #icons {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -407,8 +602,33 @@ body footer #contact #icons a {
   text-decoration: none;
 }
 
+@media (min-width: 840px) {
+  body footer #contact #icons a {
+    padding: 20px;
+  }
+}
+
 body footer #contact #icons a .svg {
   fill: #f4f4f4;
+}
+
+@media (min-width: 840px) {
+  body footer #contact #icons a .svg {
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (min-width: 840px) {
+  body footer #contact #icons a .svg:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    fill: #FFC02E;
+  }
 }
 
 body footer p {
