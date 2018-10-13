@@ -1,2 +1,1 @@
 * Update pictures of projects as they evolve
-* Make it multi language
