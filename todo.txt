@@ -1,1 +1,2 @@
 * Update pictures of projects as they evolve
+* Mudar a cor do header pra algo mais chamativo
