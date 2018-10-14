@@ -1,2 +1,3 @@
 * Update pictures of projects as they evolve
 * Mudar a cor do header pra algo mais chamativo
+* Mudar hover de projetos com conteúdo interno
