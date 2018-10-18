@@ -86,15 +86,6 @@ body {
         .folder {
             cursor: pointer;
         }
-
-        li {
-            transition-duration: 0.6s;
-            transition-property: all;
-        }
-
-        li:hover {
-            padding-left: 1rem;
-        }
     }
     
     footer {
@@ -127,31 +118,7 @@ body {
     }
 }
 
-.no-tree * {
-    list-style-type: none;
-}
-
-.no-tree ul {
-    padding-left: 25px;
-}
-
-ul.no-tree, .no-tree li {
-    padding-left: 0px;
-    padding-top: 5px;
-}
-
-ul.no-tree, ul.no-tree ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.no-tree ul {
-    margin-left: 30px;
-}
-
 /* TREE CODE CORTESIA DA COD3R ACADEMY */
-
 .tree * {
     list-style-type: none;
 }
