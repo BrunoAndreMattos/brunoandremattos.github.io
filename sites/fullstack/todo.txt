@@ -4,3 +4,4 @@
 * Add this https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d
 * Update my skills
 * Remove a little of the hover effect
+* Update npm, node.js, ejs, express, bodyparser, mongodb, mongoose, grunt, MEAN Stack, Wordpress
