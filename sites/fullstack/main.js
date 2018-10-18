@@ -41,11 +41,19 @@ const insertTreeLevel = (root, list) => {
 }
 
 // Calls the function to insert the tree, in .tree
-insertTreeLevel($('.no-tree'), technologies);
+insertTreeLevel($('.tree'), technologies);
 
 // Showing and hiding folders toggle
 $('.folder').on('click', function() {
 	$(this).next().addClass('animated fadeInRightSmall').toggle();
+
+	if ($(this).text().slice(-1) === '-') {
+		let str = $(this).text().replace(' -', ' +');
+		$(this).text(str);
+	} else {
+		let str = $(this).text().replace(' +', ' -');
+		$(this).text(str);
+	}
 });
 
 // Toggle expand all
@@ -58,6 +66,8 @@ $('#toggle-expand').click(function() {
 
 		$('.folder').each(function() {
 			$(this).next().hide();
+			let str = $(this).text().replace(' -', ' +');
+			$(this).text(str);
 		});
 
 		expanded = false;
@@ -68,26 +78,11 @@ $('#toggle-expand').click(function() {
 
 		$('.folder').each(function() {
 			$(this).next().addClass('animated fadeInRightSmall').show();
+			let str = $(this).text().replace(' +', ' -');
+			$(this).text(str);
 		});
 
 		expanded = true;
-	}
-});
-
-// Toggle tree style
-$('#toggle-tree').click(function() {
-	if ($('ul').hasClass('no-tree')) {
-
-		$('ul').removeClass('no-tree').addClass('tree');
-		$(this).html('No Tree');
-		$(this).css('background-color', '#16191f');
-		$(this).css('color', '#f4f4f4');
-	} else {
-
-		$('ul').removeClass('tree').addClass('no-tree');
-		$(this).html('Tree');
-		$(this).css('background-color', '#f4f4f4');
-		$(this).css('color', '#16191f');
 	}
 });
 
