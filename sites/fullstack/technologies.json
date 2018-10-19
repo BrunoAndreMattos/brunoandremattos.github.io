@@ -28,16 +28,6 @@ const technologies = [
                 "status": "LD"
               }
             ]
-          },
-          {
-            "name": "Templating Tools",
-            "status": "IN",
-            "data": [
-              {
-                "name": "Jade Language",
-                "status": "IN"
-              }
-            ]
           }
         ]
       },
@@ -268,7 +258,11 @@ const technologies = [
                 "status": "IN"
               },
               {
-                "name": "Angular",
+                "name": "AngularJS",
+                "status": "IN"
+              },
+              {
+                "name": "Angular2",
                 "status": "IN"
               },
               {
@@ -303,7 +297,7 @@ const technologies = [
               },
               {
                 "name": "Grunt",
-                "status": "IN"
+                "status": "LD"
               },
               {
                 "name": "Flow",
@@ -355,7 +349,7 @@ const technologies = [
         "data": [
           {
             "name": "WordPress",
-            "status": "IN"
+            "status": "LD"
           },
           {
             "name": "Webflow",
@@ -371,22 +365,44 @@ const technologies = [
     "data": [
       {
         "name": "Node.js",
-        "status": "IN",
+        "status": "LD",
         "data": [
           {
             "name": "Concepts",
-            "status": "IN",
+            "status": "LD",
             "data": [
               {
                 "name": "npm",
-                "status": "IN"
+                "status": "LD"
               },
               {
                 "name": "package.json",
-                "status": "IN"
+                "status": "LD"
               },
               {
                 "name": "Middleware pattern",
+                "status": "LD"
+              }
+            ]
+          },
+          {
+            "name": "Templating Tools",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Jade Language",
+                "status": "IN"
+              },
+              {
+                "name": "Mustache",
+                "status": "IN"
+              },
+              {
+                "name": "Pug",
+                "status": "IN"
+              },
+              {
+                "name": "EJS",
                 "status": "IN"
               }
             ]
@@ -416,7 +432,7 @@ const technologies = [
         ]
       },
       {
-        "name": "Typescript",
+        "name": "TypeScript",
         "status": "IN"
       },
       {
@@ -477,7 +493,7 @@ const technologies = [
       },
       {
         "name": "Python",
-        "status": "IN",
+        "status": "LD",
         "data": [
           {
           "name": "Package Manager",
@@ -669,7 +685,7 @@ const technologies = [
           },
           {
             "name": "Node.js",
-            "status": "IN"
+            "status": "LD"
           }
         ]
       },
@@ -748,11 +764,15 @@ const technologies = [
         "status": "IN"
       },
       {
+        "name": "Design Patterns",
+        "status": "IN"
+      },
+      {
         "name": "SSH",
         "status": "IN"
       },
       {
-        "name": "GIT",
+        "name": "Git",
         "status": "LD",
         "data": [
           {
