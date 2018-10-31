@@ -1,8 +1,10 @@
-let timer = 0;
-const button = document.querySelector('p');
+let coins = 0;
+const button = document.getElementById('button');
 
 
 button.addEventListener('click', () => {
-    timer++;
-    button.textContent = `click me ${timer}!`;
+    coins++;
+    document.getElementById('display').textContent = `You have ${coins} coins!`;
 });
+
+// setInterval(() => {button.click();}, 500);
