@@ -1,33 +1,75 @@
 const display = document.getElementById('display');
 const progress = document.getElementById('progress');
 const button = document.getElementById('button');
-let coins = 0;
-let mining = false;
-let counter = 0;
-let miningSpeed = 1000;
+const totalLoad = 10;
 
+// types:
+// Cents
 
-
-button.addEventListener('click', () => {
-    document.getElementById('display').textContent = `You have ${coins} Bitcoins!`;
-    if (mining === false) {
-        mining = true;
-        
-        let a = setInterval(() => {
-            counter++;
-            progress.textContent += '░';
-            
-            if(counter === 10) {
-                coins++;
-                clearInterval(a);
-                counter = 0;
-                mining = false;
-                document.getElementById('display').textContent = `You have ${coins} Bitcoins!`;
-            }
-        }, miningSpeed);
-        
-    } else {
-        console.log('mining in progress');
+class Computer {
+    constructor(isMining, coins, miningSpeed) {
+        this.isMining = isMining;
+        this.coins = coins;
+        this.miningSpeed = miningSpeed;
+        this.loadStatus = 0;
     }
 
+    getCoins() {
+        return this.coins;
+    }
+    
+    displayCoins() {
+        document.getElementById('display').textContent = `You have ${this.getCoins()} Bitcoins in this machine!`;
+    }
+
+    getMiningSpeed() {
+        return this.miningSpeed;
+    }
+    
+    getIsMining() {
+        return this.isMining;
+    }
+    
+    setIsMining(bool) {
+        this.isMining = bool;
+    }
+    
+    setMiningSpeed(speed) {
+        this.miningSpeed = speed;
+    }
+    
+    setCoins(num) {
+        this.coins = num;
+    }
+    
+    mine() {
+        if (this.isMining === false) {
+
+            let loading = setInterval(() => {
+                this.loadStatus++;
+                progress.textContent += '░';
+                this.isMining = true;
+                
+                if(this.loadStatus === totalLoad) {
+                    this.coins++;
+                    
+                    clearInterval(loading);
+                    
+                    this.loadStatus = 0;
+                    this.isMining = false;
+                    
+                    progress.textContent = '';
+                    this.displayCoins();
+                }
+            }, this.miningSpeed);
+        }
+    }
+    
+}
+
+const myComp = new Computer(false, 0, 400);
+
+button.addEventListener('click', () => {
+    myComp.mine();
+    myComp.displayCoins();
 });
