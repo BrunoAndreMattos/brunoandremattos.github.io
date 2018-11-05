@@ -78,8 +78,9 @@ json.onreadystatechange = function() {
     var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
 
     object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
-        console.log(currency.name);
-        usdSec.textContent = currency.name + " is currently worth $" + currency.price_usd + " USD"; // get the array keys from the API
+        if(currency.name === 'Bitcoin') {
+            usdSec.textContent =  $" + currency.price_usd + " USD"; // get the array keys from the API
+        }
     });
   }
 };
