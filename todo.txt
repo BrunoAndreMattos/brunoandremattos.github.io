@@ -1,1 +1,2 @@
 * Update pictures of projects as they evolve
+* Change visual identity to something more professional and clean
