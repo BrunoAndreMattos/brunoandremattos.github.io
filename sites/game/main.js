@@ -4,7 +4,7 @@ const button = document.getElementById('button');
 let coins = 0;
 let mining = false;
 let counter = 0;
-let miningSpeed = 10000;
+let miningSpeed = 1000;
 
 
 
