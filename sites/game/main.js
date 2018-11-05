@@ -1,29 +1,47 @@
+// HTML Sections
 const display = document.getElementById('display');
 const progress = document.getElementById('progress');
 const button = document.getElementById('button');
 const usdSec = document.getElementById('usd');
+
+// Constants
 const totalLoad = 10;
+const satoshiNumber = 100000000;
                           
 class Computer {
-    constructor(isMining, coins, miningSpeed) {
+    constructor(isMining, coins, miningSpeed, miningPower) {
         this.isMining = isMining;
         this.coins = coins;
         this.miningSpeed = miningSpeed;
+        this.miningPower = miningPower;
         this.loadStatus = 0;
     }
 
-    getCoins() {
+    getSatoshis() {
         return this.coins;
     }
-    
+
+    getBitcoins() {
+        return (this.getSatoshis()/satoshiNumber).toFixed(8);
+    }
+
+    // Changes the display from satoshis to bitcoin according to how much the player has
     displayCoins() {
-        document.getElementById('display').textContent = `You have ${this.getCoins()} Satoshis in this machine!`;
+        if(this.getSatoshis() >= satoshiNumber) {
+            document.getElementById('display').textContent = `You have ${this.getBitcoins()} Bitcoins in this machine!`;
+        } else {
+            document.getElementById('display').textContent = `You have ${this.getSatoshis()} Satoshis in this machine!`;
+        }
     }
 
     getMiningSpeed() {
         return this.miningSpeed;
     }
     
+    getMiningPower() {
+        return this.miningPower;
+    }
+
     getIsMining() {
         return this.isMining;
     }
@@ -35,29 +53,54 @@ class Computer {
     setMiningSpeed(speed) {
         this.miningSpeed = speed;
     }
+
+    setMiningPower(power) {
+        this.miningPower = power;
+    }
     
     setCoins(num) {
         this.coins = num;
     }
     
     mine() {
+        // Prevents player from mining more than one button click at a time
         if (this.isMining === false) {
 
+            // Starts mining animation part 1 using miningSpeed as animation speed
             let loading = setInterval(() => {
+
+                // Counts how many bars are displayed and displays bars
                 this.loadStatus++;
                 progress.textContent += '░';
+
+                // Set Computer to be mining
                 this.isMining = true;
                 
+                // When the mining animation ends
                 if(this.loadStatus === totalLoad) {
-                    this.coins++;
                     
-                    clearInterval(loading);
+                    // Add the acquired amout to machine total coins
+                    this.coins += this.miningPower;
                     
+                    // Requests Bitcoin Dollar price from Coinmarketcap using their API
+                    json.open(
+                        "GET", // method
+                        "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=10", // url
+                        true // async
+                    ); // initialise the request
+
+                    json.send(); //send request
+                    
+                    // Reset animation counter and set Computer state to not mining
                     this.loadStatus = 0;
                     this.isMining = false;
                     
+                    // Clear animation and display the updated coins value
                     progress.textContent = '';
                     this.displayCoins();
+                    
+                    // Ends mining animation loop
+                    clearInterval(loading);
                 }
             }, this.miningSpeed);
         }
@@ -65,11 +108,12 @@ class Computer {
     
 }
 
-const myComp = new Computer(false, 0, 400);
+// Creates the default player's computer
+const defaultComp = new Computer(false, 0, 100, 1);
 
 button.addEventListener('click', () => {
-    myComp.mine();
-    myComp.displayCoins();
+    defaultComp.mine();
+    defaultComp.displayCoins();
 });
 
 var json = new XMLHttpRequest(); // start a new variable to store the JSON in
@@ -79,14 +123,10 @@ json.onreadystatechange = function() {
 
     object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
         if(currency.name === 'Bitcoin') {
-            usdSec.textContent =  $" + currency.price_usd + " USD"; // get the array keys from the API
+            let dolar = (currency.price_usd * defaultComp.getBitcoins()).toFixed(4);
+
+            usdSec.textContent =  `You Bitcoin in Dollars: ${dolar}\$`; // get the array keys from the API
         }
     });
   }
 };
-json.open(
-  "GET", // method
-  "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=10", // url
-  true // async
-); // initialise the request
-json.send(); //send request
