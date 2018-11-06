@@ -12,24 +12,44 @@
     <title>game</title>
 </head>
 <body>
-    <div id="button">
-        <pre>
-     _________
-    / ======= \
-   / __________\
-  | ___________ |
-  | |         | |
-  | |  mine   | |
-  | |_________| |
-  \_____________/
-  / """"""""""" \
- / ::::::::::::: \
-(_________________)
-        </pre>
+    <div id="row">
+        <div class="machine">
+            <pre id="m1">
+         _________
+        / ======= \
+       / __________\
+      | ___________ |
+      | |         | |
+      | |  mine   | |
+      | |_________| |
+      \_____________/
+      / """"""""""" \
+     / ::::::::::::: \
+    (_________________)
+            </pre>
+            <div class="display">you have 0 satoshis in this machine</div>
+            <div class="progress"></div>
+        </div>
+        <div class="machine">
+            <pre id="m2">
+         _________
+        / ======= \
+       / __________\
+      | ___________ |
+      | |         | |
+      | |  mine   | |
+      | |_________| |
+      \_____________/
+      / """"""""""" \
+     / ::::::::::::: \
+    (_________________)
+            </pre>
+            <div class="display">you have 0 satoshis in this machine</div>
+            <div class="progress"></div>
+        </div>
     </div>
-    <div id="display">you have 0 satoshis in this machine!</div>
     <div id="usd">your bitcoin in dollars: 0$</div>
-    <div id="progress"></div>
+    <div id="btc">your bitcoin: 0.00000000</div>
 </body>
 <script src="main.js"></script>
 </html>

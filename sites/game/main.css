@@ -2,3 +2,15 @@ p {
     padding: 0;
     margin: 0;
 }
+
+#usd, #btc {
+    text-align: center;
+}
+
+#row {
+    display: flex;
+}
+
+.machine {
+    padding: 10px;
+}

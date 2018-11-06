@@ -1,11 +1,12 @@
 // HTML Sections
-const display = document.getElementById('display');
-const progress = document.getElementById('progress');
-const button = document.getElementById('button');
+const display = document.getElementsByClassName('display');
+const progress = document.getElementsByClassName('progress');
+const machines = document.getElementsByClassName('machine');
 const usdSec = document.getElementById('usd');
+const btcSec = document.getElementById('btc');
 
 // Constants
-const totalLoad = 10;
+const totalLoad = 22;
 const satoshiNumber = 100000000;
                           
 class Computer {
@@ -28,9 +29,9 @@ class Computer {
     // Changes the display from satoshis to bitcoin according to how much the player has
     displayCoins() {
         if(this.getSatoshis() >= satoshiNumber) {
-            document.getElementById('display').textContent = `you have ${this.getBitcoins()} bitcoins in this machine!`;
+            display.textContent = `you have ${this.getBitcoins()} bitcoins in this machine`;
         } else {
-            document.getElementById('display').textContent = `you have ${this.getSatoshis()} satoshis in this machine!`;
+            display.textContent = `you have ${this.getSatoshis()} satoshis in this machine`;
         }
     }
 
@@ -68,7 +69,6 @@ class Computer {
 
             // Starts mining animation part 1 using miningSpeed as animation speed
             let loading = setInterval(() => {
-
                 // Counts how many bars are displayed and displays bars
                 this.loadStatus++;
                 progress.textContent += '░';
@@ -109,11 +109,24 @@ class Computer {
 
 // Creates the default player's computer
 const defaultComp = new Computer(false, 0, 100, 1);
+const a = new Computer(false, 0, 100, 1);
+// defaultComp.mine();
+// defaultComp.displayCoins();
 
-button.addEventListener('click', () => {
-    defaultComp.mine();
-    defaultComp.displayCoins();
-});
+for(let machine of machines) {
+    machine.addEventListener('click', () => {
+        switch (machine.children[0].id){
+            case 'm1':
+                defaultComp.mine();
+                defaultComp.displayCoins();
+            break
+            case 'm2':
+                a.mine();
+                a.displayCoins();
+            break;
+        }
+    });
+}
 
 let json = new XMLHttpRequest(); // start a new variable to store the JSON in
 
@@ -127,6 +140,7 @@ json.onreadystatechange = function() {
             let dolar = (currency.price_usd * defaultComp.getBitcoins()).toFixed(4);
 
             usdSec.textContent =  `your bitcoin in dollars: ${dolar}\$`; // get the array keys from the API
+            btcSec.textContent =  `your bitcoin: ${defaultComp.getBitcoins()}`;
         }
     });
   }
