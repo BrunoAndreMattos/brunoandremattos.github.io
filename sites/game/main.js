@@ -28,9 +28,9 @@ class Computer {
     // Changes the display from satoshis to bitcoin according to how much the player has
     displayCoins() {
         if(this.getSatoshis() >= satoshiNumber) {
-            document.getElementById('display').textContent = `You have ${this.getBitcoins()} Bitcoins in this machine!`;
+            document.getElementById('display').textContent = `you have ${this.getBitcoins()} bitcoins in this machine!`;
         } else {
-            document.getElementById('display').textContent = `You have ${this.getSatoshis()} Satoshis in this machine!`;
+            document.getElementById('display').textContent = `you have ${this.getSatoshis()} satoshis in this machine!`;
         }
     }
 
@@ -104,8 +104,7 @@ class Computer {
                 }
             }, this.miningSpeed);
         }
-    }
-    
+    }  
 }
 
 // Creates the default player's computer
@@ -116,16 +115,18 @@ button.addEventListener('click', () => {
     defaultComp.displayCoins();
 });
 
-var json = new XMLHttpRequest(); // start a new variable to store the JSON in
+let json = new XMLHttpRequest(); // start a new variable to store the JSON in
+
 json.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) { // if HTTP header 200 - ok
-    var object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
+
+    let object = JSON.parse(this.responseText); // set the variable 'object' to whatever we get back, in our case it is an array of 10 different arrays
 
     object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
         if(currency.name === 'Bitcoin') {
             let dolar = (currency.price_usd * defaultComp.getBitcoins()).toFixed(4);
 
-            usdSec.textContent =  `You Bitcoin in Dollars: ${dolar}\$`; // get the array keys from the API
+            usdSec.textContent =  `your bitcoin in dollars: ${dolar}\$`; // get the array keys from the API
         }
     });
   }
