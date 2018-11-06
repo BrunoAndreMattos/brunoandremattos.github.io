@@ -1,16 +1,20 @@
 // HTML Sections
-const display = document.getElementsByClassName('display');
-const progress = document.getElementsByClassName('progress');
-const machines = document.getElementsByClassName('machine');
+const displays = document.getElementsByClassName('display');
+const progressBars = document.getElementsByClassName('progress');
+const machinesHTML = document.getElementsByClassName('machine');
 const usdSec = document.getElementById('usd');
 const btcSec = document.getElementById('btc');
+const listOfMachines = [];
 
 // Constants
-const totalLoad = 22;
+const totalLoad = 21;
 const satoshiNumber = 100000000;
+
+let totalBitcoins = 0;
                           
 class Computer {
-    constructor(isMining, coins, miningSpeed, miningPower) {
+    constructor( maId, isMining, coins, miningSpeed, miningPower) {
+        this.maId = maId;
         this.isMining = isMining;
         this.coins = coins;
         this.miningSpeed = miningSpeed;
@@ -18,20 +22,32 @@ class Computer {
         this.loadStatus = 0;
     }
 
+    getMachineId() {
+        return this.maId;
+    }
+
     getSatoshis() {
         return this.coins;
     }
 
     getBitcoins() {
-        return (this.getSatoshis()/satoshiNumber).toFixed(8);
+        return (this.getSatoshis()/satoshiNumber);
     }
 
     // Changes the display from satoshis to bitcoin according to how much the player has
     displayCoins() {
         if(this.getSatoshis() >= satoshiNumber) {
-            display.textContent = `you have ${this.getBitcoins()} bitcoins in this machine`;
+            for(let display of displays) {
+                if(this.maId === parseInt(display.parentElement.id)) {
+                    display.textContent = `you have ${this.getBitcoins()} bitcoins in this machine`;
+                }
+            }
         } else {
-            display.textContent = `you have ${this.getSatoshis()} satoshis in this machine`;
+            for(let display of displays) {
+                if(this.maId === parseInt(display.parentElement.id)) {
+                    display.textContent = `you have ${this.getSatoshis()} satoshis in this machine`;
+                }
+            }
         }
     }
 
@@ -45,6 +61,10 @@ class Computer {
 
     getIsMining() {
         return this.isMining;
+    }
+
+    setMachineId(id) {
+        this.maId = id;
     }
     
     setIsMining(bool) {
@@ -67,12 +87,18 @@ class Computer {
         // Prevents player from mining more than one button click at a time
         if (this.isMining === false) {
 
+            for(let progress of progressBars) {
+                if(this.maId === parseInt(progress.parentElement.id)) {
+                    var maProgress = progress;
+                }
+            }
+            
             // Starts mining animation part 1 using miningSpeed as animation speed
             let loading = setInterval(() => {
                 // Counts how many bars are displayed and displays bars
                 this.loadStatus++;
-                progress.textContent += '░';
-
+                maProgress.textContent += '░';
+                
                 // Set Computer to be mining
                 this.isMining = true;
                 
@@ -96,7 +122,8 @@ class Computer {
                     this.isMining = false;
                     
                     // Clear animation and display the updated coins value
-                    progress.textContent = '';
+                    maProgress.textContent = '';
+
                     this.displayCoins();
                     
                     // Ends mining animation loop
@@ -108,21 +135,22 @@ class Computer {
 }
 
 // Creates the default player's computer
-const defaultComp = new Computer(false, 0, 100, 1);
-const a = new Computer(false, 0, 100, 1);
-// defaultComp.mine();
-// defaultComp.displayCoins();
+const defaultComp = new Computer(1, false, 0, 100, 1);
 
-for(let machine of machines) {
+listOfMachines.push(defaultComp);
+listOfMachines.push(new Computer(2, false, 0, 100, 1));
+
+for(let machine of machinesHTML) {
+
     machine.addEventListener('click', () => {
-        switch (machine.children[0].id){
-            case 'm1':
-                defaultComp.mine();
-                defaultComp.displayCoins();
+        switch (machine.id){
+            case '1':
+                listOfMachines[0].mine()
+                listOfMachines[0].displayCoins();
             break
-            case 'm2':
-                a.mine();
-                a.displayCoins();
+            case '2':
+                listOfMachines[1].mine()
+                listOfMachines[1].displayCoins();
             break;
         }
     });
@@ -137,10 +165,17 @@ json.onreadystatechange = function() {
 
     object.forEach(function(currency) { // for each of those arrays, split it into chunks called 'currency'
         if(currency.name === 'Bitcoin') {
-            let dolar = (currency.price_usd * defaultComp.getBitcoins()).toFixed(4);
+            totalBitcoins = 0;
+            for(let machine of listOfMachines) {
+                totalBitcoins += machine.getBitcoins();
+            }
+
+            totalBitcoins = totalBitcoins.toFixed(8);
+            
+            let dolar = (currency.price_usd * totalBitcoins).toFixed(2);
 
             usdSec.textContent =  `your bitcoin in dollars: ${dolar}\$`; // get the array keys from the API
-            btcSec.textContent =  `your bitcoin: ${defaultComp.getBitcoins()}`;
+            btcSec.textContent =  `your bitcoin: ${totalBitcoins}`;
         }
     });
   }
