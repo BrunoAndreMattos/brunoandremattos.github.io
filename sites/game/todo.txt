@@ -6,3 +6,19 @@ multi steps animation
 better ascii art
 scale back dollar cents as it aproaches 2 decimal places
 cookie save games
+calculate how much the player mined while afk
+
+steps list:
+    Verify transactions
+    Create block
+    Solving proof of work
+    Adding to blockchain
+
+upgrades list:
+    buy new computer
+    upgrade computer components (GPU, CPU)
+    buy and upgrade mining specific computers
+    automate mining
+    fund industries
+    fund politicias
+    buy industries

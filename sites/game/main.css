@@ -1,4 +1,25 @@
+body {
+    height: 100vh;
+    margin: 0;
+}
+
 p {
     padding: 0;
     margin: 0;
+}
+
+#usd, #btc {
+    text-align: center;
+}
+
+/* #totals {
+    height: 100%;
+} */
+
+#row {
+    display: flex;
+}
+
+.machine {
+    padding: 10px;
 }
