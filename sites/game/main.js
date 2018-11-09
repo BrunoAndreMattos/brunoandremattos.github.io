@@ -29,7 +29,6 @@ class Computer {
         this.miningSpeed = miningSpeed;
         this.miningPower = miningPower;
         this.loadStatus = 0;
-        // this.done = true;
     }
 
     getMachineId() {
@@ -48,17 +47,29 @@ class Computer {
     displayCoins() {
         if(this.getSatoshis() >= satoshiNumber) {
             for(let display of displaysHTML) {
-                if(this.maId === parseInt(display.parentElement.id)) {
+                if(this.machineId === parseInt(display.parentElement.id)) {
                     display.textContent = `you have ${this.getBitcoins()} bitcoins in this machine`;
                 }
             }
         } else {
             for(let display of displaysHTML) {
-                if(this.maId === parseInt(display.parentElement.id)) {
+                if(this.machineId === parseInt(display.parentElement.id)) {
                     display.textContent = `you have ${this.getSatoshis()} satoshis in this machine`;
                 }
             }
         }
+    }
+
+    updateCoins() {
+        json.open(
+            "GET", // method
+            "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=10", // url
+            true // async
+        ); // initialise the request
+
+        json.send(); //send request
+
+        this.displayCoins();
     }
 
     getMiningSpeed() {
@@ -94,12 +105,12 @@ class Computer {
     }
 
     makeBin() {
-        var text = "";
-        var possible = "01";
+        let text = "";
+        let possible = "01";
       
-        for (var i = 0; i < 20; i++)
+        for (let i = 0; i < 20; i++)
           text += possible.charAt(Math.floor(Math.random() * possible.length));
-      
+
         return text;
     }
     
@@ -185,10 +196,14 @@ class Computer {
                 //Testing out 
                 let addBlockLoop = setInterval(() => {
                     timer++
-                    timer == 10 ? maAdd.textContent += `ok!` : maAdd.textContent = `adding to block-chain...`;
+                    timer >= 10 ? maAdd.textContent = `adding to block-chain...ok!` : maAdd.textContent = `adding to block-chain...`;
                     if (timer == 10) {
+                        this.coins += this.miningPower*Math.ceil(Math.random() * 50);
+                        this.updateCoins();                        
+                    } 
+                    if (timer == 15) {
                         clearInterval(addBlockLoop);
-                        this.coins++;
+                        this.isMining = false;
                         this.clearAll();
                     }
                 }, this.miningSpeed);
@@ -197,12 +212,34 @@ class Computer {
     }
     
     clearAll() {
+
         for(let verify of verifyHTML) {
             if(this.machineId === parseInt(verify.parentElement.id)) {
-                let maVerify = verify;
-                // if(this.done === true) {
-                    maVerify.textContent = ``;
-                // }
+                verify.textContent = ``;
+            }
+        }
+        
+        for(let block of createBlockHTML) {
+            if(this.machineId === parseInt(block.parentElement.id)) {
+                block.textContent = ``;
+            }
+        }
+
+        for(let solvePow of solveProofOfWorkHTML) {
+            if(this.machineId === parseInt(solvePow.parentElement.id)) {
+                solvePow.textContent = ``;
+            }
+        }
+        
+        for(let pow of proofOfWorkHTML) {
+            if(this.machineId === parseInt(pow.parentElement.id)) {
+                pow.textContent = ``;
+            }
+        }
+        
+        for(let add of addToBlockChainHTML) {
+            if(this.machineId === parseInt(add.parentElement.id)) {
+                add.textContent = ``;
             }
         }
     }
@@ -210,71 +247,17 @@ class Computer {
     mine() {
         // Prevents player from mining more than one button click at a time
         if (this.isMining === false) {
-            
             this.verifyTransaction();
-            // for(let progress of progressBars) {
-            //     if(this.machineId === parseInt(progress.parentElement.id)) {
-            //         var maProgress = progress;
-            //     }
-            // }
-            
-            // let timer = 0;
-            // //Testing out 
-            // let teste = setInterval(() => {
-            //     timer++
-            //     timer == 10 ? maProgress.textContent = `OK\n` : maProgress.textContent = `Verifying transactions...\n`;
-            //     if (timer == 10) clearInterval(teste);
-            // }, this.miningSpeed);
-
-
-            // // Starts mining animation part 1 using miningSpeed as animation speed
-            // let loading = setInterval(() => {
-            //     // Counts how many bars are displayed and displays bars
-            //     this.loadStatus++;
-            //     maProgress.textContent += '░';
-                
-            //     // Set Computer to be mining
-            //     this.isMining = true;
-                
-            //     // When the mining animation ends
-            //     if(this.loadStatus === totalLoad) {
-                    
-            //         // Add the acquired amout to machine total coins
-            //         this.coins += this.miningPower;
-                    
-            //         // Requests Bitcoin Dollar price from Coinmarketcap using their API
-            //         json.open(
-            //             "GET", // method
-            //             "https://api.coinmarketcap.com/v1/ticker/?convert=USD&limit=10", // url
-            //             true // async
-            //         ); // initialise the request
-
-            //         json.send(); //send request
-                    
-            //         // Reset animation counter and set Computer state to not mining
-            //         this.loadStatus = 0;
-            //         this.isMining = false;
-                    
-            //         // Clear animation and display the updated coins value
-            //         maProgress.textContent = '';
-
-            //         this.displayCoins();
-                    
-            //         // Ends mining animation loop
-            //         clearInterval(loading);
-            //     }
-            // }, this.miningSpeed);
         }
     }  
 }
 
 function createMachine() {
-
     // Increment the number of machines
     numberOfMachines++;
 
     // Make a new machine object
-    const comp = new Computer(numberOfMachines, false, 0, 100, 1);
+    const comp = new Computer(numberOfMachines, false, 0, 500, 1);
     // Add it to list of machines
     listOfMachines.push(comp);
 
@@ -305,9 +288,6 @@ function createMachine() {
 
 createMachine();
 createMachine();
-createMachine();
-createMachine();
-createMachine();
 
 // Make every machine clickable
 for(let i = 0; i < numberOfMachines; i++) {
@@ -334,10 +314,10 @@ json.onreadystatechange = function() {
 
             totalBitcoins = totalBitcoins.toFixed(8);
             
-            let dolar = (currency.price_usd * totalBitcoins).toFixed(4);
+            let dolar = (currency.price_usd * totalBitcoins).toFixed(2);
 
-            usdSec.textContent =  `your bitcoin in dollars: ${dolar}\$`; // get the array keys from the API
-            btcSec.textContent =  `your bitcoin: ${totalBitcoins}`;
+            usdSec.textContent = `your bitcoin in dollars: ${dolar}\$`; // get the array keys from the API
+            btcSec.textContent = `your bitcoin: ${totalBitcoins}`;
         }
     });
   }
