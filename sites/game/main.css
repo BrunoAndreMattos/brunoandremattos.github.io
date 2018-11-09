@@ -1,6 +1,13 @@
 body {
-    height: 100vh;
     margin: 0;
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 60px;
+    grid-template-areas: 
+        '.'
+        'footer'
 }
 
 p {
@@ -12,9 +19,9 @@ p {
     text-align: center;
 }
 
-/* #totals {
-    height: 100%;
-} */
+#totals {
+    grid-area: footer;
+}
 
 #row {
     display: flex;
