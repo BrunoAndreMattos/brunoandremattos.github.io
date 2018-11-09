@@ -1,18 +1,11 @@
 news
-more computers scalability
+more computers scalability (more rows)
 variety upgrades
-being able to buy some upgrades with dolars others with bitcoins
+being able to buy some upgrades with dolars others with bitcoins (crete division)
 * multi steps animation
 better ascii art
-scale back dollar cents as it aproaches 2 decimal places
 cookie save games
 calculate how much the player mined while afk
-
-steps list:
-    Verify transactions
-    Create block
-    Solving proof of work
-    Adding to blockchain
 
 upgrades list:
     buy new computer
