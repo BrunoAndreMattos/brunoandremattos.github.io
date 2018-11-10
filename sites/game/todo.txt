@@ -2,10 +2,15 @@ news
 more computers scalability (more rows)
 variety upgrades
 being able to buy some upgrades with dolars others with bitcoins (crete division)
-* multi steps animation
 better ascii art
 cookie save games
 calculate how much the player mined while afk
+
+botoes individuais de upgrade
+botão de compra mais maquinas
+botão de script trabalhador
+save em cookies
+calculo de volta no jogo
 
 upgrades list:
     buy new computer

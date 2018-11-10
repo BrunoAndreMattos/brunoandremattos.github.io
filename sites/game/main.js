@@ -11,6 +11,7 @@ const createBlockHTML = document.getElementsByClassName('create-block');
 const solveProofOfWorkHTML = document.getElementsByClassName('solve-pow');
 const proofOfWorkHTML = document.getElementsByClassName('pow');
 const addToBlockChainHTML = document.getElementsByClassName('add');
+const yourGainsHTML = document.getElementsByClassName('your-gains');
 
 
 // Constants
@@ -29,6 +30,7 @@ class Computer {
         this.miningSpeed = miningSpeed;
         this.miningPower = miningPower;
         this.loadStatus = 0;
+        this.autoMine = false;
     }
 
     getMachineId() {
@@ -84,6 +86,10 @@ class Computer {
         return this.isMining;
     }
 
+    getAutoMine (){
+        return this.autoMine;
+    }
+
     setMachineId(id) {
         this.machineId = id;
     }
@@ -102,6 +108,10 @@ class Computer {
     
     setCoins(num) {
         this.coins = num;
+    }
+
+    setAutoMine(bool) {
+        this.autoMine = bool;
     }
 
     makeBin() {
@@ -188,6 +198,12 @@ class Computer {
     }
     
     addToBlockChain() {
+        for(let gains of yourGainsHTML) {
+            if(this.machineId === parseInt(gains.parentElement.id)) {
+                var maGains = gains;
+            }
+        }
+
         for(let add of addToBlockChainHTML) {
             if(this.machineId === parseInt(add.parentElement.id)) {
                 let maAdd = add;
@@ -196,12 +212,14 @@ class Computer {
                 //Testing out 
                 let addBlockLoop = setInterval(() => {
                     timer++
-                    timer >= 10 ? maAdd.textContent = `adding to block-chain...ok!` : maAdd.textContent = `adding to block-chain...`;
+                    timer >= 10 ? maAdd.textContent = `adding to blockchain...ok!` : maAdd.textContent = `adding to blockchain...`;
                     if (timer == 10) {
-                        this.coins += this.miningPower*Math.ceil(Math.random() * 50);
-                        this.updateCoins();                        
+                        let gains = this.miningPower*Math.ceil(Math.random() * 50000);
+                        maGains.textContent = `your gains are ${gains}`;
+                        this.coins += gains;
+                        this.updateCoins();                   
                     } 
-                    if (timer == 15) {
+                    if (timer == 20) {
                         clearInterval(addBlockLoop);
                         this.isMining = false;
                         this.clearAll();
@@ -242,6 +260,16 @@ class Computer {
                 add.textContent = ``;
             }
         }
+
+        for(let gains of yourGainsHTML) {
+            if(this.machineId === parseInt(gains.parentElement.id)) {
+                gains.textContent = ``;
+            }
+        }
+
+        if(this.autoMine === true) {
+            this.mine();
+        }
     }
     
     mine() {
@@ -257,7 +285,7 @@ function createMachine() {
     numberOfMachines++;
 
     // Make a new machine object
-    const comp = new Computer(numberOfMachines, false, 0, 500, 1);
+    const comp = new Computer(numberOfMachines, false, 0, 200, 1);
     // Add it to list of machines
     listOfMachines.push(comp);
 
@@ -283,11 +311,13 @@ function createMachine() {
         <div class="solve-pow"></div>
         <div class="pow"></div>
         <div class="add"></div>
+        <div class="your-gains"></div>
     </div>`;
 }
 
 createMachine();
-createMachine();
+
+
 
 // Make every machine clickable
 for(let i = 0; i < numberOfMachines; i++) {
