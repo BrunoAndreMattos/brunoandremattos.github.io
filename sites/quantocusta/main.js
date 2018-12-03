@@ -11,7 +11,7 @@ var netflix = 32;
 var condominio = 517;
 var alimentacao = 600;
 var limpeza = 400;
-var transporte = 720;
+var transporte = 200;
 
 var fixos = luz + gas + telefone + netflix + condominio + alimentacao + limpeza + transporte;
 
@@ -140,14 +140,12 @@ $('#consultar').click(function(e) {
     
     if(resultado > 0) {
         $('#result').html(
-        '<div class="fechar">X</div>' +
         '<h2> Você pode morar no ' + nomeBairro + 
         '! </h2> <br /> <p> e ainda sobram <strong>R$' + resultado + 
         '</strong> por mês.</p>');
         $('#result').css('background-color', '#34DD46');
     } else {
         $('#result').html(
-        '<div class="fechar">X</div>' +
         '<h2> Infelizmente você ainda não pode morar no ' + nomeBairro +
         ' </h2> <br /> <p> Faltam <strong>R$' + Math.abs(resultado) +
         '</strong> por mês.</p>');
@@ -163,37 +161,18 @@ $('#consultar').click(function(e) {
         '</td> </tr><tr> <td>Alimentação</td> <td>' + alimentacao +
         '</td> </tr><tr> <td>Limpeza</td><td>' + limpeza +
         '</td> </tr><tr> <td>Transporte</td> <td>' + transporte +
-        '</td> </tr><tr> <td>IPTU para ' + dormitorios + ' dormitório(s)</td> <td>' + IPTU +
-        '</td></tr><tr><td>Aluguel para ' + dormitorios +' dormitório(s)</td><td>' + custoAluguel +
+        '</td> </tr><tr> <td>IPTU para ' + dormitorios + ' dormitório(s) nesta região</td> <td>' + IPTU +
+        '</td></tr><tr><td>Aluguel para ' + dormitorios +' dormitório(s) nesta região</td><td>' + custoAluguel +
         '</td></tr><tr><td>Total de custos</td><td>' + Math.round(custoTotal) +
         '</td> </tr><tr><td>Total por habitante</td><td>' + Math.round(Math.abs(custoTotal / habitantes)) + '</td> </tr> </table>');
     $('#extrato').show();
     
-
-
-    // if (receita - (custoTotal / habitantes) > 0) {
-    //     $('#positivo').show();
-    //     $('#negativo').hide();
-    // } else {
-    //     $('#positivo').hide();
-    //     $('#negativo').show();
-    // }
-
-    // $('html, body').animate({
-    //     scrollTop: $("#result").offset().top
-    // }, 300);
-
     var modal = document.getElementById('modal');
     
     modal.style.display = "block";
 
     publishSampleMessage();
 });
-
-// // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
