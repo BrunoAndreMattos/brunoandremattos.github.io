@@ -20,7 +20,7 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 1fr 160px;
+    grid-template-rows: 350px 1fr 160px;
     grid-template-areas: 
     'header'
     'content'
