@@ -312,12 +312,12 @@ function createMachine() {
         <div class="pow"></div>
         <div class="add"></div>
         <div class="your-gains"></div>
+
+        
     </div>`;
 }
 
 createMachine();
-
-
 
 // Make every machine clickable
 for(let i = 0; i < numberOfMachines; i++) {
