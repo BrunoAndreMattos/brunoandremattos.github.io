@@ -169,11 +169,6 @@ body main .modal #modal-content #result {
   padding: 1.3rem 0;
 }
 
-body main .modal #modal-content #result .fechar {
-  background: none;
-  right: 0;
-}
-
 body main .modal #modal-content #result h2 {
   margin: 0;
 }
@@ -201,7 +196,7 @@ body main .modal #modal-content #extrato table th {
 }
 
 body main .modal #modal-content #extrato table tr:nth-child(even) {
-  background-color: #fed47c;
+  background-color: #d3d8e0;
 }
 
 body footer {

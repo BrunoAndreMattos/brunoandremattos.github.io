@@ -9,6 +9,7 @@ $desktop: 840px;
         @content;
     }
 }
+
 * {
     font-family: 'Montserrat', 'sans-serif';
 }
@@ -156,7 +157,6 @@ body {
                 background-color: #fefefe;
                 margin: auto;
                 padding: 0;
-                // border: 1px solid #888;
                 width: 80%;
                 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
                 
@@ -166,11 +166,6 @@ body {
                     width: 100%;
                     color: $neutral;
                     padding: 1.3rem 0;
-                    
-                    .fechar {
-                        background: none;
-                        right: 0;
-                    }
                     
                     h2 {
                         margin: 0;
@@ -184,7 +179,6 @@ body {
                 
                 #extrato {
                     background-color: $neutral;
-                    // padding: 2px 16px;
 
                     table {
                         width: 100%;
@@ -199,7 +193,7 @@ body {
                         }
 
                         tr:nth-child(even) {
-                            background-color: lighten($main, 10%);
+                            background-color: lighten($bg, 75%);
                         }
                     }
                 }
