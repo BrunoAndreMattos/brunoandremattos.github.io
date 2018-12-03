@@ -1,3 +1,0 @@
-* Add modal close button
-* Add extract button
-* Make modal look decent
