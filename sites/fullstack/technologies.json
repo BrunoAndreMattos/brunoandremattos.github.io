@@ -110,6 +110,14 @@ const technologies = [
               {
                 "name": "SMACSS",
                 "status": "IN"
+              },
+              {
+                "name": "SUITCSS",
+                "status": "IN"
+              },
+              {
+                "name": "Systematic CSS",
+                "status": "IN"
               }
             ]
           },
@@ -145,7 +153,7 @@ const technologies = [
         "data": [
           {
             "name": "Concepts",
-            "status": "IN",
+            "status": "LD",
             "data": [
               {
                 "name": "JSON",
@@ -195,7 +203,7 @@ const technologies = [
               },
               {
                 "name": "jQuery UI",
-                "status": "IN"
+                "status": "NI"
               },
               {
                 "name": "Lodash",
@@ -207,19 +215,27 @@ const technologies = [
               },
               {
                 "name": "Backbone.js",
-                "status": "IN"
+                "status": "NI"
               },
               {
                 "name": "Knockout.js",
-                "status": "IN"
+                "status": "NI"
               },
               {
                 "name": "Polymer.js",
-                "status": "IN"
+                "status": "NI"
               },
               {
                 "name": "ReactiveX",
-                "status": "IN"
+                "status": "NI"
+              },
+              {
+                "name": "Preact",
+                "status": "NI"
+              },
+              {
+                "name": "Reactive Extensions for JavaScript (RxJS) (with React)",
+                "status": "NI"
               }
             ]
           },
@@ -259,26 +275,56 @@ const technologies = [
               },
               {
                 "name": "AngularJS",
+                "status": "NI"
+              },
+              {
+                "name": "Angular2+ (with TypeScript)",
                 "status": "IN"
               },
               {
-                "name": "Angular2",
+                "name": "Redux (with React)",
                 "status": "IN"
               },
               {
-                "name": "Redux",
-                "status": "IN"
+                "name": "Mobx (with React)",
+                "status": "NI"
+              },
+              {
+                "name": "Flux (with React)",
+                "status": "NI"
               },
               {
                 "name": "Ember.js",
-                "status": "IN"
+                "status": "NI"
               },
               {
                 "name": "Aurelia.js",
+                "status": "NI"
+              }
+            ]
+          },
+          {
+            "name": "Testing",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Jest",
+                "status": "IN"
+              },
+              {
+                "name": "Mocha",
+                "status": "IN"
+              },
+              {
+                "name": "Karma",
                 "status": "IN"
               },
               {
                 "name": "Jasmine",
+                "status": "IN"
+              },
+              {
+                "name": "Enzyme (with React)",
                 "status": "IN"
               }
             ]
@@ -306,19 +352,41 @@ const technologies = [
             ]
           },
           {
-            "name": "Testing",
+            "name": "TypeCheckers and Supersets",
             "status": "IN",
             "data": [
               {
-                "name": "Jest",
+                "name": "TypeScript",
                 "status": "IN"
               },
               {
-                "name": "Mocha",
+                "name": "Flow",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "Module Loader/Bundler",
+            "status": "IN",
+            "data": [
+              {
+                "name": "Webpack",
                 "status": "IN"
               },
               {
-                "name": "Karma",
+                "name": "Parcel.js",
+                "status": "IN"
+              },
+              {
+                "name": "RequireJS",
+                "status": "IN"
+              },
+              {
+                "name": "Browserify",
+                "status": "IN"
+              },
+              {
+                "name": "rollup.js",
                 "status": "IN"
               }
             ]
@@ -327,7 +395,7 @@ const technologies = [
       },
       {
         "name": "Frameworks",
-        "status": "IN",
+        "status": "LD",
         "data": [
           {
             "name": "Bootstrap",
@@ -335,11 +403,19 @@ const technologies = [
           },
           {
             "name": "Skeleton",
-            "status": "IN"
+            "status": "NI"
           },
           {
             "name": "Materialize CSS",
-            "status": "IN"
+            "status": "NI"
+          },
+          {
+            "name": "Foundation",
+            "status": "NI"
+          },
+          {
+            "name": "Semantic UI",
+            "status": "NI"
           }
         ]
       },
@@ -430,10 +506,6 @@ const technologies = [
             ]
           }
         ]
-      },
-      {
-        "name": "TypeScript",
-        "status": "IN"
       },
       {
         "name": "deno (not out yet)",
@@ -585,6 +657,16 @@ const technologies = [
               },
               {
                 "name": "Cassandra",
+                "status": "IN"
+              }
+            ]
+          },
+          {
+            "name": "GraphQL",
+            "status": "IN",
+            "data": [
+              {
+                "name": "graphql-yoga",
                 "status": "IN"
               }
             ]
@@ -751,10 +833,6 @@ const technologies = [
     "name": "Other Technologies",
     "status": "IN",
     "data": [
-      {
-        "name": "Webpack",
-        "status": "IN"
-      },
       {
         "name": "RegEx",
         "status": "IN"
