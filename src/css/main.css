@@ -5,7 +5,7 @@ html, body {
 
 body {
   scroll-behavior: smooth;
-  background: url(../../aaa.jpeg) no-repeat center center fixed;
+  background: url(../img/bg.jpeg) no-repeat center center fixed;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -13,7 +13,6 @@ body {
 }
 
 body header {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000a38+0,000a38+24,293470+100 */
   width: 100%;
   height: 100vh;
 }
@@ -74,7 +73,7 @@ body header nav #hamburger span {
   height: 4px;
   margin: 5px;
   position: relative;
-  background: #f4f4f4;
+  background: #FFFFFF;
   border-radius: 10px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
@@ -105,7 +104,7 @@ body header nav #hamburger input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
           transform: rotate(45deg) translate(-2px, -1px);
-  background: #233D4D;
+  background: #2F2E33;
 }
 
 body header nav #hamburger input:checked ~ span:nth-last-child(3) {
@@ -128,7 +127,7 @@ body header nav #hamburger ul {
   margin: -100px 0 0 -50px;
   padding-top: 100px;
   padding-bottom: 20px;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
@@ -141,7 +140,7 @@ body header nav #hamburger ul {
 }
 
 body header nav #hamburger ul li {
-  color: #233D4D;
+  color: #2F2E33;
   font-size: 20px;
   text-decoration: none;
   padding: 15px 0;
@@ -149,7 +148,7 @@ body header nav #hamburger ul li {
 
 body header nav #hamburger ul li a {
   text-decoration: none;
-  color: #233D4D;
+  color: #2F2E33;
 }
 
 @media (min-width: 840px) {
@@ -161,7 +160,7 @@ body header nav #hamburger ul li a {
     height: auto;
     padding: 0;
     padding-bottom: 30px;
-    background-color: rgba(244, 244, 244, 0);
+    background-color: rgba(255, 255, 255, 0);
     -webkit-transform: none;
             transform: none;
     -webkit-box-pack: start;
@@ -173,22 +172,22 @@ body header nav #hamburger ul li a {
     margin: 20px 0;
     margin-left: 2rem;
     font-size: 18px;
-    color: #f4f4f4;
+    color: #FFFFFF;
     cursor: pointer;
     -webkit-transition: color 0.25s ease-in-out;
     transition: color 0.25s ease-in-out;
   }
   body header nav #hamburger ul li a {
     text-decoration: none;
-    color: #f4f4f4;
+    color: #FFFFFF;
     -webkit-transition: color 0.25s ease-in-out;
     transition: color 0.25s ease-in-out;
   }
   body header nav #hamburger ul li a:hover {
-    color: #FFC02E;
+    color: #f1a501;
   }
   body header nav #hamburger ul li:hover {
-    color: #FFC02E;
+    color: #f1a501;
   }
 }
 
@@ -235,7 +234,7 @@ body header #click-aux #my-pic img {
 
 body header #click-aux h1 {
   text-align: center;
-  color: #f4f4f4;
+  color: #FFFFFF;
 }
 
 @media (min-width: 840px) {
@@ -250,7 +249,7 @@ body header #click-aux p {
   text-align: center;
   max-width: 90%;
   margin: auto;
-  color: #f4f4f4;
+  color: #FFFFFF;
 }
 
 @media (min-width: 840px) {
@@ -267,7 +266,7 @@ body main {
 
 body main h1 {
   text-align: center;
-  color: #233D4D;
+  color: #FFFFFF;
   margin: auto;
   margin-bottom: 50px;
   width: -webkit-fit-content;
@@ -275,7 +274,7 @@ body main h1 {
   width: fit-content;
   padding-top: 50px;
   padding-bottom: 8px;
-  border-bottom: solid #233D4D 4px;
+  border-bottom: solid #FFFFFF 4px;
 }
 
 @media (min-width: 840px) {
@@ -310,11 +309,18 @@ body main #projects .project {
     width: 500px;
     padding: 50px 0;
   }
+  body main #projects .project a h3 {
+    -webkit-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+  }
   body main #projects .project a:hover img {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
     -webkit-filter: opacity(100%);
             filter: opacity(100%);
+  }
+  body main #projects .project a:hover h3 {
+    color: #f1a501;
   }
 }
 
@@ -340,7 +346,7 @@ body main #projects .project a img {
 }
 
 body main #projects .project a h3 {
-  color: #233D4D;
+  color: #FFFFFF;
   margin: auto;
   padding: 20px 0;
   width: 80%;
@@ -353,21 +359,20 @@ body main #projects .project a h3 {
 }
 
 body main #projects .project p {
-  color: #233D4D;
+  color: #FFFFFF;
   margin: auto;
   width: 80%;
   padding-bottom: 20px;
 }
 
 body main #what-i-know {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d33d58+0,d62445+100 */
   margin: 0;
   padding: 0;
 }
 
 body main #what-i-know h1 {
   text-align: center;
-  color: #f4f4f4;
+  color: #FFFFFF;
   margin: auto;
   margin-bottom: 50px;
   width: -webkit-fit-content;
@@ -375,7 +380,7 @@ body main #what-i-know h1 {
   width: fit-content;
   padding-top: 50px;
   padding-bottom: 8px;
-  border-bottom: solid #f4f4f4 4px;
+  border-bottom: solid #FFFFFF 4px;
 }
 
 @media (min-width: 840px) {
@@ -389,7 +394,7 @@ body main #what-i-know ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  color: #f4f4f4;
+  color: #FFFFFF;
   padding-bottom: 50px;
 }
 
@@ -415,7 +420,7 @@ body main #what-i-know ul {
 
 body main #what-i-know ul li h2 {
   padding-top: 20px;
-  color: #f4f4f4;
+  color: #FFFFFF;
 }
 
 body main #what-i-know ul li .prog-shape {
@@ -432,77 +437,84 @@ body main #what-i-know ul li .prog-shape p {
 }
 
 body main #what-i-know ul li .prog-shape #html {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 97%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #css {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 90%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #javascript {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 85%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #node {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 15%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #bootstrap {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 75%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #php {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 55%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #sql {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 15%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #python {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 75%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #django {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
+  height: 25px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body main #what-i-know ul li .prog-shape #react {
+  background-color: #FFFFFF;
   height: 25px;
   width: 15%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #c {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 65%;
   border-radius: 0 10px 0 10px;
 }
 
 body main #what-i-know ul li .prog-shape #git {
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   height: 25px;
   width: 75%;
   border-radius: 0 10px 0 10px;
@@ -519,7 +531,7 @@ body main #what-i-know ul li h4 {
 body main #what-i-know ul li .plus {
   display: inline-block;
   padding: 5px;
-  border: 2px solid #f4f4f4;
+  border: 2px solid #FFFFFF;
   border-radius: 10px;
   margin: 3px;
   letter-spacing: 1px;
@@ -527,7 +539,6 @@ body main #what-i-know ul li .plus {
 }
 
 body footer {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#233d4d+0,193b51+41,1e6991+100 */
   margin: 0;
   padding: 0;
 }
@@ -539,7 +550,7 @@ body footer #contact {
 
 body footer #contact h1 {
   text-align: center;
-  color: #f4f4f4;
+  color: #FFFFFF;
   margin: auto;
   margin-bottom: 50px;
   width: -webkit-fit-content;
@@ -547,7 +558,7 @@ body footer #contact h1 {
   width: fit-content;
   padding-top: 50px;
   padding-bottom: 8px;
-  border-bottom: solid #f4f4f4 4px;
+  border-bottom: solid #FFFFFF 4px;
 }
 
 @media (min-width: 840px) {
@@ -576,7 +587,7 @@ body footer #contact #icons a {
 }
 
 body footer #contact #icons a .svg {
-  fill: #f4f4f4;
+  fill: #FFFFFF;
 }
 
 @media (min-width: 840px) {
@@ -594,7 +605,7 @@ body footer #contact #icons a .svg {
   body footer #contact #icons a .svg:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
-    fill: #FFC02E;
+    fill: #f1a501;
   }
 }
 
@@ -602,12 +613,12 @@ body footer p {
   text-align: center;
   margin: 0;
   padding: 10px;
-  color: #f4f4f4;
+  color: #FFFFFF;
   letter-spacing: 1px;
   font-size: 12px;
 }
 
 body footer p a {
-  color: #f4f4f4;
+  color: #f1a501;
 }
 /*# sourceMappingURL=main.css.map */
