@@ -1,4 +1,2 @@
 * Update pictures of projects as they evolve
-* Change visual identity to something more professional and clean
-* Change python and C to be "(Just the language)"
-* Also in PT-BR version
+* Update date as changes are made
