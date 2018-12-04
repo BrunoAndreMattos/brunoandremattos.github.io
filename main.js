@@ -5,46 +5,6 @@ Array.from(document.getElementsByClassName('item-menu')).forEach((e) => {
     });
 });
 
-// Changes the hambuger color after clicking according to the background
-document.getElementById('check-burger').addEventListener('click', function() {
-    const header = document.getElementsByTagName('header')[0];
-    const projects = document.getElementById('projects');
-
-    if(this.checked == false) {
-        if ((window.scrollY < (header.offsetTop + header.offsetHeight))
-         || (window.scrollY > (projects.offsetTop + projects.offsetHeight))) {
-
-            Array.from(document.getElementsByTagName('span')).forEach((e) => {
-                e.style.backgroundColor = '#f4f4f4';
-            });
-        }
-    } else {
-        Array.from(document.getElementsByTagName('span')).forEach((e) => {
-            e.style.backgroundColor = '#233D4D';
-        });
-    }
-});
-
-// Changes the hambuger color according to the background
-window.addEventListener('scroll', () => {
-    const header = document.getElementsByTagName('header')[0];
-    const projects = document.getElementById('projects');
-
-    if(document.getElementById('check-burger').checked == false) {
-        if ((window.scrollY < (header.offsetTop + header.offsetHeight))
-         || (window.scrollY > (projects.offsetTop + projects.offsetHeight))) {
-
-            Array.from(document.getElementsByTagName('span')).forEach((e) => {
-                e.style.backgroundColor = '#f4f4f4';
-            });
-        } else {
-            Array.from(document.getElementsByTagName('span')).forEach((e) => {
-                e.style.backgroundColor = '#233D4D';
-            });
-        }
-    }
-});
-
 // Smooth scrolling
 function myScroll(elem) {
     window.scrollTo({
