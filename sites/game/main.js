@@ -2,6 +2,7 @@
 const usdSec = document.getElementById('usd');
 const btcSec = document.getElementById('btc');
 const row = document.getElementById('row');
+const hack = document.getElementById('hack');
 
 // Machines HTML
 const displaysHTML = document.getElementsByClassName('display');
@@ -12,7 +13,6 @@ const solveProofOfWorkHTML = document.getElementsByClassName('solve-pow');
 const proofOfWorkHTML = document.getElementsByClassName('pow');
 const addToBlockChainHTML = document.getElementsByClassName('add');
 const yourGainsHTML = document.getElementsByClassName('your-gains');
-
 
 // Constants
 const totalLoad = 21;
@@ -320,13 +320,19 @@ function createMachine() {
 createMachine();
 
 // Make every machine clickable
-for(let i = 0; i < numberOfMachines; i++) {
-
-    machinesHTML[i].addEventListener('click', () => {
-        listOfMachines[i].mine()
-        listOfMachines[i].displayCoins();
-    });
+function makeClickable() {
+    for(let i = 0; i < numberOfMachines; i++) {
+        machinesHTML[i].addEventListener('click', () => {
+            listOfMachines[i].mine()
+            listOfMachines[i].displayCoins();
+        });
+    }
 }
+
+hack.addEventListener('click', () => {
+    createMachine();
+    makeClickable();
+})
 
 let json = new XMLHttpRequest(); // start a new variable to store the JSON in
 
