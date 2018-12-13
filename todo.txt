@@ -1,3 +1,2 @@
 * Update pictures of projects as they evolve
 * Update date as changes are made
-* Fix phone background zoom
