@@ -13,6 +13,7 @@ const solveProofOfWorkHTML = document.getElementsByClassName('solve-pow');
 const proofOfWorkHTML = document.getElementsByClassName('pow');
 const addToBlockChainHTML = document.getElementsByClassName('add');
 const yourGainsHTML = document.getElementsByClassName('your-gains');
+const upgradeButtonHTML = document.getElementsByClassName('upgrade-btn');
 
 // Constants
 const totalLoad = 21;
@@ -31,6 +32,7 @@ class Computer {
         this.miningPower = miningPower;
         this.loadStatus = 0;
         this.autoMine = false;
+        this.upgradeCost = 10;
     }
 
     getMachineId() {
@@ -72,6 +74,14 @@ class Computer {
         json.send(); //send request
 
         this.displayCoins();
+    }
+
+    displayUpgradeButton() {
+        if(this.coins > this.upgradeCost){
+            for(let button of upgradeButtonHTML) {
+                button.textContent = `upgrade machine`;
+            }
+        }
     }
 
     getMiningSpeed() {
@@ -217,7 +227,8 @@ class Computer {
                         let gains = this.miningPower*Math.ceil(Math.random() * 50000);
                         maGains.textContent = `your gains are ${gains}`;
                         this.coins += gains;
-                        this.updateCoins();                   
+                        this.updateCoins();
+                        this.displayUpgradeButton();                
                     } 
                     if (timer == 20) {
                         clearInterval(addBlockLoop);
@@ -313,11 +324,12 @@ function createMachine() {
         <div class="add"></div>
         <div class="your-gains"></div>
 
-        
+        <div class="upgrade-btn"></div>
     </div>`;
 }
 
 createMachine();
+makeClickable();
 
 // Make every machine clickable
 function makeClickable() {
