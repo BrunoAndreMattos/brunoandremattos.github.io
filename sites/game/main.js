@@ -1,19 +1,19 @@
-// HTML Sections
-const usdSec = document.getElementById('usd');
-const btcSec = document.getElementById('btc');
-const row = document.getElementById('row');
-const hack = document.getElementById('hack');
+// Global HTML Sections
+const globalDollar = document.getElementById('total-usd');
+const globalBitoin = document.getElementById('total-btc');
+const computersContainer = document.getElementById('computers-container');
+const globalUpgrades = document.getElementById('upgrades');
 
 // Machines HTML
-const displaysHTML = document.getElementsByClassName('display');
 const machinesHTML = document.getElementsByClassName('machine');
-const verifyHTML = document.getElementsByClassName('verify');
-const createBlockHTML = document.getElementsByClassName('create-block');
-const solveProofOfWorkHTML = document.getElementsByClassName('solve-pow');
-const proofOfWorkHTML = document.getElementsByClassName('pow');
-const addToBlockChainHTML = document.getElementsByClassName('add');
-const yourGainsHTML = document.getElementsByClassName('your-gains');
-const upgradeButtonHTML = document.getElementsByClassName('upgrade-btn');
+const displayPartsHTML = document.getElementsByClassName('display');
+const verifyPartsHTML = document.getElementsByClassName('verify');
+const createBlockPartsHTML = document.getElementsByClassName('create-block');
+const solveProofOfWorkPartsHTML = document.getElementsByClassName('solve-pow');
+const proofOfWorkPartsHTML = document.getElementsByClassName('pow');
+const addToBlockChainPartsHTML = document.getElementsByClassName('add');
+const yourGainsPartsHTML = document.getElementsByClassName('your-gains');
+const upgradeButtonsHTML = document.getElementsByClassName('upgrade-btn');
 
 // Constants
 const totalLoad = 21;
@@ -32,7 +32,7 @@ class Computer {
         this.miningPower = miningPower;
         this.loadStatus = 0;
         this.autoMine = false;
-        this.upgradeCost = 10;
+        this.upgradeCost = 1;
     }
 
     getMachineId() {
@@ -77,9 +77,14 @@ class Computer {
     }
 
     displayUpgradeButton() {
-        if(this.coins > this.upgradeCost){
+        let machineDolar = (currency.price_usd * this.coins).toFixed(2);
+        if(machineDolar > this.upgradeCost){
             for(let button of upgradeButtonHTML) {
-                button.textContent = `upgrade machine`;
+                button.innerHTML = `
+                ------------------------ <br>
+                | upgrade machine | <br>
+                ------------------------
+                `;
             }
         }
     }
@@ -324,8 +329,9 @@ function createMachine() {
         <div class="add"></div>
         <div class="your-gains"></div>
 
-        <div class="upgrade-btn"></div>
-    </div>`;
+    </div>
+    
+    <div class="upgrade-btn"></div>`;
 }
 
 createMachine();
