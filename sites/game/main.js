@@ -1,18 +1,19 @@
-// HTML Sections
-const usdSec = document.getElementById('usd');
-const btcSec = document.getElementById('btc');
-const row = document.getElementById('row');
+// Global HTML Sections
+const globalDollar = document.getElementById('total-usd');
+const globalBitoin = document.getElementById('total-btc');
+const computersContainer = document.getElementById('computers-container');
+const globalUpgrades = document.getElementById('upgrades');
 
 // Machines HTML
-const displaysHTML = document.getElementsByClassName('display');
 const machinesHTML = document.getElementsByClassName('machine');
-const verifyHTML = document.getElementsByClassName('verify');
-const createBlockHTML = document.getElementsByClassName('create-block');
-const solveProofOfWorkHTML = document.getElementsByClassName('solve-pow');
-const proofOfWorkHTML = document.getElementsByClassName('pow');
-const addToBlockChainHTML = document.getElementsByClassName('add');
-const yourGainsHTML = document.getElementsByClassName('your-gains');
-
+const displayPartsHTML = document.getElementsByClassName('display');
+const verifyPartsHTML = document.getElementsByClassName('verify');
+const createBlockPartsHTML = document.getElementsByClassName('create-block');
+const solveProofOfWorkPartsHTML = document.getElementsByClassName('solve-pow');
+const proofOfWorkPartsHTML = document.getElementsByClassName('pow');
+const addToBlockChainPartsHTML = document.getElementsByClassName('add');
+const yourGainsPartsHTML = document.getElementsByClassName('your-gains');
+const upgradeButtonsHTML = document.getElementsByClassName('upgrade-btn');
 
 // Constants
 const totalLoad = 21;
@@ -31,6 +32,7 @@ class Computer {
         this.miningPower = miningPower;
         this.loadStatus = 0;
         this.autoMine = false;
+        this.upgradeCost = 1;
     }
 
     getMachineId() {
@@ -72,6 +74,19 @@ class Computer {
         json.send(); //send request
 
         this.displayCoins();
+    }
+
+    displayUpgradeButton() {
+        let machineDolar = (currency.price_usd * this.coins).toFixed(2);
+        if(machineDolar > this.upgradeCost){
+            for(let button of upgradeButtonHTML) {
+                button.innerHTML = `
+                ------------------------ <br>
+                | upgrade machine | <br>
+                ------------------------
+                `;
+            }
+        }
     }
 
     getMiningSpeed() {
@@ -217,7 +232,8 @@ class Computer {
                         let gains = this.miningPower*Math.ceil(Math.random() * 50000);
                         maGains.textContent = `your gains are ${gains}`;
                         this.coins += gains;
-                        this.updateCoins();                   
+                        this.updateCoins();
+                        this.displayUpgradeButton();                
                     } 
                     if (timer == 20) {
                         clearInterval(addBlockLoop);
@@ -313,20 +329,28 @@ function createMachine() {
         <div class="add"></div>
         <div class="your-gains"></div>
 
-        
-    </div>`;
+    </div>
+    
+    <div class="upgrade-btn"></div>`;
 }
 
 createMachine();
+makeClickable();
 
 // Make every machine clickable
-for(let i = 0; i < numberOfMachines; i++) {
-
-    machinesHTML[i].addEventListener('click', () => {
-        listOfMachines[i].mine()
-        listOfMachines[i].displayCoins();
-    });
+function makeClickable() {
+    for(let i = 0; i < numberOfMachines; i++) {
+        machinesHTML[i].addEventListener('click', () => {
+            listOfMachines[i].mine()
+            listOfMachines[i].displayCoins();
+        });
+    }
 }
+
+hack.addEventListener('click', () => {
+    createMachine();
+    makeClickable();
+})
 
 let json = new XMLHttpRequest(); // start a new variable to store the JSON in
 

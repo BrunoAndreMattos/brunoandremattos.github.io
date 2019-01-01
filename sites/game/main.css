@@ -7,7 +7,7 @@ body {
     grid-template-rows: 1fr 60px;
     grid-template-areas: 
         '.'
-        'footer'
+        'global'
 }
 
 p {
@@ -15,16 +15,17 @@ p {
     margin: 0;
 }
 
-#usd, #btc {
+#total-usd, #total-btc, #upgrades {
     text-align: center;
 }
 
-#totals {
-    grid-area: footer;
+#global {
+    grid-area: global;
 }
 
-#row {
+#computers-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .machine {

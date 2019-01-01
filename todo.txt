@@ -1,6 +1,10 @@
 * Update pictures of projects as they evolve
+<<<<<<< HEAD
 * Update date as changes are made
 * Fix phone background zoom
 * Update profile picture
 * Change subtitle
 * Add knowledge bar animations
+=======
+* Update date as changes are made
+>>>>>>> 450cca2e4abc598f950093d18ae2c496e09b04f8
