@@ -12,6 +12,8 @@ botão de script trabalhador
 save em cookies
 calculo de volta no jogo
 
+fix display de dollares
+
 upgrades list:
     buy new computer
     upgrade computer components (GPU, CPU)
