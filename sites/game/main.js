@@ -347,10 +347,10 @@ function makeClickable() {
     }
 }
 
-hack.addEventListener('click', () => {
-    createMachine();
-    makeClickable();
-})
+// hack.addEventListener('click', () => {
+//     createMachine();
+//     makeClickable();
+// })
 
 let json = new XMLHttpRequest(); // start a new variable to store the JSON in
 
