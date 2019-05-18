@@ -50,13 +50,13 @@ class Computer {
     // Changes the display from satoshis to bitcoin according to how much the player has
     displayCoins() {
         if(this.getSatoshis() >= satoshiNumber) {
-            for(let display of displaysHTML) {
+            for(let display of displayPartsHTML) {
                 if(this.machineId === parseInt(display.parentElement.id)) {
                     display.textContent = `you have ${this.getBitcoins()} bitcoins in this machine`;
                 }
             }
         } else {
-            for(let display of displaysHTML) {
+            for(let display of displayPartsHTML) {
                 if(this.machineId === parseInt(display.parentElement.id)) {
                     display.textContent = `you have ${this.getSatoshis()} satoshis in this machine`;
                 }
@@ -77,7 +77,7 @@ class Computer {
     }
 
     displayUpgradeButton() {
-        let machineDolar = (currency.price_usd * this.coins).toFixed(2);
+        let machineDolar = (globalBitoin.price_usd * this.coins).toFixed(2);
         if(machineDolar > this.upgradeCost){
             for(let button of upgradeButtonHTML) {
                 button.innerHTML = `
@@ -142,7 +142,7 @@ class Computer {
     verifyTransaction() {
         this.isMining = true;
 
-        for(let verify of verifyHTML) {
+        for(let verify of verifyPartsHTML) {
             if(this.machineId === parseInt(verify.parentElement.id)) {
                 let maVerify = verify;
 
@@ -161,7 +161,7 @@ class Computer {
     }
 
     createBlock() {
-        for(let block of createBlockHTML) {
+        for(let block of createBlockPartsHTML) {
             if(this.machineId === parseInt(block.parentElement.id)) {
                 let maBlock = block;
 
@@ -187,13 +187,13 @@ class Computer {
     }
 
     solveProofOfWork() {
-        for(let pow of proofOfWorkHTML) {
+        for(let pow of proofOfWorkPartsHTML) {
             if(this.machineId === parseInt(pow.parentElement.id)) {
                 var maPow = pow;
             }
         }
 
-        for(let powMessage of solveProofOfWorkHTML) {
+        for(let powMessage of solveProofOfWorkPartsHTML) {
             if(this.machineId === parseInt(powMessage.parentElement.id)) {
                 let maPowM = powMessage;
 
@@ -213,13 +213,13 @@ class Computer {
     }
     
     addToBlockChain() {
-        for(let gains of yourGainsHTML) {
+        for(let gains of yourGainsPartsHTML) {
             if(this.machineId === parseInt(gains.parentElement.id)) {
                 var maGains = gains;
             }
         }
 
-        for(let add of addToBlockChainHTML) {
+        for(let add of addToBlockChainPartsHTML) {
             if(this.machineId === parseInt(add.parentElement.id)) {
                 let maAdd = add;
 
@@ -247,37 +247,37 @@ class Computer {
     
     clearAll() {
 
-        for(let verify of verifyHTML) {
+        for(let verify of verifyPartsHTML) {
             if(this.machineId === parseInt(verify.parentElement.id)) {
                 verify.textContent = ``;
             }
         }
         
-        for(let block of createBlockHTML) {
+        for(let block of createBlockPartsHTML) {
             if(this.machineId === parseInt(block.parentElement.id)) {
                 block.textContent = ``;
             }
         }
 
-        for(let solvePow of solveProofOfWorkHTML) {
+        for(let solvePow of solveProofOfWorkPartsHTML) {
             if(this.machineId === parseInt(solvePow.parentElement.id)) {
                 solvePow.textContent = ``;
             }
         }
         
-        for(let pow of proofOfWorkHTML) {
+        for(let pow of proofOfWorkPartsHTML) {
             if(this.machineId === parseInt(pow.parentElement.id)) {
                 pow.textContent = ``;
             }
         }
         
-        for(let add of addToBlockChainHTML) {
+        for(let add of addToBlockChainPartsHTML) {
             if(this.machineId === parseInt(add.parentElement.id)) {
                 add.textContent = ``;
             }
         }
 
-        for(let gains of yourGainsHTML) {
+        for(let gains of yourGainsPartsHTML) {
             if(this.machineId === parseInt(gains.parentElement.id)) {
                 gains.textContent = ``;
             }
@@ -306,7 +306,7 @@ function createMachine() {
     listOfMachines.push(comp);
 
     // Create the machine in HTML
-    row.innerHTML +=
+    computersContainer.innerHTML +=
     `<div class="machine" id="${numberOfMachines}">
         <pre>
          _________
@@ -347,10 +347,10 @@ function makeClickable() {
     }
 }
 
-hack.addEventListener('click', () => {
-    createMachine();
-    makeClickable();
-})
+// globalUpgrades.addEventListener('click', () => {
+//     createMachine();
+//     makeClickable();
+// })
 
 let json = new XMLHttpRequest(); // start a new variable to store the JSON in
 
