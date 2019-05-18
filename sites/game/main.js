@@ -13,7 +13,7 @@ const solveProofOfWorkPartsHTML = document.getElementsByClassName('solve-pow');
 const proofOfWorkPartsHTML = document.getElementsByClassName('pow');
 const addToBlockChainPartsHTML = document.getElementsByClassName('add');
 const yourGainsPartsHTML = document.getElementsByClassName('your-gains');
-const upgradeButtonsHTML = document.getElementsByClassName('upgrade-btn');
+const upgradeButtons1HTML = document.getElementsByClassName('upgrade-btn');
 
 // Constants
 const totalLoad = 21;
