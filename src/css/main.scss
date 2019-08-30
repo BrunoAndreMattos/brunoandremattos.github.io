@@ -1,7 +1,7 @@
-$neutral: #FFFFFF;
-$main: #3A5199;     
-$secondary: #2F2E33;
-$tertiary: rgb(241, 165, 1);
+$neutral: #D0E1F9;
+$main: #283655;     
+$secondary: #1E1F26;
+$tertiary: #4D648D;
 
 $desktop: 840px;
 
@@ -19,8 +19,9 @@ html, body {
 body {
   scroll-behavior: smooth;
 
-  background: url(../img/bg.jpeg) no-repeat center center fixed; 
-  background-size: cover;
+  // background: url(../img/bg.jpeg) no-repeat center center fixed; 
+  background: $neutral;
+  // background-size: cover;
 
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -28,7 +29,8 @@ body {
   
   header {   
     width: 100%;
-    height: 100vh;
+    // height: 100vh;
+    background-color: $secondary;
 
     @include desktop() {
       height: auto;
@@ -152,27 +154,27 @@ body {
             padding-bottom: 30px;
             background-color: rgba($neutral, 0%);
             transform: none;
-            justify-content: flex-start;
+            justify-content: center;
 
             li {
               padding: 10px;
               margin: 20px 0;
-              margin-left: 2rem;
+              margin-right: 30px;
               font-size: 18px;
               color: $neutral;
               cursor: pointer;
               transition: color 0.25s ease-in-out;
 
-              a {
-                text-decoration: none;
-                color: $neutral;
+              // a {
+              //   text-decoration: none;
+              //   color: $secondary;
 
-                transition: color 0.25s ease-in-out;
-              }
+              //   transition: color 0.25s ease-in-out;
+              // }
 
-              a:hover {
-                color: $tertiary;
-              }
+              // a:hover {
+              //   color: $tertiary;
+              // }
             }
 
             li:hover {
@@ -187,55 +189,224 @@ body {
 
       }
     }
+    #wrapper {
+        // height: 100vh;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+        "me skills";
+      #click-aux {
+        grid-area: me;
 
-    #click-aux {
-      height: 100vh;
-
-      @include desktop() {
-        height: auto;
-      }
-      
-      #my-pic {
-        padding-top: 100px;
-        
-        img {
-          display: block;
-          margin: auto;
-          width: 180px;
+        @include desktop() {
           height: auto;
-          border-radius: 30% 0;
-          box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.4);
+        }
+        
+        #my-pic {
+          padding-top: 100px;
+          
+          img {
+            display: block;
+            margin: auto;
+            width: 160px;
+            height: auto;
+            border-radius: 30% 0;
+            box-shadow: 2px 2px 15px 0px rgba(0,0,0,0.4);
+
+            @include desktop() {
+              width: 250px;
+            }
+          }
 
           @include desktop() {
-            width: 250px;
+            padding-top: 200px;
           }
         }
 
-        @include desktop() {
-          padding-top: 200px;
-        }
-      }
+        h1 {
+          text-align: center;  
+          color: $neutral;  
 
-      h1 {
-        text-align: center;  
-        color: $neutral;  
-
-        @include desktop() {
-          padding: 40px;
-          font-size: 40px;
-          letter-spacing: 1px;
+          @include desktop() {
+            padding: 40px;
+            font-size: 40px;
+            letter-spacing: 1px;
+          }
         }
-      }
-      
-      p { 
-        text-align: center;
-        max-width: 90%;
-        margin: auto;
-        color: $neutral;
         
-        @include desktop() {
-          padding-bottom: 300px;
-          letter-spacing: 1px;
+        p { 
+          text-align: center;
+          max-width: 90%;
+          margin: auto;
+          color: $neutral;
+          
+          @include desktop() {
+            padding-bottom: 300px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      #what-i-know {
+        margin: 0;
+        padding: 0;
+        
+        h1 {
+          text-align: center;
+          color: $neutral;
+  
+          margin: auto;
+          margin-bottom: 50px;
+          width: fit-content;
+          padding-top: 150px;
+          padding-bottom: 8px;
+          border-bottom: solid $neutral 4px; 
+  
+          @include desktop() {
+            font-size: 20px;
+          }
+        }
+  
+        ul {
+          text-align: center;
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+          color: $neutral;
+          padding-bottom: 50px;
+  
+          @include desktop() {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+          }
+  
+          li {
+  
+            @include desktop() {
+              width: 200px;
+              padding-top: 10px;
+            }
+  
+            h2 {
+              padding-top: 10px;
+              color: $neutral;
+            }
+  
+            .prog-shape {
+              height: auto;
+              width: 80%;
+              margin: auto auto;
+              border-radius: 10px;
+  
+              p {
+                color: lighten($neutral, 40%);
+                padding: 3px;
+                margin: 0;
+              }
+  
+              #html {
+                background-color: $neutral;
+                height: 10px;
+                width: 97%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #css {
+                background-color: $neutral;
+                height: 10px;
+                width: 90%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #javascript {
+                background-color: $neutral;
+                height: 10px;
+                width: 85%;
+                border-radius: 0 10px 0 10px;
+              }
+              
+              #node {
+                background-color: $neutral;
+                height: 10px;
+                width: 15%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #bootstrap {
+                background-color: $neutral;
+                height: 10px;
+                width: 75%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #php {
+                background-color: $neutral;
+                height: 10px;
+                width: 55%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #sql {
+                background-color: $neutral;
+                height: 10px;
+                width: 15%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #python {
+                background-color: $neutral;
+                height: 10px;
+                width: 75%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #django {
+                background-color: $neutral;
+                height: 10px;
+                width: 15%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #react {
+                background-color: $neutral;
+                height: 10px;
+                width: 15%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #c {
+                background-color: $neutral;
+                height: 10px;
+                width: 65%;
+                border-radius: 0 10px 0 10px;
+              }
+  
+              #git {
+                background-color: $neutral;
+                height: 10px;
+                width: 75%;
+                border-radius: 0 10px 0 10px;
+              }
+            }
+  
+            h4 {
+              display: inline-block;
+              // padding-right: 5px;
+              margin: auto;
+              letter-spacing: 2px;
+              font-size: 8px;
+            }
+  
+            .plus {
+              display: inline-block;
+              padding: 5px;
+              border: 2px solid $secondary;
+              border-radius: 10px;
+              margin: 3px;
+              letter-spacing: 1px;
+              font-size: 12px;
+            }
+          }
         }
       }
     }
@@ -247,14 +418,14 @@ body {
 
     h1 {
       text-align: center;
-      color: $neutral;
+      color: $secondary;
 
       margin: auto;
       margin-bottom: 50px;
       width: fit-content;
       padding-top: 50px;
       padding-bottom: 8px;
-      border-bottom: solid $neutral 4px; 
+      border-bottom: solid $secondary 4px; 
 
       @include desktop() {
         font-size: 40px;
@@ -313,7 +484,7 @@ body {
           }
 
           h3 {
-            color: $neutral;
+            color: $secondary;
             margin: auto;
             padding: 20px 0;
             width: 80%;
@@ -325,174 +496,10 @@ body {
         }
 
         p {
-          color: $neutral;
+          color: $secondary;
           margin: auto;
           width: 80%;
           padding-bottom: 20px;
-        }
-      }
-    }
-    
-    #what-i-know {
-      margin: 0;
-      padding: 0;
-      
-      h1 {
-        text-align: center;
-        color: $neutral;
-
-        margin: auto;
-        margin-bottom: 50px;
-        width: fit-content;
-        padding-top: 50px;
-        padding-bottom: 8px;
-        border-bottom: solid $neutral 4px; 
-
-        @include desktop() {
-          font-size: 40px;
-        }
-      }
-
-      ul {
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        color: $neutral;
-        padding-bottom: 50px;
-
-        @include desktop() {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        li {
-
-          @include desktop() {
-            width: 600px;
-            padding-top: 30px;
-          }
-
-          h2 {
-            padding-top: 20px;
-            color: $neutral;
-          }
-
-          .prog-shape {
-            height: auto;
-            width: 80%;
-            margin: 18px auto;
-            border-radius: 10px;
-
-            p {
-              color: lighten($tertiary, 60%);
-              padding: 3px;
-              margin: 0;
-            }
-
-            #html {
-              background-color: $neutral;
-              height: 25px;
-              width: 97%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #css {
-              background-color: $neutral;
-              height: 25px;
-              width: 90%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #javascript {
-              background-color: $neutral;
-              height: 25px;
-              width: 85%;
-              border-radius: 0 10px 0 10px;
-            }
-            
-            #node {
-              background-color: $neutral;
-              height: 25px;
-              width: 15%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #bootstrap {
-              background-color: $neutral;
-              height: 25px;
-              width: 75%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #php {
-              background-color: $neutral;
-              height: 25px;
-              width: 55%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #sql {
-              background-color: $neutral;
-              height: 25px;
-              width: 15%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #python {
-              background-color: $neutral;
-              height: 25px;
-              width: 75%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #django {
-              background-color: $neutral;
-              height: 25px;
-              width: 15%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #react {
-              background-color: $neutral;
-              height: 25px;
-              width: 15%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #c {
-              background-color: $neutral;
-              height: 25px;
-              width: 65%;
-              border-radius: 0 10px 0 10px;
-            }
-
-            #git {
-              background-color: $neutral;
-              height: 25px;
-              width: 75%;
-              border-radius: 0 10px 0 10px;
-            }
-          }
-
-          h4 {
-            display: inline-block;
-            padding-right: 5px;
-            margin: auto;
-            letter-spacing: 2px;
-            font-size: 12px;
-          }
-
-          .plus {
-            display: inline-block;
-            padding: 5px;
-            border: 2px solid $neutral;
-            border-radius: 10px;
-            margin: 3px;
-            letter-spacing: 1px;
-            font-size: 12px;
-          }
         }
       }
     }
@@ -508,14 +515,14 @@ body {
 
       h1 {
         text-align: center;
-        color: $neutral;
+        color: $secondary;
 
         margin: auto;
         margin-bottom: 50px;
         width: fit-content;
         padding-top: 50px;
         padding-bottom: 8px;
-        border-bottom: solid $neutral 4px; 
+        border-bottom: solid $secondary 4px; 
 
         @include desktop() {
           margin-bottom: 80px;
@@ -539,7 +546,7 @@ body {
               transition: transform 0.25s ease-in-out;
               transform: scale(1);
             }
-            fill: $neutral;
+            fill: $secondary;
           }
           
           .svg:hover {
@@ -556,7 +563,7 @@ body {
       text-align: center;
       margin: 0;
       padding: 10px;
-      color: $neutral;
+      color: $secondary;
       letter-spacing: 1px;
       font-size: 12px;
 

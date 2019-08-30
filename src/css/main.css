@@ -5,8 +5,7 @@ html, body {
 
 body {
   scroll-behavior: smooth;
-  background: url(../img/bg.jpeg) no-repeat center center fixed;
-  background-size: cover;
+  background: #D0E1F9;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
@@ -14,7 +13,7 @@ body {
 
 body header {
   width: 100%;
-  height: 100vh;
+  background-color: #1E1F26;
 }
 
 @media (min-width: 840px) {
@@ -73,7 +72,7 @@ body header nav #hamburger span {
   height: 4px;
   margin: 5px;
   position: relative;
-  background: #FFFFFF;
+  background: #D0E1F9;
   border-radius: 10px;
   z-index: 1;
   -webkit-transform-origin: 4px 0px;
@@ -104,7 +103,7 @@ body header nav #hamburger input:checked ~ span {
   opacity: 1;
   -webkit-transform: rotate(45deg) translate(-2px, -1px);
           transform: rotate(45deg) translate(-2px, -1px);
-  background: #2F2E33;
+  background: #1E1F26;
 }
 
 body header nav #hamburger input:checked ~ span:nth-last-child(3) {
@@ -127,7 +126,7 @@ body header nav #hamburger ul {
   margin: -100px 0 0 -50px;
   padding-top: 100px;
   padding-bottom: 20px;
-  background-color: #FFFFFF;
+  background-color: #D0E1F9;
   -webkit-font-smoothing: antialiased;
   -webkit-transform-origin: 0% 0%;
           transform-origin: 0% 0%;
@@ -140,7 +139,7 @@ body header nav #hamburger ul {
 }
 
 body header nav #hamburger ul li {
-  color: #2F2E33;
+  color: #1E1F26;
   font-size: 20px;
   text-decoration: none;
   padding: 15px 0;
@@ -148,7 +147,7 @@ body header nav #hamburger ul li {
 
 body header nav #hamburger ul li a {
   text-decoration: none;
-  color: #2F2E33;
+  color: #1E1F26;
 }
 
 @media (min-width: 840px) {
@@ -160,34 +159,25 @@ body header nav #hamburger ul li a {
     height: auto;
     padding: 0;
     padding-bottom: 30px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(208, 225, 249, 0);
     -webkit-transform: none;
             transform: none;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body header nav #hamburger ul li {
     padding: 10px;
     margin: 20px 0;
-    margin-left: 2rem;
+    margin-right: 30px;
     font-size: 18px;
-    color: #FFFFFF;
+    color: #D0E1F9;
     cursor: pointer;
     -webkit-transition: color 0.25s ease-in-out;
     transition: color 0.25s ease-in-out;
   }
-  body header nav #hamburger ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
-    -webkit-transition: color 0.25s ease-in-out;
-    transition: color 0.25s ease-in-out;
-  }
-  body header nav #hamburger ul li a:hover {
-    color: #f1a501;
-  }
   body header nav #hamburger ul li:hover {
-    color: #f1a501;
+    color: #4D648D;
   }
 }
 
@@ -196,24 +186,34 @@ body header nav #hamburger input:checked ~ ul {
           transform: none;
 }
 
-body header #click-aux {
-  height: 100vh;
+body header #wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "me skills";
+}
+
+body header #wrapper #click-aux {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: me;
 }
 
 @media (min-width: 840px) {
-  body header #click-aux {
+  body header #wrapper #click-aux {
     height: auto;
   }
 }
 
-body header #click-aux #my-pic {
+body header #wrapper #click-aux #my-pic {
   padding-top: 100px;
 }
 
-body header #click-aux #my-pic img {
+body header #wrapper #click-aux #my-pic img {
   display: block;
   margin: auto;
-  width: 180px;
+  width: 160px;
   height: auto;
   border-radius: 30% 0;
   -webkit-box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.4);
@@ -221,42 +221,214 @@ body header #click-aux #my-pic img {
 }
 
 @media (min-width: 840px) {
-  body header #click-aux #my-pic img {
+  body header #wrapper #click-aux #my-pic img {
     width: 250px;
   }
 }
 
 @media (min-width: 840px) {
-  body header #click-aux #my-pic {
+  body header #wrapper #click-aux #my-pic {
     padding-top: 200px;
   }
 }
 
-body header #click-aux h1 {
+body header #wrapper #click-aux h1 {
   text-align: center;
-  color: #FFFFFF;
+  color: #D0E1F9;
 }
 
 @media (min-width: 840px) {
-  body header #click-aux h1 {
+  body header #wrapper #click-aux h1 {
     padding: 40px;
     font-size: 40px;
     letter-spacing: 1px;
   }
 }
 
-body header #click-aux p {
+body header #wrapper #click-aux p {
   text-align: center;
   max-width: 90%;
   margin: auto;
-  color: #FFFFFF;
+  color: #D0E1F9;
 }
 
 @media (min-width: 840px) {
-  body header #click-aux p {
+  body header #wrapper #click-aux p {
     padding-bottom: 300px;
     letter-spacing: 1px;
   }
+}
+
+body header #wrapper #what-i-know {
+  margin: 0;
+  padding: 0;
+}
+
+body header #wrapper #what-i-know h1 {
+  text-align: center;
+  color: #D0E1F9;
+  margin: auto;
+  margin-bottom: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 150px;
+  padding-bottom: 8px;
+  border-bottom: solid #D0E1F9 4px;
+}
+
+@media (min-width: 840px) {
+  body header #wrapper #what-i-know h1 {
+    font-size: 20px;
+  }
+}
+
+body header #wrapper #what-i-know ul {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: #D0E1F9;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 840px) {
+  body header #wrapper #what-i-know ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 840px) {
+  body header #wrapper #what-i-know ul li {
+    width: 200px;
+    padding-top: 10px;
+  }
+}
+
+body header #wrapper #what-i-know ul li h2 {
+  padding-top: 10px;
+  color: #D0E1F9;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape {
+  height: auto;
+  width: 80%;
+  margin: auto auto;
+  border-radius: 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape p {
+  color: white;
+  padding: 3px;
+  margin: 0;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #html {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 97%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #css {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 90%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #javascript {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 85%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #node {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #bootstrap {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 75%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #php {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 55%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #sql {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #python {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 75%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #django {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #react {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 15%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #c {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 65%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li .prog-shape #git {
+  background-color: #D0E1F9;
+  height: 10px;
+  width: 75%;
+  border-radius: 0 10px 0 10px;
+}
+
+body header #wrapper #what-i-know ul li h4 {
+  display: inline-block;
+  margin: auto;
+  letter-spacing: 2px;
+  font-size: 8px;
+}
+
+body header #wrapper #what-i-know ul li .plus {
+  display: inline-block;
+  padding: 5px;
+  border: 2px solid #1E1F26;
+  border-radius: 10px;
+  margin: 3px;
+  letter-spacing: 1px;
+  font-size: 12px;
 }
 
 body main {
@@ -266,7 +438,7 @@ body main {
 
 body main h1 {
   text-align: center;
-  color: #FFFFFF;
+  color: #1E1F26;
   margin: auto;
   margin-bottom: 50px;
   width: -webkit-fit-content;
@@ -274,7 +446,7 @@ body main h1 {
   width: fit-content;
   padding-top: 50px;
   padding-bottom: 8px;
-  border-bottom: solid #FFFFFF 4px;
+  border-bottom: solid #1E1F26 4px;
 }
 
 @media (min-width: 840px) {
@@ -320,7 +492,7 @@ body main #projects .project {
             filter: opacity(100%);
   }
   body main #projects .project a:hover h3 {
-    color: #f1a501;
+    color: #4D648D;
   }
 }
 
@@ -346,7 +518,7 @@ body main #projects .project a img {
 }
 
 body main #projects .project a h3 {
-  color: #FFFFFF;
+  color: #1E1F26;
   margin: auto;
   padding: 20px 0;
   width: 80%;
@@ -359,183 +531,10 @@ body main #projects .project a h3 {
 }
 
 body main #projects .project p {
-  color: #FFFFFF;
+  color: #1E1F26;
   margin: auto;
   width: 80%;
   padding-bottom: 20px;
-}
-
-body main #what-i-know {
-  margin: 0;
-  padding: 0;
-}
-
-body main #what-i-know h1 {
-  text-align: center;
-  color: #FFFFFF;
-  margin: auto;
-  margin-bottom: 50px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-top: 50px;
-  padding-bottom: 8px;
-  border-bottom: solid #FFFFFF 4px;
-}
-
-@media (min-width: 840px) {
-  body main #what-i-know h1 {
-    font-size: 40px;
-  }
-}
-
-body main #what-i-know ul {
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  color: #FFFFFF;
-  padding-bottom: 50px;
-}
-
-@media (min-width: 840px) {
-  body main #what-i-know ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (min-width: 840px) {
-  body main #what-i-know ul li {
-    width: 600px;
-    padding-top: 30px;
-  }
-}
-
-body main #what-i-know ul li h2 {
-  padding-top: 20px;
-  color: #FFFFFF;
-}
-
-body main #what-i-know ul li .prog-shape {
-  height: auto;
-  width: 80%;
-  margin: 18px auto;
-  border-radius: 10px;
-}
-
-body main #what-i-know ul li .prog-shape p {
-  color: white;
-  padding: 3px;
-  margin: 0;
-}
-
-body main #what-i-know ul li .prog-shape #html {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 97%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #css {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 90%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #javascript {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 85%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #node {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 15%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #bootstrap {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 75%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #php {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 55%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #sql {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 15%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #python {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 75%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #django {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 15%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #react {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 15%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #c {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 65%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li .prog-shape #git {
-  background-color: #FFFFFF;
-  height: 25px;
-  width: 75%;
-  border-radius: 0 10px 0 10px;
-}
-
-body main #what-i-know ul li h4 {
-  display: inline-block;
-  padding-right: 5px;
-  margin: auto;
-  letter-spacing: 2px;
-  font-size: 12px;
-}
-
-body main #what-i-know ul li .plus {
-  display: inline-block;
-  padding: 5px;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  margin: 3px;
-  letter-spacing: 1px;
-  font-size: 12px;
 }
 
 body footer {
@@ -550,7 +549,7 @@ body footer #contact {
 
 body footer #contact h1 {
   text-align: center;
-  color: #FFFFFF;
+  color: #1E1F26;
   margin: auto;
   margin-bottom: 50px;
   width: -webkit-fit-content;
@@ -558,7 +557,7 @@ body footer #contact h1 {
   width: fit-content;
   padding-top: 50px;
   padding-bottom: 8px;
-  border-bottom: solid #FFFFFF 4px;
+  border-bottom: solid #1E1F26 4px;
 }
 
 @media (min-width: 840px) {
@@ -587,7 +586,7 @@ body footer #contact #icons a {
 }
 
 body footer #contact #icons a .svg {
-  fill: #FFFFFF;
+  fill: #1E1F26;
 }
 
 @media (min-width: 840px) {
@@ -605,7 +604,7 @@ body footer #contact #icons a .svg {
   body footer #contact #icons a .svg:hover {
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
-    fill: #f1a501;
+    fill: #4D648D;
   }
 }
 
@@ -613,12 +612,12 @@ body footer p {
   text-align: center;
   margin: 0;
   padding: 10px;
-  color: #FFFFFF;
+  color: #1E1F26;
   letter-spacing: 1px;
   font-size: 12px;
 }
 
 body footer p a {
-  color: #f1a501;
+  color: #4D648D;
 }
 /*# sourceMappingURL=main.css.map */
