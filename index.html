@@ -7,205 +7,144 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/libraries/animate.css">
-    <title>Bruno André Mattos' Portfolio</title>
+    
+    <title>Online Resume</title>
 </head>
 <body>
-
     <header id="head">
-
         <nav>
-            <div id="hamburger" data-aos="fade-down">
-                <input id="check-burger" type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu" data-aos="fade-down">
-                    <!-- <li id="m-header" class="item-menu"> <a href="#"> Home </a></li> -->
-                    <li id="m-projects" class="item-menu"> Pet Projects </li>
-                    <li id="m-what-i-know" class="item-menu"> Knowledge </li>
-                    <li id="m-contact" class="item-menu"> Contact </li>
-                </ul>
-            </div>
+            <ul id="menu" data-aos="fade-down"> 
+                <li id="m-what-i-know"> Experience </li>
+                <li id="m-projects"> Pet Projects </li>
+                <li id="m-contact"> Contact </li>
+            </ul>
         </nav>
-
-        <div id="wrapper">
-            <div id="click-aux">
-                <div id="my-pic" data-aos="fade-up">
-                    <img src="src/img/eu.png" alt="A picture of me" data-aos="fade-up">
-                </div>
-                <h1  data-aos="fade-up">Bruno André Mattos</h1>
-                <p  data-aos="fade-up">Computer Science Student | Web Developer | Learning Finance and Investing | Entrepreneur</p>
-            </div>
-            <div id="what-i-know">
-                <h1 data-aos="fade-left">Knowledge</h1>
-                <ul>
-                    <li data-aos="flip-down">
-                        <h2>HTML</h2>
-                        <div class="prog-shape">
-                            <p>97% pretty good</p>
-                            <div id="html"></div>
-                        </div>
-                    </li>
-    
-                    <li data-aos="flip-down">
-                        <h2>CSS</h2>
-                        <div class="prog-shape">
-                            <p>90% pretty good</p>
-                            <div id="css"></div>
-                        </div>
-                        <h4>Plus:</h4>
-                        <div class="plus">Sass/SCSS</div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>JavaScript</h2>
-                        <div class="prog-shape">
-                            <p>85% pretty good</p>
-                            <div id="javascript"></div>
-                        </div>
-                        <h4>Plus:</h4>
-                        <div class="plus">jQuery</div>
-                        <div class="plus">AJAX</div>
-                    </li>
-    
-                    <li data-aos="flip-down">
-                        <h2>Node.js</h2>
-                        <div class="prog-shape">
-                            <p>15% beginner learning</p>
-                            <div id="node"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>Bootstrap</h2>
-                        <div class="prog-shape">
-                            <p>75% alright</p>
-                            <div id="bootstrap"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>PHP</h2>
-                        <div class="prog-shape">
-                            <p>55% still learning</p>
-                            <div id="php"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>SQL</h2>
-                        <div class="prog-shape">
-                            <p>15% beginner learning</p>
-                            <div id="sql"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>Python (just the language)</h2>
-                        <div class="prog-shape">
-                            <p>75% alright</p>
-                            <div id="python"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>Django</h2>
-                        <div class="prog-shape">
-                            <p>15% beginner learning</p>
-                            <div id="django"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>React</h2>
-                        <div class="prog-shape">
-                            <p>15% beginner learning</p>
-                            <div id="react"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>C (just the language)</h2>
-                        <div class="prog-shape">
-                            <p>65% alright</p>
-                            <div id="c"></div>
-                        </div>
-                    </li>
-                    
-                    <li data-aos="flip-down">
-                        <h2>Git</h2>
-                        <div class="prog-shape">
-                            <p>75% alright</p>
-                            <div id="git"></div>
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>
+        
+        <div id="my-pic" data-aos="fade-up">
+            <img src="src/img/eu.png" alt="A picture of me" data-aos="fade-up">
         </div>
+        <h1 data-aos="fade-up"> <span class="small">Hello! My name is </span> Bruno André Mattos <span class="small">and</span></h1>
+        <p data-aos="fade-up" id="sub">I used to be a Computer Science sudent until I fell in love with the financial markets. Now I'm an Economic Sciences student with an entrepreneurial spirit, working to apply the acquired Computer Science knowlegde to the financial markets and studying to become a stock broker.</p>
     </header>
 
-    <main>
+    <div id="experience">
+        <h1 data-aos="fade-left">Experience</h1>
+        <ul id="all-experience">
+            <li data-aos="fade-right" class="place">
+                <a href="http://www.inf.ufrgs.br/site/" target="_blank"> <img src="./src/img/infdone2.png" alt=""></a>
+                <h3>University for Computer Science</h3>
+                <p>I studied in the Federal University of Rio Grande do Sul for CS from 2017 to 2020 when I transferred to Economic Sciences, while in the CS course I acquired the following skills and knowledge: </p>
+                <ul>
+                    <li>Advanced mathematics</li>
+                    <li>Logical reasoning</li>
+                    <li>Computer architectures and low level programming</li>
+                    <li>All kinds of algorithms and data scructures</li>
+                    <li>A lot of theoretical Computer Science</li>
+                    <li>Programming languages: Python, C, Assembly, Racket</li>
+                </ul>
+            </li>
+            <li data-aos="fade-left" class="place">
+                <a href="http://www.nuted.ufrgs.br/" target="_blank"> <img src="./src/img/nuteddone2.png" alt=""></a>
+                <h3>Scientific Initiation Internship</h3>
+                <p>In 2018 I worked for 4 months on a platform to help professors engage with their students and adequately recomend learning objects, during my time I learned the following: </p>
+                <ul>
+                    <li>Front-end: HTML, CSS, Grid & Flexbox, Sass, JavaScript, jQuery, JSON, Bootstrap</li>
+                    <li>Back-end: PHP, SQL, Ajax</li>
+                    <li>Concepts: Model-View-Controler (MVC), Git, Computational Ontology </li>
+                </ul>
+            </li>
+            <li data-aos="fade-right" class="place">
+                <a href="https://www.hpe.com/us/en/home.html" target="_blank"> <img src="./src/img/hpedone2.png" alt=""></a>
+                <h3>Research and Development Internship</h3>
+                <p>In 2019 to early 2020 I am working at the Brazil R&D center of HPE on an IoT project, and that's as far as my non disclosure agreement goes. Learned and improved the following concepts and technologies:</p>
+                <ul>
+                    <li>Software development and architecture</li>
+                    <li>Reusable clean code</li>
+                    <li>Microservices</li>
+                    <li>Test driven development</li>
+                    <li>The following technologies: Docker, Kubernetes, Prometheus and Flask</li>
+                </ul>
+            </li>
+            <li data-aos="fade-left" class="place">
+                <a href="https://www.ufrgs.br/fce/" target="_blank"> <img src="./src/img/FCEdone2.png" alt=""></a>
+                <h3>University for Economic Sciences</h3>
+                <p>Recently transferred to ES and haven't had any classes as of yet</p>
+                <ul>
+                    <li></li>
+                </ul>
+            </li >
+            <li data-aos="fade-right" class="place">
+                <a href="https://startupweekend.org/" target="_blank"> <img src="./src/img/sw.png" alt=""></a>
+                <h3>Competition Participant</h3>
+                <p>Participated a couple of years in the Startup Weekend challenge where I and other previously unkown people had to create a startup from zero, validating the idea with an minimum viable product and being avaluated at the end of the weekend.</p>
+                <ul>
+                    <li>1st place Startup Weekend Fintech Porto Alegre 2018</li>
+                    <li>2nd place Startup Weekend Porto Alegre 2019</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div id="projects">
         <h1 data-aos="fade-left"> Pet Projects </h1>
-        <div id="projects">
-            <div class="project" data-aos="flip-left">
+        <div id="all-projects">
+            <div data-aos="flip-right" class="project">
+                <a href="https://github.com/BrunoAndreMattos/taking_random_walks" target="_blank" rel="noopener noreferrer">
+                    <img src="src/img/random.png" alt="Full Stack Print screen">
+                    <h3>Analysis: Taking Random Walks (work in progress)</h3>
+                </a>
+                <p>
+                    Looking at the effects of various technical analysis indicators and techniques applied on random walks.
+                </p>
+            </div>
+            <div data-aos="flip-left" class="project">
                 <a href="/sites/fullstack/" target="_blank" rel="noopener noreferrer">
                     <img src="src/img/fullstack.png" alt="Full Stack Print screen">
-                    <h3>Full Stack Web Development (2018)</h3>
+                    <h3>Front-end: Web Development Checklist (2018)</h3>
                 </a>
                 <p>
                     A website to keep track of my web development learnings. Constantly updated as I learn.
                     Applied knowledge of HTML, SCSS, CSS animations, DOM and JSON manipulation with jQuery JavaScript.
                 </p>
             </div>
-            <div class="project" data-aos="flip-right">
-                <a href="/sites/investing/" target="_blank" rel="noopener noreferrer">
-                    <img src="src/img/investing.png" alt="Investing Guide Print screen">
-                    <h3>Investing Guide (2018)</h3>
-                </a>
-                <p>
-                    A little joke website for my friends that enjoy losing money. Applied knowledge of HTML, CSS and vanilla JavaScript.
-                </p>
-            </div>
-            <div class="project" data-aos="flip-left">
+            <div data-aos="flip-right" class="project">
                 <a href="/sites/quantocusta/" target="_blank" rel="noopener noreferrer">
                     <img src="src/img/quantocusta.png" alt="Quanto Custa Print screen">
-                    <h3>Quanto Custa (2018)</h3>
+                    <h3>Front-end & MVP: Quanto Custa (2018)</h3>
                 </a>
                 <p>
-                    A website made as a minimum viable product after we validated our market-product fit on the Startup Weekend Porto Alegre 2018 FinTech.
+                    A website made as a minimum viable product (MVP) after we validated our market-product fit on the Startup Weekend Porto Alegre 2018 FinTech.
                     Applied knowledge of HTML, SCSS, CSS animations, and some hardcoded jQuery JavaScript for data.
                 </p>
             </div>
-            <div class="project" data-aos="flip-right">
+            <div data-aos="flip-left" class="project">
                 <a href="/sites/quasar/" target="_blank" rel="noopener noreferrer">
                     <img src="src/img/quasar.png" alt="Quasar Print screen">
-                    <h3>Quasar (2015)</h3>
+                    <h3>Front-end: Quasar (2015)</h3>
                 </a>
                 <p>
-                    A website for a fictional space tourism company.
+                    My first website, for a fictional space tourism company.
                     Applied knowledge of HTML, CSS and Bootstrap.
                 </p>
             </div>
-            <div class="project" data-aos="flip-left">
-                <a href="/sites/universalmeat/" target="_blank" rel="noopener noreferrer">
-                    <img src="src/img/universalmeat.png" alt="Universal Meat Print screen">
-                    <h3>Universal Meat (Work in progress)</h3>
+            <div data-aos="flip-right" class="project">
+                <a href="/sites/game/" target="_blank" rel="noopener noreferrer">
+                    <img src="src/img/game.png" alt="Game Print screen">
+                    <h3>Game Development: Bitcoin Themed ASCII Clicker Game (work in progress)</h3>
                 </a>
                 <p>
-                    A website for a fictional company that sells lab grown meat.
-                    Still in the wireframing process.
+                    An incremental game about mining bitcoin. In the early stages of development.
                 </p>
             </div>
         </div>
-    </main>
+    </div>
+
+    <!-- <div id="certifications"></div> -->
 
     <footer>
         <div id="contact">
             <h1 data-aos="fade-left">Contact</h1>
-
-            <div id="icons">
+            <div data-aos="flip-left" id="icons">
                 <a href="mailto:brunoandremattos@gmail.com">
                     <svg xmlns="http://www.w3.org/2000/svg" class="svg" width="48" height="48" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
                 </a>
@@ -217,14 +156,13 @@
                 <a href="https://github.com/BrunoAndreMattos" target="_blank" rel="noopener noreferrer">
                     <svg aria-labelledby="simpleicons-github-icon" role="img" class="svg" width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
                 </a>
-            
-                <a href="https://twitter.com/Batttas" target="_blank" rel="noopener noreferrer">
-                    <svg aria-labelledby="simpleicons-twitter-icon" role="img" class="svg" width="48" height="48" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-twitter-icon">Twitter icon</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-                </a>
             </div>
         </div>
-        <p>Language: <a href="index-pt.html">portuguese</a> </p>
-        <p>Last Edit: 18/10/2019</p>
+
+        <!-- <p id="lang">Other language: <a href="index-pt.html">portuguese</a> </p> -->
+
+        <p>Page crafted by: Bruno André Mattos</p>
+        <p class="final">Animations made using AOS css library</p>
     </footer>
 
 </body>
